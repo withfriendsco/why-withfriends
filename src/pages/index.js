@@ -1,39 +1,52 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PostTeaser from "../components/PostTeaser"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Words from Withfriends" />
-    <div className="w-full">
-      <article className="max-w-xl prose border-b border-wfGray-300 pb-4 my-4">
-        <div className="prose text-4xl">How memberships can help your business</div>
-        <div className="text-wfGray-600 font-sm">Posted on Dec. 25, 2020 by Joe Ahearn</div>
-        <p className="lede prose max-w-none">
-          CEO and Co-Founder Joe Ahearn lays out a few simple ways that
-          memberships can help your business &mdash; no matter what industry
-          you're in.
-        </p>
-        <p className="text-right">
-          <Link to="/">
-            ...read more
-          </Link>
-        </p>
-      </article>
+const IndexPage = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges.map(e => e.node)
+  return (
+    <Layout>
+      <SEO title="Words from Withfriends" />
+      <div className="w-full">
+        {posts.slice(0, 1).map(post => (
+          <PostTeaser feature={true} post={post} />
+        ))}
 
-      <article className="max-w-xl prose border-b border-wfGray-300 pb-4 my-4">
-        <div className="prose text-2xl">Subscription Boxes = PROFIT</div>
-        <div className="text-wfGray-600 font-sm">Posted on Dec. 25, 2020 by Joe Ahearn</div>
-        <p className="prose max-w-none">
-          Here's an article about subscription boxes. Read on to hear why
-          shipping something to wherever all the time can do some great things
-          for your business.
-        </p>
-      </article>
-    </div>
-  </Layout>
-)
+        {posts.slice(1, 10).map(post => (
+          <PostTeaser post={post} />
+        ))}
+      </div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          html
+          frontmatter {
+            date(formatString: "MMMM D, YYYY")
+            title
+            author
+          }
+          excerpt(format: HTML)
+          timeToRead
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

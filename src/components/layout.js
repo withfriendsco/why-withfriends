@@ -26,12 +26,10 @@ const Layout = ({ children }) => {
   return (
     <div className="font-sans">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="flex flex-wrap justify-center pt-32">
+      <div className="flex flex-wrap justify-center pt-12 px-4">
         <div className="w-full max-w-4xl">
           <main>{children}</main>
-          <footer style={{
-            marginTop: `2rem`
-          }}>
+          <footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.com">Gatsby</a>

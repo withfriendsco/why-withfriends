@@ -70,7 +70,8 @@
     font-size: 1rem;
     @apply prose;
   }
-  p.lede {
+
+  .lede p {
     @apply prose-xl;
   }
 
