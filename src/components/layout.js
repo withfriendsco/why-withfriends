@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
   return (
     <div className="font-sans">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="max-w-full flex flex-wrap justify-center">
-        <div className="border-wfGray-300 border">
+      <div className="flex flex-wrap justify-center pt-32">
+        <div className="w-full max-w-4xl">
           <main>{children}</main>
           <footer style={{
             marginTop: `2rem`
