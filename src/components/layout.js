@@ -24,25 +24,21 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="font-sans">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <div className="max-w-full flex flex-wrap justify-center">
+        <div className="border-wfGray-300 border">
+          <main>{children}</main>
+          <footer style={{
+            marginTop: `2rem`
+          }}>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </footer>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
