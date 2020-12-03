@@ -1,597 +1,109 @@
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
-}
-figure {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  margin: 0;
-}
-optgroup {
-  font-weight: 700;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  border: 1px solid silver;
-  padding: 0.35em 0.625em 0.75em;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-h2 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
-}
-h3 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
-}
-h4 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
-}
-h5 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
-}
-h6 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
-}
-hgroup {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-ul {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-dl {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-dd {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-}
-table {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
-  width: 100%;
-}
-blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-form {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-noscript {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-iframe {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-address {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-b {
-  font-weight: bold;
-}
-strong {
-  font-weight: bold;
-}
-dt {
-  font-weight: bold;
-}
-th {
-  font-weight: bold;
-}
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
-ol li {
-  padding-left: 0;
-}
-ul li {
-  padding-left: 0;
-}
-li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(1.45rem / 2);
-}
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-samp {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-thead {
-  text-align: left;
-}
-td,
-th {
-  text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  @font-face{
+    font-family:"Avenir Light WF";
+    src:url("../fonts/Avenir/Fonts/1475496/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475496/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475496/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475496/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"),url("../fonts/Avenir/Fonts/1475496/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Light Oblique Wf";
+    src:url("../fonts/Avenir/Fonts/1475502/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475502/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475502/a59168c1-917d-4de9-a244-0316c057c357.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475502/6dc0e7d8-9284-44e1-8f05-984a41daa3a4.woff") format("woff"),url("../fonts/Avenir/Fonts/1475502/2315df7a-8bc2-433d-bf0a-162fc0063de0.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Book WF";
+    src:url("../fonts/Avenir/Fonts/1475508/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475508/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475508/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475508/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),url("../fonts/Avenir/Fonts/1475508/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Book Oblique WF";
+    src:url("../fonts/Avenir/Fonts/1475514/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475514/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475514/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475514/f1ebae2b-5296-4244-8771-5f40e60a564a.woff") format("woff"),url("../fonts/Avenir/Fonts/1475514/04d1bf6c-070d-4b7e-9498-6051c9f0c349.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Roman WF";
+    src:url("../fonts/Avenir/Fonts/1475520/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475520/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475520/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475520/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff"),url("../fonts/Avenir/Fonts/1475520/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Oblique WF";
+    src:url("../fonts/Avenir/Fonts/1475526/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475526/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475526/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475526/cdda031e-26e9-4269-83d1-5a218caa10db.woff") format("woff"),url("../fonts/Avenir/Fonts/1475526/6d1ce413-19e7-4b43-b328-6cdedc58b35a.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Medium WF";
+    src:url("../fonts/Avenir/Fonts/1475532/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475532/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475532/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475532/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff"),url("../fonts/Avenir/Fonts/1475532/25f994de-d13f-4a5d-a82b-bf925a1e054d.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Medium Oblique WF";
+    src:url("../fonts/Avenir/Fonts/1475538/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475538/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475538/deb5e718-7abb-4df3-9365-edfa95317090.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475538/04801919-17ee-4c6b-8b17-eb1965cb3ed6.woff") format("woff"),url("../fonts/Avenir/Fonts/1475538/cee053ec-4b41-4506-a1fe-796261690610.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Heavy WF";
+    src:url("../fonts/Avenir/Fonts/1475544/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475544/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475544/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475544/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),url("../fonts/Avenir/Fonts/1475544/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Heavy Oblique WF";
+    src:url("../fonts/Avenir/Fonts/1475550/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475550/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475550/3c210c80-960f-4684-850b-25390b4d08af.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475550/cb5c71ad-e582-4d00-929c-67fbfaeb1c27.woff") format("woff"),url("../fonts/Avenir/Fonts/1475550/9ced8e96-4602-4507-8c20-4ff381949a9a.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Black WF";
+    src:url("../fonts/Avenir/Fonts/1475556/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475556/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475556/c78eb7af-a1c8-4892-974b-52379646fef4.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475556/75b36c58-2a02-4057-a537-09af0832ae46.woff") format("woff"),url("../fonts/Avenir/Fonts/1475556/b5c44a82-eeb8-41de-9c3f-a8db50b24b8a.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Avenir Black Oblique WF";
+    src:url("../fonts/Avenir/Fonts/1475562/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix");
+    src:url("../fonts/Avenir/Fonts/1475562/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix") format("eot"),url("../fonts/Avenir/Fonts/1475562/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2") format("woff2"),url("../fonts/Avenir/Fonts/1475562/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff") format("woff"),url("../fonts/Avenir/Fonts/1475562/5ba5a010-7470-4d9d-8a49-2920dc1be1f8.ttf") format("truetype");
+  }
+
+  font-size: 14px;
+  
+  p {
+    font-size: 1rem;
+    @apply prose;
+  }
+  p.lede {
+    @apply prose-xl;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 { @apply text-6xl }
+  h2 { @apply text-4xl }
+  h3 { @apply text-3xl }
+  h4 { @apply text-xl }
+  h5 { @apply text-lg }
+
+  ol, ul { 
+    @apply list-none text-black;
+    text-align: inherit;
+  }
+
+  label {
+    @apply normal-case font-sans inline;
+  }
+
+  input {
+    @apply h-auto inline;
+  }
+
+  li {
+    @apply text-black;
+  }
+
+  a {
+    @apply cursor-pointer text-gray-500;
   }
 }
