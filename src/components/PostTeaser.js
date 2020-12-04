@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 const PostTeaser = ({ post, feature }) => (
   <article
@@ -16,6 +17,16 @@ const PostTeaser = ({ post, feature }) => (
     <div className="text-wfGray-600 text-sm">
       Posted on {post.frontmatter.date} by {post.frontmatter.author}
     </div>
+    <Link
+      className="no-underline hover:underline"
+      to={`/posts${post.fields.slug}`}
+    >
+      <Img
+        fadeIn={true}
+        fluid={post.frontmatter.headerImage?.childImageSharp?.fluid}
+        alt={post.frontmatter.title}
+      />
+    </Link>
     <div
       className={feature ? "lede" : ""}
       dangerouslySetInnerHTML={{ __html: post.excerpt }}

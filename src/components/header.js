@@ -5,7 +5,7 @@ import Button from "./Button"
 import Wordmark from "./Wordmark"
 
 const Header = ({ siteTitle }) => (
-  <header className="fixed w-full flex flex-nowrap border-b bg-white border-wfGray-300 justify-center">
+  <header className="fixed w-full flex flex-nowrap border-b bg-white border-wfGray-300 justify-center z-10">
     <div className="top-0 py-2 w-full max-w-4xl flex flex-grow items-center px-4">
       <h2 className="inline-block">
         <Link to="/" className="color-salmon-600 no-underline">

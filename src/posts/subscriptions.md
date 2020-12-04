@@ -2,6 +2,7 @@
 title: Subscription Boxes = PROFIT
 date: 2020-11-05
 author: Joe Ahearn
+headerImage: ../images/membership.png
 ---
 
 Here's an article about subscription boxes. Read on to hear why

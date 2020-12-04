@@ -40,6 +40,13 @@ export const query = graphql`
             date(formatString: "MMMM D, YYYY")
             title
             author
+            headerImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt(format: HTML)
           timeToRead
