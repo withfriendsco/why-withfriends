@@ -82,10 +82,11 @@ function SEO({ description, lang, meta, title, image }) {
         },
       ].concat(meta)}
     >
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-W21GB3RH49"></script>
-      <script>
-        { ga }
-      </script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-W21GB3RH49"
+      ></script>
+      <script>{ga}</script>
     </Helmet>
   )
 }

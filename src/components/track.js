@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react"
 
-import { mixpanel } from '../helpers/mixpanel' 
+import { mixpanel } from "../helpers/mixpanel"
 
 const fbPixel = `!function(f,b,e,v,n,t,s) {
   if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,19 +16,29 @@ const fbPixel = `!function(f,b,e,v,n,t,s) {
 const Track = () => {
   useEffect(() => {
     mixpanel.track("Visited Why Withfriends", {
-      url: window.location
+      url: window.location,
     })
   }, [])
 
   return (
     <>
-      <script>
-        {fbPixel}
-      </script>
+      <script>{fbPixel}</script>
       <noscript>
-        <img height="1" width="1" style={{display:"none"}} alt="pixel" src="https://www.facebook.com/tr?id=582245315891033&ev=PageView&noscript=1"/>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          alt="pixel"
+          src="https://www.facebook.com/tr?id=582245315891033&ev=PageView&noscript=1"
+        />
       </noscript>
-      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6328349.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/6328349.js"
+      ></script>
     </>
   )
 }

@@ -30,7 +30,7 @@ const Post = ({ data, pageContext }) => {
               <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
             </div>
           </div>
-          <div className="prose prose-lg pl-8 justify-self-end mr-2 sm:mr-8">
+          <div className="prose prose-md sm:prose-lg pl-8 justify-self-end mr-2 sm:mr-8">
             <h1 className="mb-4">{post.frontmatter.title}</h1>
             <div className="text-wfGray-600 text-sm">
               Posted on {post.frontmatter.date} by {post.frontmatter.author}
