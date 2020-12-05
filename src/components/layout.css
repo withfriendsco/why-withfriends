@@ -67,8 +67,7 @@
   font-size: 14px;
   
   p {
-    font-size: 1rem;
-    @apply prose;
+    @apply prose sm:prose-lg;
   }
 
   .lede p {
@@ -81,16 +80,11 @@
     height: auto;
   }
 
-  h1 { @apply prose text-6xl }
+  h1 { @apply text-6xl }
   h2 { @apply text-4xl }
   h3 { @apply text-3xl }
   h4 { @apply text-xl }
   h5 { @apply text-lg }
-
-  ol, ul { 
-    @apply list-none text-black;
-    text-align: inherit;
-  }
 
   label {
     @apply normal-case font-sans inline;
@@ -100,11 +94,15 @@
     @apply h-auto inline;
   }
 
-  li {
-    @apply text-black;
-  }
-
   a {
     @apply cursor-pointer text-gray-500;
+  }
+
+  a h1, a h2, a h3, a h4, a h5 {
+    @apply no-underline;
+  }
+
+  .prose .gatsby-resp-image-wrapper {
+    @apply border border-wfGray-300;
   }
 }
