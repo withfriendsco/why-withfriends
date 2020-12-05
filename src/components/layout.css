@@ -66,11 +66,11 @@
 
   font-size: 14px;
   
-  p {
+  article p {
     @apply prose sm:prose-lg;
   }
 
-  .lede p {
+  article.lede p {
     @apply prose-xl;
   }
 
@@ -95,7 +95,7 @@
   }
 
   a {
-    @apply cursor-pointer text-gray-500;
+    @apply cursor-pointer;
   }
 
   a h1, a h2, a h3, a h4, a h5 {

@@ -34,7 +34,13 @@ module.exports = {
       options: {
         excerpt_separator: `<!-- end -->`,
         plugins: [
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: 92,
+              isIconAfterHeader: false,
+            }
+          },
           `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-images`,

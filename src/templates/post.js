@@ -3,6 +3,17 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import SignupForm from "../components/SignupForm"
+import SidebarAd from "../components/SidebarAd"
+import styled from "styled-components"
+
+const Article = styled.article`
+  .prose p strong {
+    color: #ff877b;
+    font-family: "Avenir Heavy WF";
+    font-weight: 400;
+  }
+`
 
 const Post = ({ data, pageContext }) => {
   const edge = data?.allMarkdownRemark.edges[0]
@@ -15,7 +26,7 @@ const Post = ({ data, pageContext }) => {
         description={post.excerpt}
         image={`https://words.withfriends.co${post.frontmatter.headerImage.childImageSharp.fixed.src}`}
       />
-      <article>
+      <Article>
         <div className="mb-4 w-full">
           <Img
             fadeIn={true}
@@ -26,8 +37,30 @@ const Post = ({ data, pageContext }) => {
         <div className="flex pt-4">
           <div className="pr-8 border-wfGray-300 border-r sm:max-w-xs">
             <div className="flex-grow-0">
-              <h4>What's inside:</h4>
-              <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+              <h3>What's inside</h3>
+              {
+                post.headings.map(h => {
+                  let classNames = ""
+                  switch (h.depth) {
+                    case 2:
+                      classNames += " mt-2 pt-2 border-t border-wfGray-300"
+                      break
+                    case 3:
+                      classNames += " ml-4"
+                      break
+                    case 4:
+                      classNames += " ml-8"
+                      break
+                    default:
+                      break
+                  }
+                  return (
+                    <div className={classNames}>
+                      <a href={`#${h.id}`}>{h.value}</a><br />
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
           <div className="prose prose-md sm:prose-lg pl-8 justify-self-end mr-2 sm:mr-8">
@@ -49,9 +82,15 @@ const Post = ({ data, pageContext }) => {
               </Link>
             </div>
           </div>
-          <div className="pl-4 border-wfGray-300 border-l flex-grow"></div>
+          <div className="pl-4 border-wfGray-300 border-l flex-grow">
+            <div className="bg-wfGray-600 shadow-lg sm:p-8">
+              <SignupForm />
+            </div>
+            <div className="mt-16 w-full" />
+            <SidebarAd />
+          </div>
         </div>
-      </article>
+      </Article>
     </Layout>
   )
 }
@@ -63,6 +102,11 @@ export const query = graphql`
         node {
           html
           excerpt(format: PLAIN)
+          headings {
+            id
+            depth
+            value
+          }
           tableOfContents(absolute: false)
           ...PostFragment
         }

@@ -62,10 +62,8 @@ Your "Friend" and "Family" tiers should have exclusive gifts and benefits that
 remind your fans _why_ they're members. This means early access to your best
 merch, discounts on package deals, and even quarterly or monthly deliveries of
 products. (Consumable products like specialty foods and beverages are great for
-these tiers.)
-
-Discounts are a huge motivator, but they don't have to break the bank to be
-enticing. It's important to always be evaluating
+these tiers.) Discounts are a huge motivator, but they don't have to break the
+bank to be enticing.
 
 **If you're worried about bad actors taking advantage of your membership program,
 Withfriends provides a dashboard showing detailed discount usage reports to
