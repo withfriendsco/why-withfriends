@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Track from '../components/track'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="font-sans">
+      <Track />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="flex flex-wrap justify-center pt-32">
         <div className="w-full sm:px-16">
