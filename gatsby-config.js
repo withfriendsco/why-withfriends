@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Words from Withfriends`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Thoughts Withfriends`,
+    description: `Thoughts about how to build a membership program that engages
+      and retains your customers and fans.`,
+    author: `Withfriends`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,10 +32,19 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-classes`,
             options: {
+              "heading[depth=1]": "text-lg",
+              "heading[depth=2]": "text-md",
+              "heading[depth=3]": "text-sm",
+              "list[ordered=false]": "list-disc",
+              "list[ordered=true]": "list-decimal",
+              listitem: "ml-1",
               classMap: {
                 paragraph: "prose",
               },

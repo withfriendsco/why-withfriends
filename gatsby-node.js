@@ -21,9 +21,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({ node, graphql, actions }) => {
+  const { createPage, createNodeField } = actions
   const result = await graphql(`
+    fragment AdjacentPost on MarkdownRemark {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        author
+      }
+    }
+
     query {
       allMarkdownRemark {
         edges {
@@ -32,17 +43,25 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
             }
           }
+          next {
+            ...AdjacentPost
+          }
+          previous {
+            ...AdjacentPost
+          }
         }
       }
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     createPage({
       path: `posts${node.fields.slug}`,
       component: path.resolve(`./src/templates/post.js`),
       context: {
         slug: node.fields.slug,
+        next,
+        previous,
       },
     })
   })
