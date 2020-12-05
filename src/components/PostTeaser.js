@@ -3,20 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const PostTeaser = ({ post, feature }) => (
-  <article
-    className={`max-w-xl border-b border-wfGray-300 pb-4 mb-4 prose ${
-      feature ? "prose-2xl" : "prose-md"
-    }`}
-  >
-    <Link
-      className="no-underline hover:underline"
-      to={`/posts${post.fields.slug}`}
-    >
-      <h2>{post.frontmatter.title}</h2>
-    </Link>
-    <div className="text-wfGray-600 text-sm">
-      Posted on {post.frontmatter.date} by {post.frontmatter.author}
-    </div>
+  <article>
     <Link
       className="no-underline hover:underline"
       to={`/posts${post.fields.slug}`}
@@ -28,17 +15,32 @@ const PostTeaser = ({ post, feature }) => (
       />
     </Link>
     <div
-      className={feature ? "lede" : ""}
-      dangerouslySetInnerHTML={{ __html: post.excerpt }}
-    />
-    <p className="text-right text-md">
+      className={`border-b border-wfGray-300 pb-4 mb-4 prose ${
+        feature ? "prose-2xl" : "prose-md"
+      }`}
+    >
       <Link
         className="no-underline hover:underline"
         to={`/posts${post.fields.slug}`}
       >
-        ...read more
+        <h2 style={{ marginTop: "2rem" }}>{post.frontmatter.title}</h2>
       </Link>
-    </p>
+      <div className="text-wfGray-600 text-sm">
+        Posted on {post.frontmatter.date} by {post.frontmatter.author}
+      </div>
+      <div
+        className={feature ? "lede" : ""}
+        dangerouslySetInnerHTML={{ __html: post.excerpt }}
+      />
+      <p className="text-right text-md">
+        <Link
+          className="no-underline hover:underline"
+          to={`/posts${post.fields.slug}`}
+        >
+          ...read more
+        </Link>
+      </p>
+    </div>
   </article>
 )
 
