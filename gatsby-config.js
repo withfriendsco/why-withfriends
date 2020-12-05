@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Thoughts Withfriends`,
-    description: `Thoughts about how to build a membership program that engages
-      and retains your customers and fans.`,
+    title: `Why Withfriends`,
+    description: `Why and how you should build a membership program that engages and retains your most dedicated customers and supporters.`,
     author: `Withfriends`,
   },
   plugins: [
@@ -17,6 +16,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,16 +37,22 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-smartypants`,
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+          {
             resolve: `gatsby-remark-classes`,
             options: {
               "heading[depth=1]": "text-lg",
               "heading[depth=2]": "text-md",
               "heading[depth=3]": "text-sm",
-              "list[ordered=false]": "list-disc",
-              "list[ordered=true]": "list-decimal",
+              "list[ordered=false]": "prose prose-md sm:prose-lg list-disc text-md",
+              "list[ordered=true]": "prose prose-md sm:prose-lg list-decimal text-md",
               listitem: "ml-1",
               classMap: {
-                paragraph: "prose",
+                paragraph: "prose prose-md sm:prose-lg",
               },
             },
           },

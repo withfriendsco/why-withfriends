@@ -18,6 +18,7 @@
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-remark-autolink-headers": "^2.7.0",
     "gatsby-remark-classes": "^1.0.0",
+    "gatsby-remark-images": "^3.7.0",
     "gatsby-remark-smartypants": "^2.6.0",
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-transformer-remark": "^2.12.0",
