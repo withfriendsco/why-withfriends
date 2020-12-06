@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(e => e.node)
   return (
     <Layout>
-      <SEO title="Words from Withfriends" />
+      <SEO title="Membership and subscription software for small businesses" />
       <div className="w-full flex">
         <div className="flex-grow" />
         <div className="max-w-2xl w-full pr-8">

@@ -15,7 +15,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: `src/images/favicon.ico`,
+      },
+    },
     `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-manifest`,
