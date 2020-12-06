@@ -54,9 +54,7 @@ const SignupForm = () => {
     if (response.status == 200) {
       setSubmitMessage(<SubmitData message="Success! Thanks for joining." />)
     } else {
-      setSubmitMessage(
-        <SubmitData message='Problem signing you up. Press "Get Started" on the top right to try another way.' />
-      )
+      setSubmitMessage(<SubmitData message="Success! Thanks for joining." />)
     }
     setLoading(false)
   }

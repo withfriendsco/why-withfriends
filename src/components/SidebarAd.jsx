@@ -1,22 +1,20 @@
-import React from 'react'
+import React from "react"
 
 const SidebarAd = () => (
-  <div className="border-salmon-600 border-2 shadow-lg sm:p-8 prose">
+  <div className="p-4 sm:p-8 border-salmon-600 border-2 shadow-lg prose">
     <h2 className="text-center mb-4">
       Sell memberships for your small business, automatically.
     </h2>
     <p>
-      Withfriends makes it easy to sell memberships for any business.
-      Whether you run an online e-commerce store, a music venue, or a
-      brick-and-mortar bookstore, you can use Withfriends to build
-      sustainable recurring revenue for your business or organization.
+      Withfriends makes it easy to sell memberships for any business. Whether
+      you run an online e-commerce store, a music venue, or a brick-and-mortar
+      bookstore, you can use Withfriends to build sustainable recurring revenue
+      for your business or organization.
     </p>{" "}
     <p>
       <a href="https://withfriends.co/organizers">Learn more</a>.
     </p>
-    <h3 className="mb-4">
-      Curious who else uses Withfriends?
-    </h3>
+    <h3 className="mb-4">Curious who else uses Withfriends?</h3>
     <p>
       We've got everyone from&nbsp;
       <a

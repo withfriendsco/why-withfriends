@@ -16,7 +16,7 @@ const PostTeaser = ({ post, feature }) => (
     </Link>
     <div
       className={`border-b border-wfGray-300 pb-4 mb-4 prose ${
-        feature ? "prose-2xl" : "prose-md"
+        feature ? "prose-md md:prose-2xl" : "prose-md md:prose-xl"
       }`}
     >
       <Link

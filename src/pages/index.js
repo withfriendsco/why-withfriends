@@ -4,32 +4,26 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostTeaser from "../components/PostTeaser"
-import SignupForm from "../components/SignupForm"
-import SidebarAd from "../components/SidebarAd"
+import RightSidebar from "../components/RightSidebar"
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(e => e.node)
   return (
     <Layout>
       <SEO title="Membership and subscription software for small businesses" />
-      <div className="w-full flex">
-        <div className="flex-grow" />
-        <div className="max-w-2xl w-full pr-8">
-          {posts.slice(0, 1).map(post => (
-            <PostTeaser key={post.slug} feature={true} post={post} />
-          ))}
+      <div className="flex flex-wrap md:flex-nowrap w-full justify-center">
+        <div className="flex flex-wrap md:flex-nowrap max-w-screen-2xl">
+          <div className="md:pr-8 hidden xl:block xl:mr-8 sm:max-w-xs" />
+          <div className="max-w-2xl w-full md:pr-8">
+            {posts.slice(0, 1).map(post => (
+              <PostTeaser key={post.slug} feature={true} post={post} />
+            ))}
 
-          {posts.slice(1, 10).map(post => (
-            <PostTeaser key={post.slug} post={post} />
-          ))}
-        </div>
-        <div className="border-l border-wfGray-300 pl-8">
-          <h4 className="mb-4">Get in touch to learn more.</h4>
-          <div className="bg-wfGray-600 shadow-lg sm:p-8">
-            <SignupForm />
+            {posts.slice(1, 10).map(post => (
+              <PostTeaser key={post.slug} post={post} />
+            ))}
           </div>
-          <div className="mt-16" />
-          <SidebarAd />
+          <RightSidebar />
         </div>
       </div>
     </Layout>

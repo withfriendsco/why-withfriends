@@ -44,7 +44,7 @@ module.exports = {
             options: {
               offsetY: 92,
               isIconAfterHeader: false,
-            }
+            },
           },
           `gatsby-remark-smartypants`,
           {
