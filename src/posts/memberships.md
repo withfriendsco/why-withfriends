@@ -131,8 +131,9 @@ never a rebate larger than the order itself.**
 ### Communicating with your members
 
 Your members are not just passive — they're also your most dedicated customers!
-This is important not just to reduce "churn," but also to give you insights
-into what your most dedicated customers think about your business.
+Communicating with your members is important not just to reduce "churn," but
+also to give you insights into what your most dedicated customers think about
+your business.
 
 ![Communicating with your members is important.](../images/member-management.png)
 
@@ -154,9 +155,11 @@ know about their latest membership program perks.**
 
 ## How the right membership software can help
 
-Most people think of membership software as something that's quiet, in the
-background, and that is only ever seen by the business or organization
-employees. We believe that's misguided.
+Most people think of membership software as something that's in the background,
+and that is only ever seen by the business or organization employees. We
+believe that's misguided. As your most dedicated customers, your members are
+actively invested in your business, and it's important to choose membership
+software that's easy to use, not just for you but for your members as well!
 
 We've found that, with our checkout upsell, an average of 5-7% of people
 purchasing from your e-commerce site will become regular members. If you have
