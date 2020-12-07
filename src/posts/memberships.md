@@ -2,7 +2,7 @@
 title: How to build a sustainable membership program
 date: 2020-12-05
 author: Andrew C. Smith
-headerImage: ../images/membership.png
+headerImage: ../images/membership-header.png
 ---
 
 Learn how you can build a membership program that puts your business or
@@ -46,14 +46,14 @@ Family:
   their purchasing based on their membership.
 
 **Most members on Withfriends stay members for two _years._ This means that even
-a "Fan" membership is worth 400% of your AOV!**
+a "Fan" membership is worth 350% of your AOV!**
 
 ### How to entice your customers to the higher tiers
 
 When we ask members why they sign up for their memberships, they overwhelmingly
 respond, "I want to support the business." But while supporting your business
 might them to sign up at the "Fan" level, a well-crafted set of higher-priced
-tiers with great merch can tip the scales.
+benefits can tip the scales toward those premium tiers.
 
 Remember: a member at the "Friend" level is supporting your business at 350% of
 the price of the "Fan" level.
@@ -122,9 +122,9 @@ your online store, and redirecting to a membership upsell.
 Finally, we've found that adding a rebate, even if it's just \$2, can be highly
 motivating.
 
-**At Withfriends, we've dedicated many hours to our Shopify, Square, Eventbrite,
-and custom ticketing upsells, so that the customer sees a pitch for a
-membership as soon as they complete checkout. We automatically calculate a
+**At Withfriends, we've dedicated many hours to perfecting our Shopify, Square,
+Eventbrite, and custom ticketing upsells, so that the customer sees a pitch for
+a membership as soon as they complete checkout. We automatically calculate a
 rebate based on a percentage of their most recent purchase, so that there's
 never a rebate larger than the order itself.**
 
