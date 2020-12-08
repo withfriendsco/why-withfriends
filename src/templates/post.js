@@ -7,6 +7,7 @@ import styled from "styled-components"
 import RightSidebar from "../components/RightSidebar"
 import UTMLink from "../components/UTMLink"
 import Button from "../components/Button"
+import { becomeAnOrganizer } from "../helpers/mixpanel"
 
 const Article = styled.article`
   .prose p strong {
@@ -80,7 +81,11 @@ const Post = ({ data, pageContext }) => {
                   href="https://withfriends.co/action/364/sign_up/modal"
                   text="Get Started"
                 >
-                  <Button className="no-underline" variant="salmon">Get Started</Button>
+                  <Button 
+                    onClick={becomeAnOrganizer}
+                    className="no-underline" variant="salmon">
+                    Get Started
+                  </Button>
                 </UTMLink>
               </div>
               <div className="border-wfGray-300 border-b pb-4 mb-4 block" />

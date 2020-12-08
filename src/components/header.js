@@ -4,6 +4,7 @@ import React from "react"
 import Button from "./Button"
 import Wordmark from "./Wordmark"
 import UTMLink from "./UTMLink"
+import { becomeAnOrganizer } from "../helpers/mixpanel"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -40,7 +41,7 @@ const Header = ({ siteTitle }) => {
           text="Get Started"
         >
           <div className="flex justify-end">
-            <Button variant="salmon-sm">Get Started</Button>
+            <Button onClick={becomeAnOrganizer} variant="salmon-sm">Get Started</Button>
           </div>
         </UTMLink>
       </div>
