@@ -16,11 +16,11 @@ const IndexPage = ({ data }) => {
           <div className="md:pr-8 hidden xl:block xl:mr-8 sm:max-w-xs" />
           <div className="max-w-2xl w-full md:pr-8">
             {posts.slice(0, 1).map(post => (
-              <PostTeaser key={post.slug} feature={true} post={post} />
+              <PostTeaser key={post.fields.slug} feature={true} post={post} />
             ))}
 
             {posts.slice(1, 10).map(post => (
-              <PostTeaser key={post.slug} post={post} />
+              <PostTeaser key={post.fields.slug} post={post} />
             ))}
           </div>
           <RightSidebar />

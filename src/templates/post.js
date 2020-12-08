@@ -56,7 +56,7 @@ const Post = ({ data, pageContext }) => {
                       break
                   }
                   return (
-                    <div className={classNames}>
+                    <div key={h.id} className={classNames}>
                       <a href={`#${h.id}`}>{h.value}</a>
                       <br />
                     </div>
