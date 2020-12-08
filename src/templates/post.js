@@ -26,7 +26,8 @@ const Post = ({ data, pageContext }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        image={`https://words.withfriends.co${post.frontmatter.headerImage.childImageSharp.fixed.src}`}
+        image={`https://why.withfriends.co${post.frontmatter.headerImage.childImageSharp.fixed.src}`}
+        url={`https://why.withfriends.co/posts${post.fields.slug}`}
       />
       <Article className="w-full flex justify-center flex-wrap">
         <div className="mb-4 md:mb-8 w-full max-w-screen-2xl">
