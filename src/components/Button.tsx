@@ -50,6 +50,7 @@ const Button = ({
         onClick={onClick}
         disabled={disabled || done}
         className={classes + " " + className}
+        style={{ textDecoration: "none" }}
       >
         {children}
         {done && <DoneIcon />}

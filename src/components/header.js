@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Button from "./Button"
 import Wordmark from "./Wordmark"
+import UTMLink from "./UTMLink"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -14,33 +15,34 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h2>
         <div className="justify-self-end flex-grow" />
-        <a
+        <UTMLink
           href="https://withfriends.co/organizers"
           className="color-salmon-600 no-underline ml-2 justify-self-end hidden md:inline-block"
         >
           Why Withfriends?
-        </a>
-        <a
+        </UTMLink>
+        <UTMLink
           href="https://withfriends.co/pricing"
           className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
         >
           Pricing
-        </a>
+        </UTMLink>
         <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r border-wfGray-300 hidden md:inline-block" />
-        <a
+        <UTMLink
           href="https://withfriends.co/action/363/sign_in/modal"
           className="color-salmon-600 no-underline mr-4 justify-self-end hidden md:inline-block"
         >
           Log In
-        </a>
-        <a
+        </UTMLink>
+        <UTMLink
           className="inline-block justify-self-end justify-end"
           href="https://withfriends.co/action/364/sign_up/modal"
+          text="Get Started"
         >
           <div className="flex justify-end">
             <Button variant="salmon-sm">Get Started</Button>
           </div>
-        </a>
+        </UTMLink>
       </div>
     </header>
   )

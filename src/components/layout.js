@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Track from "../components/track"
 import "./layout.css"
+import UTMLink from "./UTMLink"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -36,33 +37,36 @@ const Layout = ({ children }) => {
       <footer className="mt-4 md:mt-16 py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">
         <div className="pl-2 md:pl-16 justify-self-start text-white flex-grow md:flex-grow-0 text-center md:text-left">
           <p className="text-white">
-            <a href="https://withfriends.co/organizers">Why Withfriends?</a>
+            <UTMLink href="https://withfriends.co/organizers">Why Withfriends?</UTMLink>
           </p>
           <p className="text-white">
-            <a href="https://withfriends.co/disclaimer/terms_of_service/page">
+            <UTMLink href="https://withfriends.co/disclaimer/terms_of_service/page">
               Terms of Service
-            </a>
+            </UTMLink>
           </p>
           <p className="text-white">
-            <a href="https://withfriends.co/disclaimer/code_of_conduct/page">
+            <UTMLink href="https://withfriends.co/disclaimer/code_of_conduct/page">
               Code of Conduct
-            </a>
+            </UTMLink>
           </p>
           <p className="text-white">
-            <a href="https://withfriends.co/meet_the_team">Our Team</a>
+            <UTMLink href="https://withfriends.co/meet_the_team">Our Team</UTMLink>
           </p>
           <p className="text-white">
-            <a href="https://withfriends.co/pricing">Pricing</a>
+            <UTMLink href="https://withfriends.co/pricing">Pricing</UTMLink>
           </p>
           <p className="text-white">
-            <a href="mailto:team@withfriends.co">Contact</a>
+            <UTMLink href="mailto:team@withfriends.co">Contact</UTMLink>
           </p>
         </div>
-        <div className="px-2 md:px-16"></div>
-        <div className="px-2 mt-4 md:mt-0 md:pr-16 min-w-sm justify-self-end text-center md:text-left">
-          <p className="text-center md:text-left">
+        <div className="px-2 md:px-16 md:flex-grow"></div>
+        <div className="px-2 mt-4 md:mt-0 md:pr-16 min-w-sm justify-self-end text-center md:text-right">
+          <p className="text-center md:text-right md:max-w-xs mb-4">
             Withfriends is dedicated to the preservation of community culture,
-            spaces, and small businesses. Get in touch to learn more.
+            spaces, and small businesses. 
+          </p>
+          <p className="text-center md:text-right md:max-w-xs">
+            <a href="mailto:team@withfriends.co">Get in touch</a> to learn more.
           </p>
         </div>
       </footer>

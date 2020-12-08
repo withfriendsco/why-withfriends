@@ -5,6 +5,8 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import RightSidebar from "../components/RightSidebar"
+import UTMLink from "../components/UTMLink"
+import Button from "../components/Button"
 
 const Article = styled.article`
   .prose p strong {
@@ -62,12 +64,25 @@ const Post = ({ data, pageContext }) => {
                 })}
               </div>
             </div>
-            <div className="px-0 md:pr-8 prose prose-md md:prose-lg order-1 md:order-2">
-              <h1 className="mb-4">{post.frontmatter.title}</h1>
-              <div className="text-wfGray-600 text-sm">
-                Posted on {post.frontmatter.date} by {post.frontmatter.author}
+            <div className="px-0 md:pr-8 order-1 md:order-2">
+              <div className="prose prose-md md:prose-lg">
+                <h1 className="mb-4">{post.frontmatter.title}</h1>
+                <div className="text-wfGray-600 text-sm">
+                  Posted on {post.frontmatter.date} by {post.frontmatter.author}
+                </div>
+                <div>
+                  <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                </div>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <div className="flex justify-center">
+                <UTMLink
+                  className="inline-block justify-self-end justify-end no-underline"
+                  href="https://withfriends.co/action/364/sign_up/modal"
+                  text="Get Started"
+                >
+                  <Button className="no-underline" variant="salmon">Get Started</Button>
+                </UTMLink>
+              </div>
               <div className="border-wfGray-300 border-b pb-4 mb-4 block" />
               <div className="grid grid-cols-2">
                 <Link to={`/posts${next?.fields.slug}`}>
