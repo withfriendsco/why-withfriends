@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 
 import { mixpanel } from "../helpers/mixpanel"
+import * as FullStory from '@fullstory/browser'
 
 const fbPixel = `!function(f,b,e,v,n,t,s) {
   if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -14,6 +15,8 @@ const fbPixel = `!function(f,b,e,v,n,t,s) {
   fbq('track', 'PageView');`
 
 const Track = () => {
+  FullStory.init({ orgId: 'J4FPZ' })
+
   useEffect(() => {
     mixpanel.track("Visited Why Withfriends")
   }, [])
