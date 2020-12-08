@@ -64,12 +64,12 @@ function SEO({ description, lang, meta, title, image }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: `og:image`,
+          content: image,
         },
         {
-          name: `og:image`,
-          content: image,
+          name: `twitter:card`,
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
