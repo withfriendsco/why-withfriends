@@ -5,7 +5,7 @@ date: 2020-12-05
 headerImage: ../images/too-many-vegetables.jpg
 ---
 
-*By coupling subscription boxes with discounts, you can allow your customers the freedom to pause their subscription box while retaining their discount at a monthly cost — making it even easier to regain them as customers once they work through that pile of face cream.*
+By coupling subscription boxes with discounts, you can allow your customers the freedom to pause their subscription box while retaining their discount at a monthly cost — making it even easier to regain them as customers once they work through that pile of face cream.
 
 <!-- end -->
 

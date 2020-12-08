@@ -11,6 +11,8 @@ groceries for meals each week or month. It's rare that these businesses attempt
 to convey a greater purpose. It's no surprise, then, that many subscription box
 services face substantial churn rates. 
 
+<!-- end -->
+
 There are lots of ways that businesses have attempted to reduce these churn
 rates, ranging from subscription "pauses" to a "free month on us." But what
 about a solution that's free for the business, and that can inspire growth as

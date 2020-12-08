@@ -67,12 +67,12 @@ const Post = ({ data, pageContext }) => {
               </div>
             </div>
             <div className="px-0 md:pr-8 order-1 md:order-2">
-              <div className="prose prose-md md:prose-lg">
+              <div className="prose prose-md md:prose-lg max-w-none">
                 <h1 className="mb-4">{post.frontmatter.title}</h1>
                 <div className="text-wfGray-600 text-sm">
                   Posted on {post.frontmatter.date} by {post.frontmatter.author}
                 </div>
-                <div>
+                <div className="max-w-none">
                   <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </div>
               </div>
@@ -90,16 +90,24 @@ const Post = ({ data, pageContext }) => {
                 </UTMLink>
               </div>
               <div className="border-wfGray-300 border-b pb-4 mb-4 block" />
+              <div className="w-full my-4 flex justify-center">
+                <h4 className="border-b border-wfGray-300 inline">Keep reading, keep learning</h4>
+              </div>
               <div className="grid grid-cols-2">
-                <Link to={`/posts${next?.fields.slug}`}>
-                  {next?.frontmatter?.title}
-                </Link>
-                <Link
-                  className="text-right"
-                  to={`/posts${previous?.fields.slug}`}
-                >
-                  {previous?.frontmatter?.title}
-                </Link>
+                {
+                  previous && (
+                    <Link to={`/posts${previous?.fields.slug}`}>
+                      {previous?.frontmatter?.title}
+                    </Link>
+                  )
+                }
+                {
+                  next && (
+                    <Link className="text-right" to={`/posts${next?.fields.slug}`}>
+                      {next?.frontmatter?.title}
+                    </Link>
+                  )
+                }
               </div>
             </div>
           </div>
@@ -130,6 +138,9 @@ export const query = graphql`
   }
 
   fragment PostFragment on MarkdownRemark {
+    fields {
+      slug
+    }
     frontmatter {
       title
       date(formatString: "MMMM D, YYYY")
