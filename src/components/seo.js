@@ -108,6 +108,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  url: `https://why.withfriends.co`,
 }
 
 SEO.propTypes = {
@@ -115,6 +116,8 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  url: PropTypes.string.isRequired,
 }
 
 export default SEO
