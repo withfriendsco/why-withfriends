@@ -13,7 +13,7 @@ const RightSidebar = () => (
     <div className="bg-wfGray-600 shadow-lg p-8">
       <SignupForm />
     </div>
-    <div className="mt-8 md:mt-16 w-full" />
+    <div className="mt-8 md:my-16 w-full" />
     <SidebarAd />
   </div>
 )
