@@ -53,10 +53,10 @@ const Button = ({
         style={{ textDecoration: "none" }}
       >
         {children}
-        {done && <DoneIcon />}
       </button>
     </div>
   )
 }
 
 export default Button
+
