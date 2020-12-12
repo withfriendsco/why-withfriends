@@ -131,6 +131,9 @@ const OrganizersPage = ({ data }) => {
 					</p>
 				</div>
 			</div>
+
+			<div className="w-full text-center my-32">Add magic moment here.</div>
+
 			{ featureRows }
 
 			<div className="w-full my-8" />
@@ -182,6 +185,7 @@ const OrganizersPage = ({ data }) => {
 				<h3 className="text-4xl font-normal my-8">
 					Join over 390 small businesses on Withfriends
 				</h3>
+				<div className="w-full text-center">Add carousel here.</div>
 			</div>
 			<div>
 				<h3 className="text-4xl text-center font-normal my-8 text-wfGray-800">
@@ -211,6 +215,9 @@ const OrganizersPage = ({ data }) => {
 				<div className="max-w-2xl">
 					{ testimonialRows }
 				</div>
+			</div>
+			<div className="w-full text-center my-32">
+				Add testimonials here.
 			</div>
 			<div className="flex justify-center">
 				<div className="max-w-2xl">
