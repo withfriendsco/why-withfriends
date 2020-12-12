@@ -40,6 +40,7 @@ module.exports = {
           400: "#c0c0c0",
           300: "#d2d2d2",
           200: "#e2e2e2",
+          100: "#f6f4f4",
         },
       },
       container: {
