@@ -45,7 +45,7 @@ const BecomeAnOrganizer = () => {
 				<div className="flex justify-end">
 					<Button 
 						onClick={becomeAnOrganizer} 
-						className="py-6 px-12 text-xl"
+						className="py-6 px-8 sm:px-12 text-xl"
 						variant="salmon">
 						Find your members
 					</Button>
@@ -123,9 +123,9 @@ const OrganizersPage = ({ data }) => {
         </div>
       </div>
 
-			<div className="h-screen -mb-32" />
+			<div className="h-screen -mb-24 sm:-mb-32" />
 
-			<div className="flex flex-wrap justify-center px-4 -mx-4 md:-mx-8 text-xl sm:text-2xl md:text-4xl font-bold text-wfGray-800 py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-4 -mx-4 md:-mx-8 text-xl sm:text-2xl md:text-4xl font-bold text-wfGray-800 py-8 sm:pt-16 bg-wfGray-100">
 				<div className="w-full flex justify-center mb-8 md:mb-16">
 					<p className="text-center max-w-screen-md leading-tight">
 						An average of <span className="text-salmon-700">one of every five</span> customers
@@ -160,12 +160,14 @@ const OrganizersPage = ({ data }) => {
 				<BecomeAnOrganizer />
 			</div>
 
-			{ featureRows }
+			<div className="w-full px-2 sm:px-8">
+				{ featureRows }
+			</div>
 
 			<div className="w-full my-8" />
 			<BecomeAnOrganizer />
 
-			<div className="flex flex-wrap justify-center px-6 -mx-4 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
 				<div className="text-center w-full max-w-2xl">
 					<h3 className="text-2xl md:text-4xl font-normal my-2 sm:my-8">
 						Automations and integrated services let you focus on your business, while we grow your memberships.
