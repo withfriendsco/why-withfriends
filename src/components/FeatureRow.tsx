@@ -20,7 +20,7 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
 			<div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
 				<div className={`m-2 sm:m-4 flex-1 order-3 ${imageFirst ? "" : "sm:order-1" }`}>
 					<div className="pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24">
-						<h3 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">{featureRow.title}</h3>
+						<h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">{featureRow.title}</h2>
 						<p className="prose md:prose-md text-wfGray-800">{featureRow.content}</p>
 					</div>
 				</div>

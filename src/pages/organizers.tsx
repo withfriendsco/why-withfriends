@@ -114,7 +114,7 @@ const OrganizersPage = ({ data }) => {
 				</video>
 				<div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
 					<div>
-						<h1 className="text-center leading-tight mb-16">Sell memberships for your local business, automatically</h1>
+						<h1 className="text-center leading-tight mb-16">Sell memberships for your {data.magicMomentsYaml.midSentenceLanguage}, automatically</h1>
 						<div className="w-full">
 							<BecomeAnOrganizer />
 						</div>
@@ -129,7 +129,7 @@ const OrganizersPage = ({ data }) => {
 				<div className="w-full flex justify-center mb-8 md:mb-16">
 					<p className="text-center max-w-screen-md leading-tight">
 						An average of <span className="text-salmon-700">one of every five</span> customers
-						will support your business, resulting in a
+						will support your {data.magicMomentsYaml.midSentenceAbbreviation}, resulting in a
 						<span className="text-salmon-700">&nbsp;60%&nbsp;increase</span> in your monthly revenue.
 					</p>
 				</div>
@@ -255,7 +255,7 @@ const OrganizersPage = ({ data }) => {
 				</div>
 			</div>
 
-			<div className="flex flex-wrap justify-center px-8 -mx-4 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-8 -mx-4 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="max-w-2xl text-center">
 					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">
 						Have questions?
@@ -278,6 +278,7 @@ export const query = graphql`
 			storeLanguage
 			storeIcon
 			midSentenceLanguage
+			midSentenceLanguagePlural
 			midSentenceAbbreviation
 			images {
 				childImageSharp {

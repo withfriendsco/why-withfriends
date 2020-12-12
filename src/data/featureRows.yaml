@@ -1,6 +1,6 @@
 -
   image: ../images/subscriptions-sample-tiers.png 
-  title: Craft member tiers including discounts and subscription boxes.
+  title: Create membership levels with automated discounts and subscription boxes.
   content: Create a box that you deliver weekly, monthly, or quarterly, and set options (like t-shirt sizes). Members set their adddress and options when they join and any time afterwards, and your business gets an easy fulfillment dashboard.
 -
   image: ../images/subscriptions-customize-addons.png
@@ -13,11 +13,11 @@
   only: shopify
 -
   image: ../images/lead-upsell-your-customers.png
-  title: Turn customers into members with every purchase.
+  title: Convert customers into members with every purchase.
   content: Offer memberships with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your members will support you!
 -
   image: ../images/lead-manage-multiple-tiers.png
-  title: Manage multiple tiers.
+  title: Manage recurring payments for multiple tiers.
   content: Complex membership program? No problem. We make it easy to build multiple tiers, and we automate the discounts for you and your members.
 -
   image: ../images/lead-delight-your-members.png
@@ -25,5 +25,5 @@
   content: We completely automate discounts for your members, and we help you offer exciting benefits like a free coffee with every visit. We make it easy for you to make your members feel special.
 -
   image: ../images/member-management.png
-  title: Keep track of your members.
+  title: Use effective membership management software.
   content: Use our member management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync with your CRM automatically.

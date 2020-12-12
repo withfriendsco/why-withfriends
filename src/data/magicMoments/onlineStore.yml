@@ -6,6 +6,7 @@ averageOrderValue: Between_20_and_30
 storeLanguage: online store or point of sale.
 storeIcon: cart
 midSentenceLanguage: online store
+midSentenceLanguagePlural: online stores
 midSentenceAbbreviation: business
 images:
   - ../../images/magic_moment/online-store-1.jpg
