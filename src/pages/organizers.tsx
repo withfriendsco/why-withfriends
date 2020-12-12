@@ -140,6 +140,10 @@ const OrganizersPage = ({ data }) => {
 				</div>
 			</div>
 
+			<div className="flex flex-wrap justify-center">
+
+			</div>
+
 			{ featureRows }
 
 			<div className="w-full my-8" />
@@ -148,7 +152,7 @@ const OrganizersPage = ({ data }) => {
 			<div className="flex flex-wrap justify-center px-6 -mx-4 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
 				<div className="text-center w-full max-w-2xl">
 					<h3 className="text-2xl md:text-4xl font-normal my-8">
-						A sustainable business is one built by its community.
+						Automations and integrated services let you focus on your business, while we grow your memberships.
 					</h3>
 					<div className="flex my-8 flex-wrap">
 						<IconItem icon={<Easy />} text="15 minutes to setup" />
@@ -183,12 +187,13 @@ const OrganizersPage = ({ data }) => {
 				<BecomeAnOrganizer />
 			</div>
 
-			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16">
-				<h3 className="text-2xl md:text-4xl text-center font-normal my-8">
-					Join over 390 small businesses on Withfriends
-				</h3>
-				<div className="w-full text-center">Add carousel here.</div>
-			</div>
+			{/* <div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16"> */}
+			{/* 	<h3 className="text-2xl md:text-4xl text-center font-normal my-8"> */}
+			{/* 		Join over 390 small businesses on Withfriends */}
+			{/* 	</h3> */}
+			{/* 	<div className="w-full text-center">Add carousel here.</div> */}
+			{/* </div> */}
+
 			<div>
 				<h3 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
 					Stories from Withfriends small businesses
@@ -218,16 +223,18 @@ const OrganizersPage = ({ data }) => {
 					{ testimonialRows }
 				</div>
 			</div>
-			<div className="w-full text-center my-32">
-				Add testimonials here.
-			</div>
+
+			{/* <div className="w-full text-center my-32"> */}
+			{/* 	Add testimonials here. */}
+			{/* </div> */}
+
 			<div className="flex justify-center">
 				<div className="max-w-2xl">
 					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">Let your community help support your local business.</h3>
 					<BecomeAnOrganizer />
 				</div>
 			</div>
-			<div className="flex flex-wrap justify-center px-8 -mx-4 sm:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-8 -mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="max-w-2xl text-center">
 					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">Have questions?</h3>
 					<div className="my-8">
