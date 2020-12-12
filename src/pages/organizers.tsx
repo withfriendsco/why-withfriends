@@ -141,19 +141,19 @@ const OrganizersPage = ({ data }) => {
 			</div>
 
 			<div className="flex justify-center my-4 sm:my-16 flex-wrap">
-				<h2 className="w-full text-center">If your {data.magicMomentsYaml.midSentenceLanguage} gets {data.magicMomentsYaml.customersPerMonth} customers per month...</h2>
+				<h2 className="text-center my-4">If your {data.magicMomentsYaml.midSentenceLanguage} gets {data.magicMomentsYaml.customersPerMonth} customers per month...</h2>
 				<div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
 					{
 						data.magicMomentsYaml.images.map(image => (
 							<Img 
-								className="flex-1 mx-4"
+								className="w-full my-2 sm:mx-2 shadow-lg"
 								fluid={image.childImageSharp.fluid}
 								alt="Magic Moment"
 							/>
 						))
 					}
 				</div>
-				<h2 className="w-full text-center">
+				<h2 className="text-center mt-8">
 					You'll make $38,880 per year on Withfriends!
 				</h2>
 				<div className="w-full my-4" />
@@ -167,7 +167,7 @@ const OrganizersPage = ({ data }) => {
 
 			<div className="flex flex-wrap justify-center px-6 -mx-4 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
 				<div className="text-center w-full max-w-2xl">
-					<h3 className="text-2xl md:text-4xl font-normal my-8">
+					<h3 className="text-2xl md:text-4xl font-normal my-2 sm:my-8">
 						Automations and integrated services let you focus on your business, while we grow your memberships.
 					</h3>
 					<div className="flex my-8 flex-wrap">
@@ -252,7 +252,8 @@ const OrganizersPage = ({ data }) => {
 					<BecomeAnOrganizer />
 				</div>
 			</div>
-			<div className="flex flex-wrap justify-center px-8 -mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+
+			<div className="flex flex-wrap justify-center px-8 -mx-4 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="max-w-2xl text-center">
 					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">
 						Have questions?
