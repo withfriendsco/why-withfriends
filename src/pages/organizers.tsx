@@ -105,8 +105,8 @@ const OrganizersPage = ({ data }) => {
 				title="Membership and subscription box software for small businesses" 
 				url="https://why.withfriends.co/organizers"
 			/>
-			<div className="flex flex-wrap md:flex-nowrap w-full justify-center">
-				<video autoPlay muted loop playsInline className="absolute top-0 z-0 object-cover w-screen h-screen">
+			<div className="flex flex-wrap md:flex-nowrap w-full justify-center bg-wfGray-800">
+				<video autoPlay muted loop playsInline className="absolute top-0 z-0 object-cover w-screen h-screen bg-wfGray-800">
 					<source src={LocalBusinessVideoWebm} type="video/webm" />
 					<source src={LocalBusinessVideoMp4} type="video/mp4" />
 					<img src={LocalBusinessVideoJpg} />
@@ -140,8 +140,24 @@ const OrganizersPage = ({ data }) => {
 				</div>
 			</div>
 
-			<div className="flex flex-wrap justify-center">
-
+			<div className="flex justify-center my-4 sm:my-16 flex-wrap">
+				<h2 className="w-full text-center">If your {data.magicMomentsYaml.midSentenceLanguage} gets {data.magicMomentsYaml.customersPerMonth} customers per month...</h2>
+				<div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
+					{
+						data.magicMomentsYaml.images.map(image => (
+							<Img 
+								className="flex-1 mx-4"
+								fluid={image.childImageSharp.fluid}
+								alt="Magic Moment"
+							/>
+						))
+					}
+				</div>
+				<h2 className="w-full text-center">
+					You'll make $38,880 per year on Withfriends!
+				</h2>
+				<div className="w-full my-4" />
+				<BecomeAnOrganizer />
 			</div>
 
 			{ featureRows }
@@ -230,13 +246,17 @@ const OrganizersPage = ({ data }) => {
 
 			<div className="flex justify-center">
 				<div className="max-w-2xl">
-					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">Let your community help support your local business.</h3>
+					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">
+						Let your community help support your local business.
+					</h3>
 					<BecomeAnOrganizer />
 				</div>
 			</div>
 			<div className="flex flex-wrap justify-center px-8 -mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="max-w-2xl text-center">
-					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">Have questions?</h3>
+					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">
+						Have questions?
+					</h3>
 					<div className="my-8">
 						Get in touch with us via the chat bubble in the bottom-right, or at (646) 846-6126.
 					</div>
@@ -249,6 +269,22 @@ const OrganizersPage = ({ data }) => {
 
 export const query = graphql`
 	query {
+		magicMomentsYaml(alias: { eq: "online_store" }) {
+			name
+			customersPerMonth
+			storeLanguage
+			storeIcon
+			midSentenceLanguage
+			midSentenceAbbreviation
+			images {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
+
 		allFeatureRowsYaml {
 			edges {
 				node {

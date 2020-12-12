@@ -1,0 +1,13 @@
+alias: online_store
+pluralAlias: online_stores
+name: Online Store
+customersPerMonth: 450
+averageOrderValue: Between_20_and_30
+storeLanguage: online store or point of sale.
+storeIcon: cart
+midSentenceLanguage: online store
+midSentenceAbbreviation: business
+images:
+  - ../../images/magic_moment/online-store-1.jpg
+  - ../../images/magic_moment/online-store-2.jpg
+  - ../../images/magic_moment/online-store-3.jpg
