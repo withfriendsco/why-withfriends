@@ -22,6 +22,10 @@ import Tickets from "../components/integrations/Tickets"
 import Toast from "../components/integrations/Toast"
 import Value from "../components/integrations/Value"
 
+import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
+import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
+import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
+
 const BecomeAnOrganizer = () => {
 	return (
 		<div className="flex w-full justify-center">
@@ -93,24 +97,36 @@ const OrganizersPage = ({ data }) => {
 				title="Membership and subscription box software for small businesses" 
 				url="https://why.withfriends.co/organizers"
 			/>
-			<div className="flex flex-wrap md:flex-nowrap w-full justify-center md:mt-16">
-				<div className="flex flex-wrap md:flex-nowrap max-w-screen-md">
-					<h1 className="text-center leading-tight mb-16">Sell memberships for your local business, automatically</h1>
+			<div className="flex flex-wrap md:flex-nowrap w-full justify-center">
+				<video autoPlay muted loop playsInline className="absolute top-0 z-0 object-cover w-screen h-screen">
+					<source src={LocalBusinessVideoWebm} type="video/webm" />
+					<source src={LocalBusinessVideoMp4} type="video/mp4" />
+					<img src={LocalBusinessVideoJpg} />
+					<p>Your browser does not support the video element.</p>
+				</video>
+				<div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
+					<div>
+						<h1 className="text-center leading-tight mb-16">Sell memberships for your local business, automatically</h1>
+						<div className="w-full">
+							<BecomeAnOrganizer />
+						</div>
+					</div>
+					<div />
         </div>
       </div>
 
-			<BecomeAnOrganizer />
+			<div className="h-screen -mb-32" />
 
-			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-4xl font-bold text-wfGray-800 py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center md:-mx-8 text-4xl font-bold text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="w-full flex justify-center mb-16">
-					<p className="text-center max-w-screen-sm leading-tight">
+					<p className="text-center max-w-screen-md leading-tight">
 						An average of <span className="text-salmon-700">one of every five</span> customers
 						will support your business, resulting in a
 						<span className="text-salmon-700">&nbsp;60%&nbsp;increase</span> in your monthly revenue.
 					</p>
 				</div>
 				<div className="w-full flex justify-center">
-					<p className="text-center max-w-screen-sm leading-tight">
+					<p className="text-center max-w-screen-md leading-tight">
 						Withfriends helps small businesses earn <span className="text-salmon-700">$11.84m of recurring community support every year.</span>
 					</p>
 				</div>
