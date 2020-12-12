@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
           Log In
         </UTMLink>
         <UTMLink
-          className="inline-block justify-self-end justify-end pr-8 sm:pr-2"
+          className="inline-block justify-self-end justify-end"
           href="https://withfriends.co/action/364/sign_up/modal"
           text="Get Started"
         >

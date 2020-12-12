@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import Slider from "react-slick"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -25,6 +26,13 @@ import Value from "../components/integrations/Value"
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
+
+const sliderSettings = {
+	dots: true,
+	infinite: true,
+	speed: 500,
+	arrows: false,
+}
 
 const BecomeAnOrganizer = () => {
 	return (
@@ -132,14 +140,12 @@ const OrganizersPage = ({ data }) => {
 				</div>
 			</div>
 
-			<div className="w-full text-center my-32">Add magic moment here.</div>
-
 			{ featureRows }
 
 			<div className="w-full my-8" />
 			<BecomeAnOrganizer />
 
-			<div className="flex flex-wrap justify-center px-6 -mx-6 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-6 -mx-4 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
 				<div className="text-center w-full max-w-2xl">
 					<h3 className="text-2xl md:text-4xl font-normal my-8">
 						A sustainable business is one built by its community.
@@ -221,7 +227,7 @@ const OrganizersPage = ({ data }) => {
 					<BecomeAnOrganizer />
 				</div>
 			</div>
-			<div className="flex flex-wrap justify-center px-8 -mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+			<div className="flex flex-wrap justify-center px-8 -mx-4 sm:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="max-w-2xl text-center">
 					<h3 className="text-2xl md:text-4xl leading-normal text-center mb-8">Have questions?</h3>
 					<div className="my-8">
