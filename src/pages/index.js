@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Membership and subscription software for small businesses" />
-      <div className="flex flex-wrap md:flex-nowrap w-full justify-center">
+      <div className="flex flex-wrap md:flex-nowrap w-full justify-center mb-16">
         <div className="flex flex-wrap md:flex-nowrap max-w-screen-2xl">
           <div className="md:pr-8 hidden xl:block xl:mr-8 sm:max-w-xs" />
           <div className="max-w-2xl w-full md:pr-8">

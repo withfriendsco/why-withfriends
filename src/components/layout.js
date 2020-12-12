@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </div>
       </div>
-      <footer className="mt-4 md:mt-16 py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">
+      <footer className="py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">
         <div className="pl-2 md:pl-16 justify-self-start text-white flex-grow md:flex-grow-0 text-center md:text-left">
           <p className="text-white">
             <UTMLink href="https://withfriends.co/organizers">Why Withfriends?</UTMLink>

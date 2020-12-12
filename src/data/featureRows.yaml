@@ -1,7 +1,11 @@
 -
   image: ../images/subscriptions-sample-tiers.png 
-  title: Send subscription boxes to your members.
+  title: Craft member tiers including discounts and subscription boxes.
   content: Create a box that you deliver weekly, monthly, or quarterly, and set options (like t-shirt sizes). Members set their adddress and options when they join and any time afterwards, and your business gets an easy fulfillment dashboard.
+-
+  image: ../images/subscriptions-customize-addons.png
+  title: Let your members choose what's in their box.
+  content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
@@ -19,10 +23,6 @@
   image: ../images/lead-delight-your-members.png
   title: Delight your members with ease.
   content: We completely automate discounts for your members, and we help you offer exciting benefits like a free coffee with every visit. We make it easy for you to make your members feel special.
--
-  image: ../images/subscriptions-customize-addons.png
-  title: Let your members choose what's in their box.
-  content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
 -
   image: ../images/member-management.png
   title: Keep track of your members.

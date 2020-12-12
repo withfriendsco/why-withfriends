@@ -9,6 +9,49 @@ import UTMLink from "../components/UTMLink"
 import FeatureRow from "../components/FeatureRow"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
 
+import Cart from "../components/integrations/Cart"
+import Chownow from "../components/integrations/Chownow"
+import Discounts from "../components/integrations/Discounts"
+import Easy from "../components/integrations/Easy"
+import Eventbrite from "../components/integrations/Eventbrite"
+import Pos from "../components/integrations/Pos"
+import Shopify from "../components/integrations/Shopify"
+import Square from "../components/integrations/Square"
+import Squarespace from "../components/integrations/Squarespace"
+import Tickets from "../components/integrations/Tickets"
+import Toast from "../components/integrations/Toast"
+import Value from "../components/integrations/Value"
+
+const BecomeAnOrganizer = () => {
+	return (
+		<div className="flex w-full justify-center">
+			<UTMLink
+				className="inline-block justify-self-end justify-end"
+				href="https://withfriends.co/action/364/sign_up/modal"
+				text="Get Started"
+			>
+				<div className="flex justify-end">
+					<Button 
+						onClick={becomeAnOrganizer} 
+						className="py-6 px-12 text-xl"
+						variant="salmon">
+						Find your members
+					</Button>
+				</div>
+			</UTMLink>
+		</div>
+	)
+}
+
+const IconItem = ({ icon, text }) => (
+	<div className="flex-1">
+		{React.cloneElement(icon, { className: "mx-16" })}
+		<div className="mt-4 font-bold">
+			{text}
+		</div>
+	</div>
+)
+
 const OrganizersPage = ({ data }) => {
 	let imageFirst = false
 	const featureRows = data.allFeatureRowsYaml.edges.map(node => {
@@ -18,6 +61,32 @@ const OrganizersPage = ({ data }) => {
 		)
 	})
 
+	const testimonialRows = data.allTestimonialsYaml.edges.map(node => (
+		<div className="my-16">
+			<div className="text-xl mb-8 leading-normal">
+				{node.node.quote}
+			</div>
+			<div className="flex">
+				<div className="rounded-full mr-8">
+					<Img
+						className="rounded-full"
+						imgStyle={{objectFit: 'contain'}}
+						fixed={node.node.image?.childImageSharp.fixed}
+						alt={node.node.name}
+					/>
+				</div>
+				<div>
+					<div className="font-bold leading-loose">
+						{node.node.name}
+					</div>
+					<div>
+						{node.node.business}
+					</div>
+				</div>
+			</div>
+		</div>
+	))
+
 	return (
 		<Layout>
 			<SEO 
@@ -26,21 +95,12 @@ const OrganizersPage = ({ data }) => {
 			/>
 			<div className="flex flex-wrap md:flex-nowrap w-full justify-center md:mt-16">
 				<div className="flex flex-wrap md:flex-nowrap max-w-screen-md">
-					<h1 className="text-center leading-tight">Sell memberships for your local business, automatically</h1>
+					<h1 className="text-center leading-tight mb-16">Sell memberships for your local business, automatically</h1>
         </div>
       </div>
 
-			<div className="flex w-full justify-center mt-16">
-				<UTMLink
-					className="inline-block justify-self-end justify-end"
-					href="https://withfriends.co/action/364/sign_up/modal"
-					text="Get Started"
-				>
-					<div className="flex justify-end">
-						<Button onClick={becomeAnOrganizer} variant="salmon">Find your members</Button>
-					</div>
-				</UTMLink>
-			</div>
+			<BecomeAnOrganizer />
+
 			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-4xl font-bold text-wfGray-800 py-16 bg-wfGray-100">
 				<div className="w-full flex justify-center mb-16">
 					<p className="text-center max-w-screen-sm leading-tight">
@@ -56,6 +116,101 @@ const OrganizersPage = ({ data }) => {
 				</div>
 			</div>
 			{ featureRows }
+
+			<div className="w-full my-8" />
+			<BecomeAnOrganizer />
+
+			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+				<div className="text-center w-full max-w-2xl">
+					<h3 className="text-4xl font-normal my-8">
+						A sustainable business is one built by its community.
+					</h3>
+					<div className="flex my-8">
+						<IconItem icon={<Easy />} text="15 minutes to setup" />
+						<IconItem icon={<Pos />} text="Point of sale upsell" />
+						<IconItem icon={<Cart />} text="Online order upsell" />
+					</div>
+					<div className="flex">
+						<IconItem icon={<Value />} text="Automated subscriptions" />
+						<IconItem icon={<Tickets />} text="Ticketing upsell" />
+						<IconItem icon={<Discounts />} text="Automated member discounts" />
+					</div>
+				</div>
+				<div className="w-full my-4" />
+				<div className="text-center w-full max-w-2xl">
+					<h3 className="text-4xl font-normal my-8">
+						We integrate with your platform, however you reach your customers.
+					</h3>
+					<div className="flex my-8">
+						<IconItem icon={<Eventbrite />} text="Eventbrite integration" />
+						<IconItem icon={<Shopify />} text="Shopify integration" />
+						<IconItem icon={<Square />} text="Square integration" />
+					</div>
+					<div className="flex">
+						<IconItem icon={<Squarespace />} text="Squarespace integration" />
+						<IconItem icon={<Toast />} text="Toast integration" />
+						<IconItem icon={<Chownow />} text="ChowNow integration" />
+					</div>
+				</div>
+				<div className="w-full my-4" />
+				<div className="text-center w-full max-w-2xl">
+					<h3 className="text-4xl font-normal my-8">
+						...and more, just ask!
+					</h3>
+				</div>
+				<div className="w-full my-4" />
+				<BecomeAnOrganizer />
+			</div>
+
+			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16">
+				<h3 className="text-4xl font-normal my-8">
+					Join over 390 small businesses on Withfriends
+				</h3>
+			</div>
+			<div>
+				<h3 className="text-4xl text-center font-normal my-8 text-wfGray-800">
+					Stories from Withfriends small businesses
+				</h3>
+				<div className="max-w-3xl mx-auto">
+					<div 
+						style={{
+							padding:"56.25% 0 0 0", 
+							position: "relative"}}>
+							<iframe 
+								src="https://player.vimeo.com/video/383441579?autoplay=1&muted=1&loop=1&color=ffabac&title=0&byline=0&portrait=0" 
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									width: "100%",
+									height: "100%",
+								}}
+									allow="autoplay; fullscreen"
+							></iframe>
+					</div>
+				</div>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			<div className="flex justify-center">
+				<div className="max-w-2xl">
+					{ testimonialRows }
+				</div>
+			</div>
+			<div className="flex justify-center">
+				<div className="max-w-2xl">
+					<h3 className="text-4xl leading-normal text-center mb-8">Let your community help support your local business.</h3>
+					<BecomeAnOrganizer />
+				</div>
+			</div>
+			<div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16 bg-wfGray-100">
+				<div className="max-w-2xl text-center">
+					<h3 className="text-4xl leading-normal text-center mb-8">Have questions?</h3>
+					<div className="my-8">
+						Get in touch with us via the chat bubble in the bottom-right, or at (646) 846-6126.
+					</div>
+					<Button variant="outlined">Let's chat</Button>
+				</div>
+			</div>
 		</Layout>
 	)
 }
@@ -72,6 +227,24 @@ export const query = graphql`
 						childImageSharp {
 							fluid {
 								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
+			}
+		}
+
+		allTestimonialsYaml {
+			edges {
+				node {
+					id
+					quote
+					name
+					business
+					image {
+						childImageSharp {
+							fixed(height: 60, cropFocus: ATTENTION) {
+								...GatsbyImageSharpFixed
 							}
 						}
 					}

@@ -29,7 +29,7 @@ const Post = ({ data, pageContext }) => {
         image={`https://why.withfriends.co${post.frontmatter.headerImage.childImageSharp.fixed.src}`}
         url={`https://why.withfriends.co/posts${post.fields.slug}`}
       />
-      <Article className="w-full flex justify-center flex-wrap">
+      <Article className="w-full flex justify-center flex-wrap mb-4 md:mb-16">
         <div className="mb-4 md:mb-8 w-full max-w-screen-2xl">
           <Img
             fadeIn={true}
