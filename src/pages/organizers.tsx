@@ -142,16 +142,18 @@ const OrganizersPage = ({ data }) => {
 
 			<div className="flex justify-center my-4 sm:my-16 flex-wrap">
 				<h2 className="text-center my-4">If your {data.magicMomentsYaml.midSentenceLanguage} gets {data.magicMomentsYaml.customersPerMonth} customers per month...</h2>
-				<div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
-					{
-						data.magicMomentsYaml.images.map(image => (
-							<Img 
-								className="w-full my-2 sm:mx-2 shadow-lg"
-								fluid={image.childImageSharp.fluid}
-								alt="Magic Moment"
-							/>
-						))
-					}
+				<div className="w-full flex justify-center">
+					<div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
+						{
+							data.magicMomentsYaml.images.map(image => (
+								<Img 
+									className="w-full my-2 sm:mx-2 shadow-lg"
+									fluid={image.childImageSharp.fluid}
+									alt="Magic Moment"
+								/>
+							))
+						}
+					</div>
 				</div>
 				<h2 className="text-center mt-8">
 					You'll make $38,880 per year on Withfriends!
