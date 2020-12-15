@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { GatsbyImageFluidProps } from "gatsby-image"
+import { BecomeAnOrganizer } from "../pages/organizers"
 
 interface FeatureRowData {
   imageFirst: boolean
@@ -18,7 +19,7 @@ interface FeatureRowData {
 
 const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex flex-wrap justify-center">
       <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
         <div
           className={`m-2 sm:m-4 flex-1 order-3 ${

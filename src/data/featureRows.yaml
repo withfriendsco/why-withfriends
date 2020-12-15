@@ -1,9 +1,15 @@
 -
   image: ../images/subscriptions-sample-tiers.png 
   title: Create membership levels with automated discounts and subscription boxes.
-  content: Create a box that you deliver weekly, monthly, or quarterly, and set options (like t-shirt sizes). Members set their adddress and options when they join and any time afterwards, and your business gets an easy fulfillment dashboard.
+  content: Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, plus members-only discounts synched to your Shopify or Square store. You can include options like t-shirt sizes attached to different Shopify products.
   linkText: Read our insights on how discounts reduce churn.
   link: /posts/subscription-box-churn/
+-
+  image: ../images/lead-upsell-your-customers.png
+  title: Convert customers into members with every purchase.
+  content: Offer memberships with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your members will support you!
+  linkText: Read about how to write a purpose that inspires growth and reduces churn.
+  link: /posts/purpose/
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
@@ -13,12 +19,6 @@
   image: ../images/subscriptions-customize-addons.png
   title: Let your members choose what's in their box.
   content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
--
-  image: ../images/lead-upsell-your-customers.png
-  title: Convert customers into members with every purchase.
-  content: Offer memberships with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your members will support you!
-  linkText: Read about how to write a purpose that inspires growth and reduces churn.
-  link: /posts/purpose/
 -
   image: ../images/lead-manage-multiple-tiers.png
   title: Manage recurring payments for multiple tiers.

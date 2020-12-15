@@ -57,6 +57,7 @@ module.exports = {
       fontFamily: {
         sans: ['"Avenir Book WF"', "sans-serif"],
         heavy: ['"Avenir Heavy WF"', "sans-serif"],
+        bold: ['"Avenir Heavy WF"', "sans-serif"],
       },
       inset: {
         "-2": "-2px",

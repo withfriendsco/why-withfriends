@@ -86,6 +86,10 @@
     @apply h-auto inline;
   }
 
+	strong {
+		@apply font-heavy;
+	}
+
   a {
     @apply cursor-pointer;
   }

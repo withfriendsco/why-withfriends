@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import Slider from "react-slick"
 
@@ -35,7 +35,7 @@ const sliderSettings = {
   arrows: false,
 }
 
-const BecomeAnOrganizer = () => {
+export const BecomeAnOrganizer = () => {
   return (
     <div className="flex w-full justify-center">
       <UTMLink
@@ -60,7 +60,7 @@ const BecomeAnOrganizer = () => {
 const IconItem = ({ icon, text }) => (
   <div className="flex-1 min-w-1/3 my-4 px-2">
     {React.cloneElement(icon, { className: "mx-auto w-8 sm:w-12" })}
-    <div className="mt-4 text-sm sm:text-md font-bold">{text}</div>
+    <div className="mt-4 text-sm sm:text-md font-heavy">{text}</div>
   </div>
 )
 
@@ -106,7 +106,7 @@ const OrganizersPage = ({ data }) => {
         </video>
         <div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
           <div>
-            <h1 className="text-center leading-tight mb-16">
+            <h1 className="text-center leading-tight mb-16 font-bold">
               Sell memberships for your{" "}
               {data.magicMomentsYaml.midSentenceLanguage}, automatically
             </h1>
@@ -245,6 +245,31 @@ const OrganizersPage = ({ data }) => {
       {/* <div className="w-full text-center my-32"> */}
       {/* 	Add testimonials here. */}
       {/* </div> */}
+
+      <div className="flex justify-center my-4 sm:my-16 flex-wrap">
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
+            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+              <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+              <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+              <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/purpose/" className="text-right">Read.</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="flex justify-center">
         <div className="max-w-2xl">
