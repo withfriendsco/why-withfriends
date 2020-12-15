@@ -82,32 +82,35 @@ const Post = ({ data, pageContext }) => {
                   href="https://withfriends.co/action/364/sign_up/modal"
                   text="Get Started"
                 >
-                  <Button 
+                  <Button
                     onClick={becomeAnOrganizer}
-                    className="no-underline" variant="salmon">
+                    className="no-underline"
+                    variant="salmon"
+                  >
                     Get Started
                   </Button>
                 </UTMLink>
               </div>
               <div className="border-wfGray-300 border-b pb-4 mb-4 block" />
               <div className="w-full my-4 flex justify-center">
-                <h4 className="border-b border-wfGray-300 inline">Keep reading, keep learning</h4>
+                <h4 className="border-b border-wfGray-300 inline">
+                  Keep reading, keep learning
+                </h4>
               </div>
               <div className="grid grid-cols-2">
-                {
-                  previous && (
-                    <Link to={`/posts${previous?.fields.slug}`}>
-                      {previous?.frontmatter?.title}
-                    </Link>
-                  )
-                }
-                {
-                  next && (
-                    <Link className="text-right" to={`/posts${next?.fields.slug}`}>
-                      {next?.frontmatter?.title}
-                    </Link>
-                  )
-                }
+                {previous && (
+                  <Link to={`/posts${previous?.fields.slug}`}>
+                    {previous?.frontmatter?.title}
+                  </Link>
+                )}
+                {next && (
+                  <Link
+                    className="text-right"
+                    to={`/posts${next?.fields.slug}`}
+                  >
+                    {next?.frontmatter?.title}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

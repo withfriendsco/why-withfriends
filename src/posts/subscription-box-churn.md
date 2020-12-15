@@ -9,17 +9,17 @@ By coupling subscription boxes with discounts, you can allow your customers the 
 
 <!-- end -->
 
-In June 2017, Blue Apron, one of the major players in the subscription box grocery delivery service, went public at a valuation of $2 billion. Starting at $10 a share, the company [dropped below $1 a share over the next 18 months](https://www.cnbc.com/2018/12/21/blue-aprons-worst-meal-kit-deal-ever-now-costs-under-1-.html). How did the bubble burst so quickly?
+In June 2017, Blue Apron, one of the major players in the subscription box grocery delivery service, went public at a valuation of $2 billion. Starting at $10 a share, the company [dropped below \$1 a share over the next 18 months](https://www.cnbc.com/2018/12/21/blue-aprons-worst-meal-kit-deal-ever-now-costs-under-1-.html). How did the bubble burst so quickly?
 
 According to a [McKinsey & Company Report, subscription boxes face a major problem: churn](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/thinking-inside-the-subscription-box-new-research-on-ecommerce-consumers). In the consumable food and grocery sector, anywhere from 60-70% of customers can end their subscriptions within a year. One of the frequently cited reasons is a lack of "flexibility," and a sense that groceries are piling up without the time to cook or consume them. Certainly, churn is a critical factor to solve for any subscription-based business; acquiring customers is difficult, so it's important to keep them.
 
 ## Why subscription box pausing is not the answer
 
-When your valued customers pause their subscription boxes because the groceries pile up, they're basically saying, "I like what you do, but I have too much of it." They're asking for *flexibility,* not for a total break. But the problem lies in what happens next: they might quickly learn that they can live without their weekly or monthly subscription supply. In essence, they have no substantive connection to your company or your brand while their subscription is paused. You're facing an uphill battle for re-acquisition.
+When your valued customers pause their subscription boxes because the groceries pile up, they're basically saying, "I like what you do, but I have too much of it." They're asking for _flexibility,_ not for a total break. But the problem lies in what happens next: they might quickly learn that they can live without their weekly or monthly subscription supply. In essence, they have no substantive connection to your company or your brand while their subscription is paused. You're facing an uphill battle for re-acquisition.
 
 What's more, your valued customers might enjoy the kale you're sending them every week, but are still working through last month's tahini dressing. Yet, a subscription pause becomes a one-size-fits-all solution that loses you revenue in the end.
 
-Instead of a total pause, you might offer your customers the flexibility to purchase *a la carte*, at a discount. This allows the customer to retain a connection with your business and product while creating the flexibility to replenish certain items but not others.
+Instead of a total pause, you might offer your customers the flexibility to purchase _a la carte_, at a discount. This allows the customer to retain a connection with your business and product while creating the flexibility to replenish certain items but not others.
 
 ## Setting up your discounts to reduce subscription box churn
 

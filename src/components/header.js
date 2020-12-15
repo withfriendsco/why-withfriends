@@ -47,7 +47,9 @@ const Header = ({ siteTitle }) => {
           text="Get Started"
         >
           <div className="flex justify-end">
-            <Button onClick={becomeAnOrganizer} variant="salmon-sm">Get Started</Button>
+            <Button onClick={becomeAnOrganizer} variant="salmon-sm">
+              Get Started
+            </Button>
           </div>
         </UTMLink>
       </div>

@@ -45,8 +45,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-fullstory`,
       options: {
-        fs_org: "J4FPZ"
-      }
+        fs_org: "J4FPZ",
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,

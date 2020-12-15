@@ -5,7 +5,4 @@ const becomeAnOrganizer = () => {
   mixpanel.track("Clicked Become an Organizer")
 }
 
-export { 
-  mixpanel,
-  becomeAnOrganizer,
-}
+export { mixpanel, becomeAnOrganizer }

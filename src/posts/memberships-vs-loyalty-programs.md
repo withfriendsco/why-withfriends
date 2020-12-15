@@ -28,7 +28,7 @@ The basic premise behind these systems is that if customers are close to
 getting a freebie, they might come back one last time and pay for something
 just to get that extra bonus.
 
-But how much do we think this *really* affects the customers' behavior before
+But how much do we think this _really_ affects the customers' behavior before
 that 8th or 9th sandwich? At that point, the customer is likely "loyal," but
 you've already lost plenty of customers who only bought one, two, or three
 sandwiches before never returning. Why is it so rare to find a loyalty program
@@ -42,10 +42,10 @@ into monthly sustaining members.**
 
 Consider airline credit cards. It's rare that an airline credit card is free
 after the first year. Instead, the cardholder usually pays a premium
-(frequently in the ballpark of $100 annually), and then subsequently might even
-buy a flight on the card-issuing airline when it's *more expensive* than a
-competing airline's flight. Why would a consumer buy something for *more
-money,* on top of paying an annual premium?
+(frequently in the ballpark of \$100 annually), and then subsequently might even
+buy a flight on the card-issuing airline when it's _more expensive_ than a
+competing airline's flight. Why would a consumer buy something for _more
+money,_ on top of paying an annual premium?
 
 The answer is simple: they're buying a membership, not a deal or a product. As
 a cardholder, the flyer gets to board first, they might get free itinerary
@@ -75,17 +75,17 @@ freebie. The overall cost to the business is the same (one freebie out of ten =
 What's more, you can even charge for the membership program — even at a
 relatively low monthly rate of $3, which we calculate as 20% of an average
 order value of $15 — and make up for revenue lost to discounts. At a signup
-rate of 5-7%, your membership program will be bringing in *additional* monthly
+rate of 5-7%, your membership program will be bringing in _additional_ monthly
 revenue, on top of giving your most dedicated customers a reason to return.
 
 Let's return to the airline credit cards. These airlines might give away the
 first year for free, but they lock in customers long-term even despite an
-annual fee. The customers feel *more compelled* to use the benefits of their
+annual fee. The customers feel _more compelled_ to use the benefits of their
 airline credit card, and therefore become more dedicated customers, precisely
 because they are already paying for the benefit. It's simple: people value what
 they're already paying for.
 
-By the end of the year, you could be bringing in over $15,000 in additional
+By the end of the year, you could be bringing in over \$15,000 in additional
 annual revenue, just by switching from a loyalty model to a membership model!
 
 ## Questions? Let's get started!

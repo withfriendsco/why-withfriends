@@ -12,8 +12,8 @@ const SidebarAd = () => (
       <p>
         Withfriends makes it easy to sell memberships for any business. Whether
         you run an online e-commerce store, a music venue, or a brick-and-mortar
-        bookstore, you can use Withfriends to build sustainable recurring revenue
-        for your business or organization.
+        bookstore, you can use Withfriends to build sustainable recurring
+        revenue for your business or organization.
       </p>{" "}
       <p>
         <a href="https://withfriends.co/organizers">Learn more</a>.
@@ -73,7 +73,9 @@ const SidebarAd = () => (
         text="Get Started"
       >
         <div className="flex justify-end">
-          <Button onClick={becomeAnOrganizer} variant="salmon">Get Started</Button>
+          <Button onClick={becomeAnOrganizer} variant="salmon">
+            Get Started
+          </Button>
         </div>
       </UTMLink>
     </div>

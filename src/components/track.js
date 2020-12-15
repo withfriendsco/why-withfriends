@@ -19,8 +19,7 @@ const Track = () => {
   }, [])
 
   useEffect(() => {
-    if (window.Intercom) 
-      window.Intercom('boot', { app_id: "ohqapfc3" })
+    if (window.Intercom) window.Intercom("boot", { app_id: "ohqapfc3" })
   })
 
   return (

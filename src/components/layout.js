@@ -37,7 +37,9 @@ const Layout = ({ children }) => {
       <footer className="py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">
         <div className="pl-2 md:pl-16 justify-self-start text-white flex-grow md:flex-grow-0 text-center md:text-left">
           <p className="text-white">
-            <UTMLink href="https://withfriends.co/organizers">Why Withfriends?</UTMLink>
+            <UTMLink href="https://withfriends.co/organizers">
+              Why Withfriends?
+            </UTMLink>
           </p>
           <p className="text-white">
             <UTMLink href="https://withfriends.co/disclaimer/terms_of_service/page">
@@ -50,7 +52,9 @@ const Layout = ({ children }) => {
             </UTMLink>
           </p>
           <p className="text-white">
-            <UTMLink href="https://withfriends.co/meet_the_team">Our Team</UTMLink>
+            <UTMLink href="https://withfriends.co/meet_the_team">
+              Our Team
+            </UTMLink>
           </p>
           <p className="text-white">
             <UTMLink href="https://withfriends.co/pricing">Pricing</UTMLink>
@@ -63,7 +67,7 @@ const Layout = ({ children }) => {
         <div className="px-2 mt-4 md:mt-0 md:pr-16 min-w-sm justify-self-end text-center md:text-right">
           <p className="text-center md:text-right md:max-w-xs mb-4">
             Withfriends is dedicated to the preservation of community culture,
-            spaces, and small businesses. 
+            spaces, and small businesses.
           </p>
           <p className="text-center md:text-right md:max-w-xs">
             <a href="mailto:team@withfriends.co">Get in touch</a> to learn more.

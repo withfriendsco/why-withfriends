@@ -9,7 +9,7 @@ Most subscription services are purely transactional: you pay a flat fee, and
 you receive some number of hand-selected clothes, or cosmetic samples, or
 groceries for meals each week or month. It's rare that these businesses attempt
 to convey a greater purpose. It's no surprise, then, that many subscription box
-services face substantial churn rates. 
+services face substantial churn rates.
 
 <!-- end -->
 
@@ -43,7 +43,7 @@ There are three ways that we've seen how a well-crafted purpose can make a
 different in turning your customers into recurring members.
 
 - How are you changing the world for the better?
-- How are you fighting an uphill battle? 
+- How are you fighting an uphill battle?
 - How do your customers relate to you?
 
 Let's go into each of these in-depth below.
@@ -52,7 +52,7 @@ Let's go into each of these in-depth below.
 
 ![cabriere-purpose.png](../images/cabriere-purpose.png)
 
-> *Support regenerative agriculture by becoming a member of Cabriére Farm.*
+> _Support regenerative agriculture by becoming a member of Cabriére Farm._
 
 Cabriére Farm is a family owned farm in Columbus, Ohio, offering weekly premium
 grocery deliveries to local customers. Yet, when you visit [their "Become a
@@ -70,8 +70,8 @@ who orders from their online store gets an "upsell" message to become a member.
 
 ![bluestockings-purpose.png](../images/bluestockings-purpose.png)
 
-> *Help us secure a future as a stable oasis in the city’s ecosystem of radical
-> spaces, movements, and groups by becoming a member of Bluestockings.*
+> _Help us secure a future as a stable oasis in the city’s ecosystem of radical
+> spaces, movements, and groups by becoming a member of Bluestockings._
 
 Everyone loves an underdog, and Amazon has turned every bookstore in the
 country into the biggest underdogs of all. [Bluestockings, a collectively run
@@ -91,14 +91,14 @@ members.
 
 ![stick-figure-purpose.png](../images/stick-figure-purpose.png)
 
-> *Support Stick Figure remaining fully independent, and get early access to
+> _Support Stick Figure remaining fully independent, and get early access to
 > new merch, store discounts, and other perks by becoming a member of Stick
-> Figure.*
+> Figure._
 
 From the woods outside of Santa Cruz, California, the reggae artist Stick
 Figure has built an enormous following through online releases and tours of
 roots reggae festivals. His fans are dedicated to his music, and to their
-connection to an independent performing artist. 
+connection to an independent performing artist.
 
 Because of this, many of his fans head to his Shopify store and purchase merch
 — tank tops, t-shirts, and even Christmas ornaments — all branded with his
@@ -107,7 +107,7 @@ pandemic when tour-driven merch sales are slow.
 
 As a result of stating a purpose that resonates with his fans, nearly 8% of
 people who finish a purchase through his online Shopify store become monthly
-members, subscribing at up to $30 per month for a t-shirt or other merch item
+members, subscribing at up to \$30 per month for a t-shirt or other merch item
 sent right to their door.
 
 Stick Figure's fans are independent, free-thinkers, and highlighting that

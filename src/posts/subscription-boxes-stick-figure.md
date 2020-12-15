@@ -7,7 +7,7 @@ headerImage: ../images/stick-figure-box.png
 
 Read on to see how a reggae musician based in the woods outside of Santa Cruz
 turned a successful merch store into a recurring revenue stream work over
-$100,000 a year. Stick Figure's average membership on Withfriends is 300% the
+\$100,000 a year. Stick Figure's average membership on Withfriends is 300% the
 average Patreon donation.
 
 <!-- end -->
@@ -55,13 +55,13 @@ Stick Figure membership benefits include:
 In two and a half months, Stick Figure has grown to:
 
 - 363 members
-- Paying an average of $22 per month
-- Generating $8,000 per month
+- Paying an average of \$22 per month
+- Generating \$8,000 per month
 
 Within a year, Stick Figure memberships will have scaled to:
 
 - 1,750 members
-- Worth $462,000 per year
+- Worth \$462,000 per year
 
 As vital as this kind of revenue is for every small business, the most valuable
 part is the deeper engagement it fosters with these members, represented by the
