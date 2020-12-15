@@ -2,28 +2,30 @@
   image: ../images/subscriptions-sample-tiers.png 
   title: Create membership levels with automated discounts and subscription boxes.
   content: Create a box that you deliver weekly, monthly, or quarterly, and set options (like t-shirt sizes). Members set their adddress and options when they join and any time afterwards, and your business gets an easy fulfillment dashboard.
--
-  image: ../images/subscriptions-customize-addons.png
-  title: Let your members choose what's in their box.
-  content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
+  linkText: Read our insights on how discounts reduce churn.
+  link: /posts/subscription-box-churn/
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
   content: Withfriends syncs your members' subscription boxes to Shopify as Draft Orders for your dashboard. We also automate discounts for your store if they're a part of your membership tiers.
   only: shopify
 -
+  image: ../images/subscriptions-customize-addons.png
+  title: Let your members choose what's in their box.
+  content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
+-
   image: ../images/lead-upsell-your-customers.png
   title: Convert customers into members with every purchase.
   content: Offer memberships with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your members will support you!
+  linkText: Read about how to write a purpose that inspires growth and reduces churn.
+  link: /posts/purpose/
 -
   image: ../images/lead-manage-multiple-tiers.png
   title: Manage recurring payments for multiple tiers.
   content: Complex membership program? No problem. We make it easy to build multiple tiers, and we automate the discounts for you and your members.
--
-  image: ../images/lead-delight-your-members.png
-  title: Delight your members with ease.
-  content: We completely automate discounts for your members, and we help you offer exciting benefits like a free coffee with every visit. We make it easy for you to make your members feel special.
+  linkText: Read about how you can craft a sustainable membership program.
+  link: /posts/memberships/
 -
   image: ../images/member-management.png
-  title: Use effective membership management software.
+  title: Use our comprehensive membership management software.
   content: Use our member management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync with your CRM automatically.

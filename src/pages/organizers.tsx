@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Button from "../components/Button"
 import UTMLink from "../components/UTMLink"
 import FeatureRow from "../components/FeatureRow"
+import TestimonialRow from "../components/TestimonialRow"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
 
 import Cart from "../components/integrations/Cart"
@@ -73,31 +74,13 @@ const OrganizersPage = ({ data }) => {
 		)
 	})
 
-	const testimonialRows = data.allTestimonialsYaml.edges.map(node => (
-		<div className="my-16">
-			<div className="prose prose-md sm:prose-xl mb-8 leading-normal text-center sm:text-left">
-				{node.node.quote}
-			</div>
-			<div className="flex">
-				<div className="rounded-full mr-8">
-					<Img
-						className="rounded-full"
-						imgStyle={{objectFit: 'contain'}}
-						fixed={node.node.image?.childImageSharp.fixed}
-						alt={node.node.name}
-					/>
-				</div>
-				<div className="sm:leading-loose text-center sm:text-left">
-					<div className="font-bold">
-						{node.node.name}
-					</div>
-					<div>
-						{node.node.business}
-					</div>
-				</div>
-			</div>
-		</div>
-	))
+  const letsChat = () => { 
+    // @ts-ignore
+    if (window.Intercom) {
+      // @ts-ignore
+      window.Intercom('show') 
+    }
+  }
 
 	return (
 		<Layout>
@@ -128,17 +111,21 @@ const OrganizersPage = ({ data }) => {
 			<div className="flex flex-wrap justify-center px-4 -mx-4 md:-mx-8 text-xl sm:text-2xl md:text-4xl font-bold text-wfGray-800 py-8 sm:pt-16 bg-wfGray-100">
 				<div className="w-full flex justify-center mb-8 md:mb-16">
 					<p className="text-center max-w-screen-md leading-tight">
-						An average of <span className="text-salmon-700">one of every five</span> customers
-						will support your {data.magicMomentsYaml.midSentenceAbbreviation}, resulting in a
-						<span className="text-salmon-700">&nbsp;60%&nbsp;increase</span> in your monthly revenue.
-					</p>
-				</div>
-				<div className="w-full flex justify-center">
-					<p className="text-center max-w-screen-md leading-tight">
-						Withfriends helps small businesses earn <span className="text-salmon-700">$11.84m of recurring community support every year.</span>
+            Withfriends <span className="text-salmon-700">transforms memberships and subscription sales by upselling your customers</span> automatically with each purchase. <br />
+            <br />
+            On Withfriends, an average of <span className="text-salmon-700">one of every ten</span> customers
+						will purchase a membership for your {data.magicMomentsYaml.midSentenceAbbreviation}, resulting in a
+            <span className="text-salmon-700">&nbsp;60%&nbsp;increase in reliable monthly revenue.</span>
 					</p>
 				</div>
 			</div>
+
+			<div className="w-full px-2 sm:px-8">
+				{ featureRows }
+			</div>
+
+			<div className="w-full my-8" />
+			<BecomeAnOrganizer />
 
 			<div className="flex justify-center my-4 sm:my-16 flex-wrap">
 				<h2 className="text-center my-4">If your {data.magicMomentsYaml.midSentenceLanguage} gets {data.magicMomentsYaml.customersPerMonth} customers per month...</h2>
@@ -161,13 +148,6 @@ const OrganizersPage = ({ data }) => {
 				<div className="w-full my-4" />
 				<BecomeAnOrganizer />
 			</div>
-
-			<div className="w-full px-2 sm:px-8">
-				{ featureRows }
-			</div>
-
-			<div className="w-full my-8" />
-			<BecomeAnOrganizer />
 
 			<div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
 				<div className="text-center w-full max-w-2xl">
@@ -207,13 +187,6 @@ const OrganizersPage = ({ data }) => {
 				<BecomeAnOrganizer />
 			</div>
 
-			{/* <div className="flex flex-wrap justify-center md:-mx-8 md:mt-16 text-wfGray-800 py-16"> */}
-			{/* 	<h3 className="text-2xl md:text-4xl text-center font-normal my-8"> */}
-			{/* 		Join over 390 small businesses on Withfriends */}
-			{/* 	</h3> */}
-			{/* 	<div className="w-full text-center">Add carousel here.</div> */}
-			{/* </div> */}
-
 			<div>
 				<h3 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
 					Stories from Withfriends small businesses
@@ -240,7 +213,11 @@ const OrganizersPage = ({ data }) => {
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<div className="flex justify-center">
 				<div className="max-w-2xl">
-					{ testimonialRows }
+					{ 
+            data.allTestimonialsYaml.edges.map(node => (
+              <TestimonialRow node={node.node} />
+            ))
+          }
 				</div>
 			</div>
 
@@ -265,7 +242,7 @@ const OrganizersPage = ({ data }) => {
 					<div className="my-8">
 						Get in touch with us via the chat bubble in the bottom-right, or at (646) 846-6126.
 					</div>
-					<Button variant="outlined">Let's chat</Button>
+					<Button variant="outlined" onClick={letsChat}>Let's chat</Button>
 				</div>
 			</div>
 		</Layout>
@@ -297,6 +274,8 @@ export const query = graphql`
 					id
 					title
 					content
+          linkText
+          link
 					image {
 						childImageSharp {
 							fluid {

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { GatsbyImageFluidProps } from "gatsby-image"
 
@@ -11,6 +11,8 @@ interface FeatureRowData {
 		}
 		content: string
 		title: string
+    link?: string
+    linkText?: string
 	}
 }
 
@@ -22,6 +24,13 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
 					<div className="pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24">
 						<h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">{featureRow.title}</h2>
 						<p className="prose md:prose-md text-wfGray-800">{featureRow.content}</p>
+            {
+              featureRow.link && featureRow.linkText && (
+                <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
+                  <Link to={featureRow.link} className="text-salmon-700 font-bold">{featureRow.linkText}</Link>
+                </p>
+              )
+            }
 					</div>
 				</div>
 				<div className="w-full sm:hidden order-2" />

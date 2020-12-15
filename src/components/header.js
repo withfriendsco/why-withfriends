@@ -16,12 +16,18 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h2>
         <div className="justify-self-end flex-grow" />
-        <UTMLink
-          href="https://withfriends.co/organizers"
+        <Link
+          to="/"
           className="color-salmon-600 no-underline ml-2 justify-self-end hidden md:inline-block"
         >
+          Insights
+        </Link>
+        <Link
+          to="/organizers"
+          className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
+        >
           Why Withfriends?
-        </UTMLink>
+        </Link>
         <UTMLink
           href="https://withfriends.co/pricing"
           className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
