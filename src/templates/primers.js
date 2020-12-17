@@ -1,12 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import Slider from "react-slick"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/Button"
-import UTMLink from "../components/UTMLink"
 import FeatureRow from "../components/FeatureRow"
 import TestimonialRow from "../components/TestimonialRow"
 
@@ -29,14 +27,7 @@ import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  arrows: false,
-}
-
-const OrganizersPage = ({ data }) => {
+const PrimerTemplate = ({ data }) => {
   let imageFirst = false
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
     imageFirst = !imageFirst
@@ -61,7 +52,7 @@ const OrganizersPage = ({ data }) => {
     <Layout>
       <SEO
         title="Membership and subscription box software for small businesses"
-        url="https://why.withfriends.co/organizers"
+        url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
       />
       <div className="flex flex-wrap md:flex-nowrap w-full justify-center bg-wfGray-800">
         <video
@@ -73,14 +64,14 @@ const OrganizersPage = ({ data }) => {
         >
           <source src={LocalBusinessVideoWebm} type="video/webm" />
           <source src={LocalBusinessVideoMp4} type="video/mp4" />
-          <img src={LocalBusinessVideoJpg} />
+          <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>
         <div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
           <div>
             <h1 className="text-center leading-tight mb-16 font-bold">
               Sell memberships for your{" "}
-              {data.magicMomentsYaml.midSentenceLanguage}, automatically
+              {data.market.name}, automatically
             </h1>
             <div className="w-full">
               <BecomeAnOrganizer />
@@ -105,7 +96,7 @@ const OrganizersPage = ({ data }) => {
             On Withfriends, an average of{" "}
             <span className="text-salmon-700">one of every ten</span> customers
             will purchase a membership for your{" "}
-            {data.magicMomentsYaml.midSentenceAbbreviation}, resulting in a
+            {data.market.short}, resulting in a
             <span className="text-salmon-700">
               &nbsp;60%&nbsp;increase in reliable monthly revenue.
             </span>
@@ -120,12 +111,12 @@ const OrganizersPage = ({ data }) => {
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
         <h2 className="text-center my-4">
-          If your {data.magicMomentsYaml.midSentenceLanguage} gets{" "}
-          {data.magicMomentsYaml.customersPerMonth} customers per month...
+          If your {data.market.short} gets{" "}
+          450 customers per month...
         </h2>
         <div className="w-full flex justify-center">
           <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
-            {data.magicMomentsYaml.images.map(image => (
+            {data.market.images.map(image => (
               <Img
                 className="w-full my-2 sm:mx-2 shadow-lg"
                 fluid={image.childImageSharp.fluid}
@@ -217,6 +208,7 @@ const OrganizersPage = ({ data }) => {
             }}
           >
             <iframe
+              title="Stories from Withfriends small businesses"
               src="https://player.vimeo.com/video/383441579?autoplay=1&muted=1&loop=1&color=ffabac&title=0&byline=0&portrait=0"
               style={{
                 position: "absolute",
@@ -239,14 +231,10 @@ const OrganizersPage = ({ data }) => {
         </div>
       </div>
 
-      {/* <div className="w-full text-center my-32"> */}
-      {/* 	Add testimonials here. */}
-      {/* </div> */}
-
       <div className="flex justify-center">
         <div className="max-w-2xl">
           <h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">
-            Let your community help support your local business.
+            Let your community help support your {data.market.name}.
           </h3>
           <BecomeAnOrganizer />
         </div>
@@ -271,15 +259,17 @@ const OrganizersPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query {
-    magicMomentsYaml(alias: { eq: "online_store" }) {
+  query PrimerTemplateQuery($market: String!, $platform: String!, $build: String!) {
+    platform: platformsYaml(slug: { eq: $platform }) {
+      slug
       name
-      customersPerMonth
-      storeLanguage
-      storeIcon
-      midSentenceLanguage
-      midSentenceLanguagePlural
-      midSentenceAbbreviation
+    }
+
+    market: marketsYaml(slug: { eq: $market }) {
+      slug
+      name
+      plural
+      short
       images {
         childImageSharp {
           fluid {
@@ -287,6 +277,11 @@ export const query = graphql`
           }
         }
       }
+    }
+
+    build: buildsYaml(slug: { eq: $build }) {
+      slug
+      name
     }
 
     allFeatureRowsYaml {
@@ -328,4 +323,5 @@ export const query = graphql`
   }
 `
 
-export default OrganizersPage
+export default PrimerTemplate
+

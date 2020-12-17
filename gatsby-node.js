@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ node, graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createNodeField } = actions
   const result = await graphql(`
     fragment AdjacentPost on MarkdownRemark {
@@ -65,4 +65,50 @@ exports.createPages = async ({ node, graphql, actions }) => {
       },
     })
   })
+
+  const primerSegments = await graphql(
+    `
+  query {
+    markets: allMarketsYaml {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
+
+    platforms: allPlatformsYaml {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
+
+    builds: allBuildsYaml {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
+  }`)
+
+  // /organizers/build/-memberships-/for/-online_store-/using/-shopify-/
+  primerSegments.data.markets.edges.forEach(({ node: market }) => {
+    primerSegments.data.platforms.edges.forEach(({ node: platform }) => {
+      primerSegments.data.builds.edges.forEach(({ node: build }) => {
+        createPage({
+          path: `organizers/${market.slug}/${platform.slug}/${build.slug}`,
+          component: path.resolve(`./src/templates/primers.js`),
+          context: {
+            market: market.slug,
+            platform: platform.slug,
+            build: build.slug,
+          }
+        })
+      })
+    })
+  })
 }
+
