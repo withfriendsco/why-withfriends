@@ -4,7 +4,7 @@ import React from "react"
 import Button from "./Button"
 import Wordmark from "./Wordmark"
 import UTMLink from "./UTMLink"
-import { becomeAnOrganizer } from "../helpers/mixpanel"
+import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -16,9 +16,15 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h2>
         <div className="justify-self-end flex-grow" />
+        <button
+          className="color-salmon-600 no-underline ml-2 justify-self-end hidden md:inline-block beamer-news"
+          onClick={() => { mixpanel.track("Clicked What's new"); return false; }}
+        >
+          What's new
+        </button>
         <Link
           to="/"
-          className="color-salmon-600 no-underline ml-2 justify-self-end hidden md:inline-block"
+          className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
         >
           Insights
         </Link>
