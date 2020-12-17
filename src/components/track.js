@@ -15,6 +15,20 @@ const fbPixel = `!function(f,b,e,v,n,t,s) {
 
 const Track = () => {
   useEffect(() => {
+    if (mixpanel.get_distinct_id().indexOf("@") === -1) {
+      let obj = document.cookie.split("; ").reduce((acc, c) => {
+        const [key, val] = c.split('=')
+        acc[key] = val
+        return acc
+      }, {})
+
+      obj['wf-lm-id'] = mixpanel.get_distinct_id()
+
+      document.cookie = Object.keys(obj).reduce((acc, key) => {
+        return acc + `${key}=${obj[key]}; `
+      }, "")
+    }
+
     mixpanel.track("Visited Why Withfriends")
   }, [])
 
