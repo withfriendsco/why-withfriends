@@ -5,17 +5,17 @@ date: 2020-12-09
 headerImage: ../images/stick-figure-box.png
 ---
 
-Read on to see how a reggae musician based in the woods outside of Santa Cruz
-turned a successful merch store into a recurring revenue stream work over
-\$100,000 a year. Stick Figure's average membership on Withfriends is 300% the
+Read on to see how a reggae group based in the woods outside of Oakland, CA,
+turned a successful merch store into a recurring revenue stream worth a
+substantial amount. Stick Figure's average membership on Withfriends is 300% the
 average Patreon donation.
 
 <!-- end -->
 
 ## Turn your biggest fans into monthly paying members
 
-Stick Figure, a solo studio project by guitarist and producer Scott Woodruff,
-based in the mountains outside of Santa Cruz, has been running a successful
+Stick Figure, a 5-member live band led by guitarist and producer Scott Woodruff,
+based out of their studio in Oakland, CA, has been running a successful
 merch store on Shopify, with fans all over the country buying t-shirts,
 hoodies, and even Stick Figure-branded tiki mugs.
 
@@ -24,9 +24,6 @@ all over the country by selling memberships with every purchase on their merch
 store. Using our Shopify integration to generate profitable pricing and
 benefits for their **Stick Fam**, **On The List**, and **Band & Crew** tiers,
 they launched a little over two months ago and their growth is surging!
-
-The average Stick Figure membership on Withfriends is 300% the average Patreon
-donation.
 
 ## Give something to your fans and get support in return
 
@@ -52,16 +49,7 @@ Stick Figure membership benefits include:
 - Support Stick Figure remaining independent
 - Early access to special merch drops
 
-In two and a half months, Stick Figure has grown to:
-
-- 363 members
-- Paying an average of \$22 per month
-- Generating \$8,000 per month
-
-Within a year, Stick Figure memberships will have scaled to:
-
-- 1,750 members
-- Worth \$462,000 per year
+In two and a half months, Stick Figure has grown to 363 members!
 
 As vital as this kind of revenue is for every small business, the most valuable
 part is the deeper engagement it fosters with these members, represented by the
