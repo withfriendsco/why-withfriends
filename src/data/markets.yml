@@ -1,0 +1,56 @@
+-
+  slug: local_business
+  name: local business
+  plural: local businesses
+  short: business
+  storeLanguage: point-of-sale
+  storeIcon: cart
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+-
+  slug: online_store
+  name: online store
+  plural: online stores
+  short: business
+  storeLanguage: online store or point-of-sale
+  storeIcon: cart
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+-
+  slug: restaurant
+  name: restaurant
+  plural: restaurants
+  short: restaurant
+  storeLanguage: delivery app or point-of-sale
+  storeIcon: cart
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+-
+  slug: bookstore
+  name: bookstore
+  plural: bookstores
+  short: bookstore
+  storeLanguage: online store or point-of-sale
+  storeIcon: cart
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+-
+  slug: music_venue
+  name: music venue
+  plural: music venues
+  short: venue
+  storeLanguage: ticketing platform
+  storeIcon: tickets
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+  
