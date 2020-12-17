@@ -9,6 +9,7 @@ import Button from "../components/Button"
 import UTMLink from "../components/UTMLink"
 import FeatureRow from "../components/FeatureRow"
 import TestimonialRow from "../components/TestimonialRow"
+import { becomeAnOrganizer } from "../helpers/mixpanel"
 
 import Cart from "../components/integrations/Cart"
 import Chownow from "../components/integrations/Chownow"
@@ -22,8 +23,6 @@ import Squarespace from "../components/integrations/Squarespace"
 import Tickets from "../components/integrations/Tickets"
 import Toast from "../components/integrations/Toast"
 import Value from "../components/integrations/Value"
-import BecomeAnOrganizer from "../components/BecomeAnOrganizer"
-import IconItem from "../components/IconItem"
 
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
@@ -35,6 +34,35 @@ const sliderSettings = {
   speed: 500,
   arrows: false,
 }
+
+export const BecomeAnOrganizer = () => {
+  return (
+    <div className="flex w-full justify-center">
+      <UTMLink
+        className="inline-block justify-self-end justify-end"
+        href="https://withfriends.co/action/364/sign_up/modal"
+        text="Get Started"
+      >
+        <div className="flex justify-end">
+          <Button
+            onClick={becomeAnOrganizer}
+            className="py-6 px-8 sm:px-12 text-xl"
+            variant="salmon"
+          >
+            Find your members
+          </Button>
+        </div>
+      </UTMLink>
+    </div>
+  )
+}
+
+const IconItem = ({ icon, text }) => (
+  <div className="flex-1 min-w-1/3 my-4 px-2">
+    {React.cloneElement(icon, { className: "mx-auto w-8 sm:w-12" })}
+    <div className="mt-4 text-sm sm:text-md font-heavy">{text}</div>
+  </div>
+)
 
 const OrganizersPage = ({ data }) => {
   let imageFirst = false
