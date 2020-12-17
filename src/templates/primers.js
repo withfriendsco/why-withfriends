@@ -30,14 +30,18 @@ import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
-    imageFirst = !imageFirst
-    return (
-      <FeatureRow
-        key={node.node.id}
-        imageFirst={imageFirst}
-        featureRow={node.node}
-      />
-    )
+    if (!node.node.only || node.node.only === data.platform.slug) {
+      imageFirst = !imageFirst
+      return (
+        <FeatureRow
+          key={node.node.id}
+          imageFirst={imageFirst}
+          featureRow={node.node}
+        />
+      )
+    } else {
+      return null
+    }
   })
 
   const letsChat = () => {
@@ -70,8 +74,8 @@ const PrimerTemplate = ({ data }) => {
         <div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
           <div>
             <h1 className="text-center leading-tight mb-16 font-bold">
-              Sell memberships for your{" "}
-              {data.market.name}, automatically
+              Sell {data.build.name} for your{" "}
+              {data.platform.store}, automatically
             </h1>
             <div className="w-full">
               <BecomeAnOrganizer />
@@ -88,8 +92,7 @@ const PrimerTemplate = ({ data }) => {
           <p className="text-center max-w-screen-md leading-tight">
             Withfriends{" "}
             <span className="text-salmon-700">
-              transforms memberships and subscription sales by upselling your
-              customers
+              transforms {data.build.name} by upselling your customers
             </span>{" "}
             automatically with each purchase. <br />
             <br />
@@ -263,6 +266,7 @@ export const query = graphql`
     platform: platformsYaml(slug: { eq: $platform }) {
       slug
       name
+      store
     }
 
     market: marketsYaml(slug: { eq: $market }) {
@@ -292,6 +296,7 @@ export const query = graphql`
           content
           linkText
           link
+          only
           image {
             childImageSharp {
               fluid {
