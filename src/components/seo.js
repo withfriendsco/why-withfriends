@@ -21,6 +21,14 @@ gtag('config', 'G-W21GB3RH49');
 const intercomOne = `window.intercomSettings = { app_id: "ohqapfc3" };`
 const intercomTwo = `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ohqapfc4';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`
 
+const beamerConfig = `
+var beamer_config = {
+  product_id: 'VbrLNLJO22655',
+  selector: '.beamer-news',
+  top: -6,
+  right: -18
+};`
+
 function SEO({
   description,
   lang,
@@ -107,6 +115,8 @@ function SEO({
       <script>{intercomOne}</script>
       <script>{intercomTwo}</script>
       <script>{ga}</script>
+      <script>{beamerConfig}</script>
+      <script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
     </Helmet>
   )
 }
