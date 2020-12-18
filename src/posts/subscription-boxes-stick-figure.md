@@ -14,8 +14,7 @@ average Patreon donation.
 
 ## Turn your biggest fans into monthly paying members
 
-Stick Figure, a 5-member live band led by guitarist and producer Scott Woodruff,
-based out of their studio in Oakland, CA, has been running a successful
+Stick Figure, an independent reggae group, has been running a successful
 merch store on Shopify, with fans all over the country buying t-shirts,
 hoodies, and even Stick Figure-branded tiki mugs.
 
