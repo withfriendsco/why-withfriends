@@ -17,11 +17,11 @@ const SignupForm = () => {
   const [loading, setLoading] = useState(false)
   const [submitMessage, setSubmitMessage] = useState(<span />)
 
-  const changeEmailAddress = (ev: React.ChangeEvent<HTMLInputEvent>) => {
+  const changeEmailAddress = (ev: React.ChangeEvent<HTMLInputElement>) => {
     setEmailAddress(ev.target.value)
   }
 
-  const changePersonName = (ev: React.ChangeEvent<HTMLInputEvent>) => {
+  const changePersonName = (ev: React.ChangeEvent<HTMLInputElement>) => {
     setPersonName(ev.target.value)
   }
 

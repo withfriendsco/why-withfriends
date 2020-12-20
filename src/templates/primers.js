@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { useApolloClient, useLazyQuery } from "@apollo/client"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,6 +23,7 @@ import Toast from "../components/integrations/Toast"
 import Value from "../components/integrations/Value"
 import BecomeAnOrganizer from "../components/BecomeAnOrganizer"
 import IconItem from "../components/IconItem"
+import EmailCaptureDevice from "../components/EmailCaptureDevice"
 
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
@@ -71,15 +73,14 @@ const PrimerTemplate = ({ data }) => {
           <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>
-        <div className="absolute flex flex-wrap max-w-screen-md z-10 text-white place-items-center h-screen">
-          <div>
-            <h1 className="text-center leading-tight mb-16 font-bold">
+        <div className="absolute flex flex-wrap max-w-screen-lg z-10 text-white place-items-center h-screen">
+          <div className="flex flex-wrap justify-center">
+            <h1 className="text-center leading-tight mb-8 font-bold">
               Sell {data.build.name} for your{" "}
               {data.platform.store}, automatically
             </h1>
-            <div className="w-full">
-              <BecomeAnOrganizer />
-            </div>
+            <div className="w-full" />
+            <EmailCaptureDevice />
           </div>
           <div />
         </div>
@@ -121,6 +122,7 @@ const PrimerTemplate = ({ data }) => {
           <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
             {data.market.images.map(image => (
               <Img
+                key={image.id}
                 className="w-full my-2 sm:mx-2 shadow-lg"
                 fluid={image.childImageSharp.fluid}
                 alt="Magic Moment"
@@ -275,6 +277,7 @@ export const query = graphql`
       plural
       short
       images {
+        id
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -298,6 +301,7 @@ export const query = graphql`
           link
           only
           image {
+            id
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid
@@ -316,6 +320,7 @@ export const query = graphql`
           name
           business
           image {
+            id
             childImageSharp {
               fixed(height: 80, cropFocus: ATTENTION) {
                 ...GatsbyImageSharpFixed

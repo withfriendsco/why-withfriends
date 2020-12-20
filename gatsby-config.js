@@ -86,6 +86,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-theme-apollo`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
