@@ -1,9 +1,20 @@
 import React, { useState } from "react"
 import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
+import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
+import GoogleLogin from "react-google-login"
 
 import Button from "./Button"
+import IconItem from "./IconItem"
+import Facebook from "./Facebook"
+import Google from "./Google"
 
-import { GET_USER, AUTHORIZE_USER, CREATE_USER } from "../queries"
+import { 
+  GET_USER, 
+  AUTHORIZE_USER, 
+  CREATE_USER_EMAIL,
+  CREATE_USER_FACEBOOK,
+  CREATE_USER_GOOGLE,
+} from "../queries"
 
 const EmailCaptureDevice = () => {
   const [emailAddress, setEmailAddress] = useState("")
@@ -24,7 +35,19 @@ const EmailCaptureDevice = () => {
     called: createUserCalled, 
     loading: createUserLoading, 
     data: createUserData 
-  }] = useMutation(CREATE_USER)
+  }] = useMutation(CREATE_USER_EMAIL)
+
+  const [createUserFacebook, { 
+    called: createUserFacebookCalled, 
+    loading: createUserFacebookLoading, 
+    data: createUserFacebookData 
+  }] = useMutation(CREATE_USER_FACEBOOK)
+
+  const [createUserGoogle, { 
+    called: createUserGoogleCalled, 
+    loading: createUserGoogleLoading, 
+    data: createUserGoogleData 
+  }] = useMutation(CREATE_USER_GOOGLE)
 
   const submitLogin = async () => {
     searchEmailAddress({
@@ -64,11 +87,81 @@ const EmailCaptureDevice = () => {
     setEmailAddress(ev.target.value)
   }
 
+  const responseFacebook = (response) => {
+    if (response) {
+      const [firstName, ...moreName] = response?.name?.split(' ')
+      const lastName = moreName?.join(' ')
+      const emailAddress = response?.email
+      const facebookId = response?.id
+      createUserFacebook({
+        variables: {
+          firstName, 
+          lastName,
+          emailAddress,
+          facebookId,
+        }
+      })
+    }
+  }
+
+  const responseGoogleSuccess = (response) => {
+    if (response.profileObj) {
+      const firstName = response.profileObj.givenName
+      const lastName = response.profileObj.familyName
+      const emailAddress = response.profileObj.email
+      const googleId = response.googleId
+      createUserGoogle({
+        variables: {
+          firstName,
+          lastName,
+          emailAddress,
+          googleId,
+        }
+      })
+    }
+  }
+
+  const responseGoogleFailure = (response) => {
+    console.log(response)
+  }
+
   const emailScreen = (
-    <>
-      <div className="w-full my-8 flex justify-center">
+    <div className="w-full max-w-md">
+      <div className="w-full max-w-md font-bold">
+        <FacebookLogin
+          appId="783700495040097"
+          autoLoad={false}
+          fields="name,email,picture"
+          callback={responseFacebook}
+          render={renderProps => (
+            <Button variant="outlined" className="w-full flex relative place-items-center" {...renderProps}>
+              <Facebook className="w-8 inline absolute left-4" />
+              <div className="inline flex-1">
+                Sign in with Facebook
+              </div>
+            </Button>
+          )}
+        />
+      </div>
+      <div className="w-full max-w-md font-bold">
+        <GoogleLogin
+          clientId="351154443072-0nvldf11qe5dc13dlf7hfator1g2ks3t.apps.googleusercontent.com"
+          onSuccess={responseGoogleSuccess}
+          onFailure={responseGoogleFailure}
+          uxMode="popup"
+          render={renderProps => (
+            <Button variant="outlined" className="w-full flex relative place-items-center" {...renderProps}>
+              <Google className="w-8 inline absolute left-4" />
+              <div className="inline flex-1">
+                Sign in with Google
+              </div>
+            </Button>
+          )}
+        />
+      </div>
+      <div className="w-full my-2 flex flex-wrap justify-center">
         <input 
-          className="text-wfGray-800 p-4 text-center w-full max-w-xl" 
+          className="text-wfGray-800 p-4 text-left w-full max-w-md" 
           value={emailAddress} 
           onChange={changeEmailAddress} 
           placeholder="you@yourstore.com" />
@@ -81,7 +174,7 @@ const EmailCaptureDevice = () => {
           Find Your Members
         </Button>
       </div>
-    </>
+    </div>
   )
 
   const loginScreen = (

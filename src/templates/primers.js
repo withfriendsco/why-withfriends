@@ -68,8 +68,8 @@ const PrimerTemplate = ({ data }) => {
           playsInline
           className="absolute top-0 z-0 object-cover w-screen h-screen bg-wfGray-800"
         >
-          <source src={LocalBusinessVideoWebm} type="video/webm" />
-          <source src={LocalBusinessVideoMp4} type="video/mp4" />
+          {/* <source src={LocalBusinessVideoWebm} type="video/webm" /> */}
+          {/* <source src={LocalBusinessVideoMp4} type="video/mp4" /> */}
           <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>

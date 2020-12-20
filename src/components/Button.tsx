@@ -40,6 +40,15 @@ const Button = ({
     }
   }
 
+  if (variant === "facebook") {
+    classes += " border-wfGray-600 bg-white rounded-none border text-wfGray-800"
+    if (disabled) {
+      classes += " hover:border-wfGray-600 text-wfGray-800"
+    } else {
+      classes += " hover:border-wfGray-800"
+    }
+  }
+
   if (disabled) {
     classes += " cursor-not-allowed"
   }

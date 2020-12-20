@@ -21,7 +21,7 @@ export const AUTHORIZE_USER = gql`
   }
 `
 
-export const CREATE_USER = gql`
+export const CREATE_USER_EMAIL = gql`
   mutation CreateUser($emailAddress: String!, $password: String!) {
     userCreate(userInput: {
       emailAddress: $emailAddress,
@@ -30,6 +30,40 @@ export const CREATE_USER = gql`
     }) {
       id
       emailAddress
+    }
+  }
+`
+
+export const CREATE_USER_FACEBOOK = gql`
+  mutation CreateUserFacebook(
+    $emailAddress: String!, 
+    $facebookId: String!, 
+    $firstName: String, 
+    $lastName: String) {
+    userCreate(userInput: {
+      emailAddress: $emailAddress,
+      facebookId: $facebookId,
+      firstName: $firstName,
+      lastName: $lastName,
+    }) {
+      id
+    }
+  }
+`
+
+export const CREATE_USER_GOOGLE = gql`
+  mutation CreateUserGoogle(
+    $emailAddress: String!, 
+    $googleId: String!, 
+    $firstName: String, 
+    $lastName: String) {
+    userCreate(userInput: {
+      emailAddress: $emailAddress,
+      googleId: $googleId,
+      firstName: $firstName,
+      lastName: $lastName,
+    }) {
+      id
     }
   }
 `
