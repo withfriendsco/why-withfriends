@@ -68,16 +68,16 @@ const PrimerTemplate = ({ data }) => {
           playsInline
           className="absolute top-0 z-0 object-cover w-screen h-screen bg-wfGray-800"
         >
-          {/* <source src={LocalBusinessVideoWebm} type="video/webm" /> */}
-          {/* <source src={LocalBusinessVideoMp4} type="video/mp4" /> */}
+          <source src={LocalBusinessVideoWebm} type="video/webm" />
+          <source src={LocalBusinessVideoMp4} type="video/mp4" />
           <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>
-        <div className="absolute flex flex-wrap max-w-screen-lg z-10 text-white place-items-center h-screen">
-          <div className="flex flex-wrap justify-center">
+        <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 p-16 w-full h-screen -my-32 bg-wfGray-800 justify-center">
+          <div className="flex flex-wrap justify-center max-w-xl">
             <h1 className="text-center leading-tight mb-8 font-bold">
               Sell {data.build.name} for your{" "}
-              {data.platform.store}, automatically
+              {data.platform.store}, automatically.
             </h1>
             <div className="w-full" />
             <EmailCaptureDevice />
