@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
 import GoogleLogin from "react-google-login"
+import { mailchimpSignup } from "../helpers/mailchimp"
 
 import Button from "./Button"
 import IconItem from "./IconItem"
@@ -50,6 +51,7 @@ const EmailCaptureDevice = () => {
   }] = useMutation(CREATE_USER_GOOGLE)
 
   const submitLogin = async () => {
+    await mailchimpSignup(emailAddress, "")
     searchEmailAddress({
       variables: {
         emailAddress 
@@ -70,7 +72,7 @@ const EmailCaptureDevice = () => {
 
   const submitNewUser = async () => {
     if (emailAddress && password) {
-      createUser({
+      await createUser({
         variables: {
           emailAddress,
           password,
@@ -87,13 +89,13 @@ const EmailCaptureDevice = () => {
     setEmailAddress(ev.target.value)
   }
 
-  const responseFacebook = (response) => {
+  const responseFacebook = async (response) => {
     if (response) {
       const [firstName, ...moreName] = response?.name?.split(' ')
       const lastName = moreName?.join(' ')
       const emailAddress = response?.email
       const facebookId = response?.id
-      createUserFacebook({
+      await createUserFacebook({
         variables: {
           firstName, 
           lastName,
@@ -101,16 +103,18 @@ const EmailCaptureDevice = () => {
           facebookId,
         }
       })
+
+      await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
     }
   }
 
-  const responseGoogleSuccess = (response) => {
+  const responseGoogleSuccess = async (response) => {
     if (response.profileObj) {
       const firstName = response.profileObj.givenName
       const lastName = response.profileObj.familyName
       const emailAddress = response.profileObj.email
       const googleId = response.googleId
-      createUserGoogle({
+      await createUserGoogle({
         variables: {
           firstName,
           lastName,
@@ -118,6 +122,8 @@ const EmailCaptureDevice = () => {
           googleId,
         }
       })
+
+      await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
     }
   }
 
@@ -178,13 +184,13 @@ const EmailCaptureDevice = () => {
   )
 
   const loginScreen = (
-    <>
-      <div className="p-8 my-2 bg-white text-lg text-wfGray-800 max-w-xl">
+    <div className="w-full max-w-md">
+      <div className="w-full p-4 my-2 bg-white text-lg text-wfGray-800 max-w-xl">
         Welcome back, { userData?.userByEmail?.firstName }<br />
         <br />
         Looks like you already have an account. Sign in and let's get started.
       </div>
-      <div className="w-full my-8 flex justify-center">
+      <div className="w-full my-2 flex justify-center">
         <input 
           type="password"
           className="text-wfGray-800 p-4 text-center w-full max-w-xl" 
@@ -201,18 +207,18 @@ const EmailCaptureDevice = () => {
           Continue to Login
         </Button>
       </div>
-    </>
+    </div>
   )
 
   const newAccountScreen = (
-    <>
-      <div className="w-full p-8 my-2 bg-white text-lg text-wfGray-800 max-w-xl">
-        Welcome! Create a password, and let's get started!
+    <div className="w-full max-w-md">
+      <div className="w-full p-4 my-2 bg-white text-lg text-wfGray-800">
+        Welcome to Withfriends! Create a password, and let's get started!
       </div>
-      <div className="w-full my-8 flex justify-center">
+      <div className="w-full my-2 flex justify-center">
         <input 
           type="password"
-          className="text-wfGray-800 p-4 text-center w-full max-w-xl" 
+          className="text-wfGray-800 p-4 text-left w-full" 
           value={password} 
           onChange={changePassword} 
           placeholder="enter your password"
@@ -226,7 +232,7 @@ const EmailCaptureDevice = () => {
           Get Started
         </Button>
       </div>
-    </>
+    </div>
   )
 
   const userExists = getUserCalled && emailAddress && !!userData?.userByEmail?.id

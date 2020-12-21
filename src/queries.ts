@@ -27,6 +27,7 @@ export const CREATE_USER_EMAIL = gql`
       emailAddress: $emailAddress,
       password: $password,
       passwordCreated: true,
+      signUpReason: "Become_an_Organizer",
     }) {
       id
       emailAddress
@@ -45,6 +46,7 @@ export const CREATE_USER_FACEBOOK = gql`
       facebookId: $facebookId,
       firstName: $firstName,
       lastName: $lastName,
+      signUpReason: "Become_an_Organizer",
     }) {
       id
     }
@@ -62,6 +64,7 @@ export const CREATE_USER_GOOGLE = gql`
       googleId: $googleId,
       firstName: $firstName,
       lastName: $lastName,
+      signUpReason: "Become_an_Organizer",
     }) {
       id
     }
