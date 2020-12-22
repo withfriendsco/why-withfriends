@@ -3,7 +3,7 @@ import { ApolloLink, ApolloClient, createHttpLink, InMemoryCache } from '@apollo
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = createHttpLink({
-  uri: process.env.GRAPHQL_API || "https://dev.api.withfriends.co/graphql",
+  uri: process.env.GATSBY_GRAPHQL_API || "https://dev.api.withfriends.co/graphql",
   fetch
 })
 
@@ -11,7 +11,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      Authorization: `Bearer ${process.env.PUBLIC_JWT}`,
+      Authorization: `Bearer ${process.env.GATSBY_PUBLIC_JWT}`,
     }
   }
 })
