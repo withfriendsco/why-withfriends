@@ -3,6 +3,7 @@ import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
 import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"
+import { hubspotSignup } from "../helpers/hubspot"
 
 import Button from "./Button"
 import IconItem from "./IconItem"
@@ -51,6 +52,7 @@ const EmailCaptureDevice = () => {
   }] = useMutation(CREATE_USER_GOOGLE)
 
   const submitLogin = async () => {
+    await hubspotSignup(emailAddress, "")
     await mailchimpSignup(emailAddress, "")
     searchEmailAddress({
       variables: {
@@ -104,6 +106,7 @@ const EmailCaptureDevice = () => {
         }
       })
 
+      await hubspotSignup(emailAddress, `${firstName} ${lastName}`)
       await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
     }
   }
@@ -123,6 +126,7 @@ const EmailCaptureDevice = () => {
         }
       })
 
+      await hubspotSignup(emailAddress, `${firstName} ${lastName}`)
       await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
     }
   }

@@ -88,6 +88,14 @@ module.exports = {
     },
     `gatsby-theme-apollo`,
     {
+      resolve: `gatsby-plugin-hubspot`,
+      options: {
+        trackingCode: `6328349`,
+        respectDNT: false,
+        productionOnly: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/posts`,

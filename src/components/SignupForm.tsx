@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Button from "./Button"
 import { mailchimpSignup } from "../helpers/mailchimp"
+import { hubspotSignup } from "../helpers/hubspot"
 
 const SubmitData = ({ message }: { message: React.Element }) => {
   return (
@@ -27,13 +28,10 @@ const SignupForm = () => {
   const submitForm = async () => {
     setLoading(true)
 
-    let response = await mailchimpSignup(emailAddress, personName)
+    await hubspotSignup(emailAddress, personName)
+    await mailchimpSignup(emailAddress, personName)
 
-    if (response.status == 200) {
-      setSubmitMessage(<SubmitData message="Success! Thanks for joining." />)
-    } else {
-      setSubmitMessage(<SubmitData message="Success! Thanks for joining." />)
-    }
+    setSubmitMessage(<SubmitData message="Success! Thanks for joining." />)
     setLoading(false)
   }
 
