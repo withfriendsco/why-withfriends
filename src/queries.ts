@@ -57,6 +57,7 @@ export const CREATE_USER_GOOGLE = gql`
   mutation CreateUserGoogle(
     $emailAddress: String!, 
     $googleId: String!, 
+    $googleToken: String!, 
     $firstName: String, 
     $lastName: String) {
     userCreate(userInput: {
@@ -65,8 +66,9 @@ export const CREATE_USER_GOOGLE = gql`
       firstName: $firstName,
       lastName: $lastName,
       signUpReason: "Become_an_Organizer",
-    }) {
+    }, googleToken: $googleToken) {
       id
+      loginLink
     }
   }
 `

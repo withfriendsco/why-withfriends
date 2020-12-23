@@ -19,6 +19,7 @@ import {
 } from "../queries"
 
 const EmailCaptureDevice = () => {
+  const [loginLoading, setLoginLoading] = useState<boolean>(false)
   const [emailAddress, setEmailAddress] = useState("")
   const [password, setPassword] = useState("")
   const [searchEmailAddress, { 
@@ -112,22 +113,32 @@ const EmailCaptureDevice = () => {
   }
 
   const responseGoogleSuccess = async (response) => {
+    setLoginLoading(true)
     if (response.profileObj) {
+      console.log(response)
       const firstName = response.profileObj.givenName
       const lastName = response.profileObj.familyName
       const emailAddress = response.profileObj.email
-      const googleId = response.googleId
-      await createUserGoogle({
+      const googleId = response.profileObj.googleId
+      const googleToken = response.tokenId
+
+      const createUserResponse = await createUserGoogle({
         variables: {
           firstName,
           lastName,
           emailAddress,
           googleId,
+          googleToken,
         }
       })
 
-      await hubspotSignup(emailAddress, `${firstName} ${lastName}`)
-      await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
+      if (createUserResponse.data.userCreate.id) {
+        hubspotSignup(emailAddress, `${firstName} ${lastName}`)
+        mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
+        window.location.href = createUserResponse.data.userCreate.loginLink
+      } else {
+        setLoginLoading(false)
+      }
     }
   }
 
@@ -137,7 +148,7 @@ const EmailCaptureDevice = () => {
 
   const emailScreen = (
     <div className="w-full max-w-md">
-      <div className="w-full max-w-md font-bold">
+      { /* <div className="w-full max-w-md font-bold">
         <FacebookLogin
           appId="783700495040097"
           autoLoad={false}
@@ -152,7 +163,7 @@ const EmailCaptureDevice = () => {
             </Button>
           )}
         />
-      </div>
+        </div> */ }
       <div className="w-full max-w-md font-bold">
         <GoogleLogin
           clientId="351154443072-0nvldf11qe5dc13dlf7hfator1g2ks3t.apps.googleusercontent.com"
@@ -180,6 +191,7 @@ const EmailCaptureDevice = () => {
         <Button 
           className="py-6 px-8 sm:px-12 text-xl"
           variant="salmon" 
+          loading={loginLoading}
           onClick={submitLogin}>
           Find Your Members
         </Button>

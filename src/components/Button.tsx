@@ -1,4 +1,5 @@
 import React from "react"
+import Loading from "./Loading"
 
 const Button = ({
   children,
@@ -40,16 +41,11 @@ const Button = ({
     }
   }
 
-  if (variant === "facebook") {
-    classes += " border-wfGray-600 bg-white rounded-none border text-wfGray-800"
-    if (disabled) {
-      classes += " hover:border-wfGray-600 text-wfGray-800"
-    } else {
-      classes += " hover:border-wfGray-800"
-    }
+  if (disabled) {
+    classes += " cursor-not-allowed"
   }
 
-  if (disabled) {
+  if (loading) {
     classes += " cursor-not-allowed"
   }
 
@@ -58,10 +54,15 @@ const Button = ({
       <button
         onClick={onClick}
         disabled={disabled || done}
-        className={classes + " " + className}
+        className={classes + " " + className + " relative"}
         style={{ textDecoration: "none" }}
       >
         {children}
+        {
+          loading && (
+            <Loading className="w-8 inline left-4 animate-spin fill-current text-white ml-4" />
+          )
+        }
       </button>
     </div>
   )
