@@ -11,12 +11,13 @@ export const GET_USER = gql`
 `
 
 export const AUTHORIZE_USER = gql`
-  query AuthorizeUser($id: ID!, $password: String!) {
+  mutation AuthorizeUser($id: ID!, $password: String!) {
     userAuthorize(id: $id, password: $password) {
       id
       emailAddress
       firstName
       lastName
+      loginLink
     }
   }
 `
@@ -31,6 +32,7 @@ export const CREATE_USER_EMAIL = gql`
     }) {
       id
       emailAddress
+      loginLink
     }
   }
 `

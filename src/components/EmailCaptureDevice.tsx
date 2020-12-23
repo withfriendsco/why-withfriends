@@ -19,20 +19,29 @@ import {
 } from "../queries"
 
 const EmailCaptureDevice = () => {
+  const [showFindYourMembers, setShowFindYourMembers] = useState(true)
   const [loginLoading, setLoginLoading] = useState<boolean>(false)
+  const [loginMessage, setLoginMessage] = useState(<span />)
   const [emailAddress, setEmailAddress] = useState("")
   const [password, setPassword] = useState("")
   const [searchEmailAddress, { 
     called: getUserCalled, 
     loading: getUserLoading, 
     data: userData 
-  }] = useLazyQuery(GET_USER)
+  }] = useLazyQuery(GET_USER, {
+    onCompleted: () => {
+      setLoginLoading(false)
+    },
+    onError: () => {
+      setLoginLoading(false)
+    },
+  })
 
   const [authorizeUser, { 
     called: authorizedUserCalled, 
     loading: authorizedUserLoading, 
     data: authorizedUserData 
-  }] = useLazyQuery(AUTHORIZE_USER)
+  }] = useMutation(AUTHORIZE_USER)
 
   const [createUser, { 
     called: createUserCalled, 
@@ -53,35 +62,72 @@ const EmailCaptureDevice = () => {
   }] = useMutation(CREATE_USER_GOOGLE)
 
   const submitLogin = async () => {
+    setLoginLoading(true)
     await hubspotSignup(emailAddress, "")
     await mailchimpSignup(emailAddress, "")
     searchEmailAddress({
       variables: {
         emailAddress 
-      }
+      },
     })
   }
 
   const submitAuthorization = async () => {
     if (userData.userByEmail.id) {
-      authorizeUser({
+      setLoginLoading(true)
+      const response = await authorizeUser({
         variables: {
           id: userData.userByEmail.id,
           password
         }
       })
+
+      if (response?.data?.userAuthorize?.loginLink) {
+        setLoginMessage(
+          <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={response.data.userAuthorize.loginLink}>click here to continue to find your members.</a>
+          </div>
+        )
+        window.location = response.data.userAuthorize.loginLink
+      } else if (!response?.data?.userAuthorize) {
+        setLoginMessage(
+          <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+            Incorrect password. Try again, or <a className="underline" href="https://withfriends.co">reset your password here</a>.
+          </div>
+        )
+        setLoginLoading(false)
+      }
     }
   }
 
   const submitNewUser = async () => {
+    setLoginLoading(true)
     if (emailAddress && password) {
-      await createUser({
+      let createUserResponse = await createUser({
         variables: {
           emailAddress,
           password,
         }
       })
+
+      if (createUserResponse.data.userCreate.id) {
+        setLoginMessage(
+          <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={createUserResponse.data.userCreate.loginLink}>click here to continue to find your members.</a>
+          </div>
+        )
+        setShowFindYourMembers(false)
+        await Promise.all([
+          hubspotSignup(emailAddress, ``),
+          mailchimpSignup(emailAddress, ``),
+        ])
+        setLoginLoading(false)
+        window.location.href = createUserResponse.data.userCreate.loginLink
+      } else {
+        setLoginLoading(false)
+      }
     }
+    setLoginLoading(false)
   }
 
   const changePassword = (ev) => {
@@ -115,7 +161,6 @@ const EmailCaptureDevice = () => {
   const responseGoogleSuccess = async (response) => {
     setLoginLoading(true)
     if (response.profileObj) {
-      console.log(response)
       const firstName = response.profileObj.givenName
       const lastName = response.profileObj.familyName
       const emailAddress = response.profileObj.email
@@ -133,8 +178,17 @@ const EmailCaptureDevice = () => {
       })
 
       if (createUserResponse.data.userCreate.id) {
-        hubspotSignup(emailAddress, `${firstName} ${lastName}`)
-        mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
+        setLoginMessage(
+          <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={createUserResponse.data.userCreate.loginLink}>click here to continue to find your members.</a>
+          </div>
+        )
+        setShowFindYourMembers(false)
+        await Promise.all([
+          hubspotSignup(emailAddress, `${firstName} ${lastName}`),
+          mailchimpSignup(emailAddress, `${firstName} ${lastName}`),
+        ])
+        setLoginLoading(false)
         window.location.href = createUserResponse.data.userCreate.loginLink
       } else {
         setLoginLoading(false)
@@ -143,7 +197,12 @@ const EmailCaptureDevice = () => {
   }
 
   const responseGoogleFailure = (response) => {
-    console.log(response)
+    setLoginMessage(
+      <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+        Error logging you in. Try another method, or visit <a className="underline"
+          href="https://withfriends.co/action/364/sign_up/modal">this page to reset your password.</a>
+      </div>
+    )
   }
 
   const emailScreen = (
@@ -174,7 +233,7 @@ const EmailCaptureDevice = () => {
             <Button variant="outlined" className="w-full flex relative place-items-center" {...renderProps}>
               <Google className="w-8 inline absolute left-4" />
               <div className="inline flex-1">
-                Sign in with Google
+                Sign up with Google
               </div>
             </Button>
           )}
@@ -187,7 +246,8 @@ const EmailCaptureDevice = () => {
           onChange={changeEmailAddress} 
           placeholder="you@yourstore.com" />
       </div>
-      <div className="w-full flex justify-center">
+      { loginMessage }
+      <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
         <Button 
           className="py-6 px-8 sm:px-12 text-xl"
           variant="salmon" 
@@ -209,16 +269,18 @@ const EmailCaptureDevice = () => {
       <div className="w-full my-2 flex justify-center">
         <input 
           type="password"
-          className="text-wfGray-800 p-4 text-center w-full max-w-xl" 
+          className="text-wfGray-800 p-4 text-left w-full max-w-xl" 
           value={password} 
           onChange={changePassword} 
           placeholder="enter your password"
         />
       </div>
+      { loginMessage }
       <div className="w-full flex justify-center">
         <Button 
-          className="py-6 px-8 sm:px-12 text-xl"
+          className={`py-6 px-8 sm:px-12 text-xl ${showFindYourMembers ? "" : "hidden"}`}
           variant="salmon" 
+          loading={loginLoading}
           onClick={submitAuthorization}>
           Continue to Login
         </Button>
@@ -240,10 +302,12 @@ const EmailCaptureDevice = () => {
           placeholder="enter your password"
         />
       </div>
+      { loginMessage }
       <div className="w-full flex justify-center">
         <Button 
-          className="py-6 px-8 sm:px-12 text-xl"
+          className={`py-6 px-8 sm:px-12 text-xl ${showFindYourMembers ? "" : "hidden"}`}
           variant="salmon" 
+          loading={loginLoading}
           onClick={submitNewUser}>
           Get Started
         </Button>
@@ -256,7 +320,7 @@ const EmailCaptureDevice = () => {
   return (
     <div className="w-full flex flex-wrap justify-center">
       {
-        getUserCalled ? (
+        getUserCalled && !getUserLoading ? (
           userExists ? (
             loginScreen
           ) : (
