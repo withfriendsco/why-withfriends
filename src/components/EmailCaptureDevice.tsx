@@ -111,9 +111,10 @@ const EmailCaptureDevice = () => {
       })
 
       if (createUserResponse.data.userCreate.id) {
+        let loginLink = createUserResponse.data.userCreate.loginLink + ",first_login"
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Success! You should be redirected soon. Otherwise, <a className="underline" href={createUserResponse.data.userCreate.loginLink}>click here to continue to find your members.</a>
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your members.</a>
           </div>
         )
         setShowFindYourMembers(false)
@@ -122,7 +123,7 @@ const EmailCaptureDevice = () => {
           mailchimpSignup(emailAddress, ``),
         ])
         setLoginLoading(false)
-        window.location.href = createUserResponse.data.userCreate.loginLink
+        window.location.href = loginLink
       } else {
         setLoginLoading(false)
       }
@@ -178,9 +179,10 @@ const EmailCaptureDevice = () => {
       })
 
       if (createUserResponse.data.userCreate.id) {
+        const loginLink = createUserResponse.data.userCreate.loginLink + ",first_login"
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Success! You should be redirected soon. Otherwise, <a className="underline" href={createUserResponse.data.userCreate.loginLink}>click here to continue to find your members.</a>
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your members.</a>
           </div>
         )
         setShowFindYourMembers(false)
@@ -189,7 +191,7 @@ const EmailCaptureDevice = () => {
           mailchimpSignup(emailAddress, `${firstName} ${lastName}`),
         ])
         setLoginLoading(false)
-        window.location.href = createUserResponse.data.userCreate.loginLink
+        window.location.href = loginLink
       } else {
         setLoginLoading(false)
       }
