@@ -1,10 +1,10 @@
 [context.production]
 	[context.production.environment]
-		GRAPHQL_API = "https://wf-graphql-api.herokuapp.com"
-		PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMzIwfQ.XMtCGoGk9peJnph25V7CirtXZiMMP6-KZejlF2qWIUQ"
+		GATSBY_GRAPHQL_API = "https://wf-graphql-api.herokuapp.com"
+		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMzIwfQ.XMtCGoGk9peJnph25V7CirtXZiMMP6-KZejlF2qWIUQ"
 
 [context.staging]
 	[context.staging.environment]
-		GRAPHQL_API = "https://wf-graphql-api-staging.herokuapp.com"
-		PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMjIzfQ.ozhMygzdz7nUxcFcpdDmiCOZHxqhil3MelCpa_8dMl4"
+		GATSBY_GRAPHQL_API = "https://wf-graphql-api-staging.herokuapp.com"
+		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMjIzfQ.ozhMygzdz7nUxcFcpdDmiCOZHxqhil3MelCpa_8dMl4"
 
