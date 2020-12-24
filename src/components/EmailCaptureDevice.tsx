@@ -62,14 +62,23 @@ const EmailCaptureDevice = () => {
   }] = useMutation(CREATE_USER_GOOGLE)
 
   const submitLogin = async () => {
-    setLoginLoading(true)
-    await hubspotSignup(emailAddress, "")
-    await mailchimpSignup(emailAddress, "")
-    searchEmailAddress({
-      variables: {
-        emailAddress 
-      },
-    })
+    if (emailAddress.match(/.+\@.+\..+/)) {
+      setLoginLoading(true)
+      await hubspotSignup(emailAddress, "")
+      await mailchimpSignup(emailAddress, "")
+      searchEmailAddress({
+        variables: {
+          emailAddress 
+        },
+      })
+      setLoginMessage(<span />)
+    } else {
+      setLoginMessage(
+        <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+          Please enter an email address.
+        </div>
+      )
+    }
   }
 
   const submitAuthorization = async () => {
