@@ -6,10 +6,26 @@ import Wordmark from "./Wordmark"
 import UTMLink from "./UTMLink"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, isPrimer }) => {
+  const pricingLink = isPrimer ? (
+    <a
+      href="#pricing"
+      className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
+    >
+      Pricing
+    </a>
+  ) : (
+    <UTMLink
+      href="https://withfriends.co/pricing"
+      className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
+    >
+      Pricing
+    </UTMLink>
+  )
+
   return (
     <header className="fixed w-full flex flex-nowrap border-b bg-white border-wfGray-300 justify-center z-50 shadow-sm">
-      <div className="top-0 py-2 w-full flex flex-grow items-center px-4 sm:px-8">
+      <nav className="top-0 py-2 w-full flex flex-grow items-center px-4 sm:px-8">
         <h2 className="inline-block">
           <Link to="/" className="color-salmon-600 no-underline">
             <Wordmark className="h-5" />
@@ -34,12 +50,9 @@ const Header = ({ siteTitle }) => {
         >
           Why Withfriends?
         </Link>
-        <UTMLink
-          href="https://withfriends.co/pricing"
-          className="color-salmon-600 no-underline ml-8 justify-self-end hidden md:inline-block"
-        >
-          Pricing
-        </UTMLink>
+        {
+          pricingLink
+        }
         <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r border-wfGray-300 hidden md:inline-block" />
         <UTMLink
           href="https://withfriends.co/action/363/sign_in/modal"
@@ -58,7 +71,7 @@ const Header = ({ siteTitle }) => {
             </Button>
           </div>
         </UTMLink>
-      </div>
+      </nav>
     </header>
   )
 }

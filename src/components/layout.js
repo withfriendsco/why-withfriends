@@ -14,7 +14,7 @@ import Track from "../components/track"
 import "./layout.css"
 import UTMLink from "./UTMLink"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isPrimer }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div className="font-sans">
       <Track />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} />
       <div className="flex flex-wrap justify-center pt-24 md:pt-32">
         <div className="w-full px-4 md:px-8">
           <main>{children}</main>

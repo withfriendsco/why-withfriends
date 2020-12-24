@@ -23,6 +23,7 @@ import Toast from "../components/integrations/Toast"
 import Value from "../components/integrations/Value"
 import BecomeAnOrganizer from "../components/BecomeAnOrganizer"
 import IconItem from "../components/IconItem"
+import DoneIcon from "../components/DoneIcon"
 import EmailCaptureDevice from "../components/EmailCaptureDevice"
 
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
@@ -55,7 +56,7 @@ const PrimerTemplate = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout isPrimer={true}>
       <SEO
         title="Membership and subscription box software for small businesses"
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
@@ -112,6 +113,111 @@ const PrimerTemplate = ({ data }) => {
 
       <div className="w-full my-8" />
       <BecomeAnOrganizer />
+
+
+      <a id="pricing" />
+      <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
+        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Our Pricing & Features</h2>
+        <div className="text-center w-full flex justify-center">
+          <div className="w-full max-w-screen-lg flex flex-wrap md:flex-nowrap my-4 md:my-12">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
+              <div className="flex-1">
+                <h4 className="flex-grow font-heavy mb-4">Member Management Software</h4>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Management dashboard</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Member import/export</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Member messaging by tier</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Create and manage subscription boxes</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Member events and ticketing</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Receive and auto-post member testimonials</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Integrations with Mailchimp, Shopify, Square, Squarespace, Eventbrite, and more.</div>
+                </div>
+              </div>
+              <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
+                Manage existing members on Withfriends <strong className="font-heavy">for free.</strong>
+              </div>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
+              <div className="flex-1">
+                <h4 className="flex-grow font-heavy mb-4">Receive One-Time Contributions</h4>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Hosted business profile</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Kickstarter-like drives for one-time donations</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Simple button for one-time payments</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Upsell during checkout</div>
+                </div>
+              </div>
+              <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
+                We charge <strong className="font-heavy">5% of one-time contributions,</strong> plus a $0.30 + 2.9% fee charged by our payment processor.
+              </div>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
+              <div className="flex-1">
+                <h4 className="flex-grow font-heavy mb-4">Recurring subscription and membership payments</h4>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Instant website checkout</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Upsell and integration with your online store or point-of-sale</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Subscription box fulfillment dashboard</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Gift memberships</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Automatic member lapse recovery</div>
+                </div>
+                <div className="flex">
+                  <DoneIcon />
+                  <div className="flex-1">Membership drives</div>
+                </div>
+              </div>
+              <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
+                We charge <strong className="font-heavy">10% of recurring payments</strong> for memberships and subscriptions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full mb-8" />
+        <BecomeAnOrganizer />
+      </div>
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
         <h2 className="text-center my-4">
@@ -177,21 +283,23 @@ const PrimerTemplate = ({ data }) => {
       </div>
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
+        <a id="insights" />
+        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
         <div className="w-full flex justify-center">
           <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
-            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
               <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
               <p className="prose prose-md md:prose-xl text-right mt-4">
                 <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
               </p>
             </div>
-            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
               <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
               <p className="prose prose-md md:prose-xl text-right mt-4">
                 <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
               </p>
             </div>
-            <div className="flex-1 border-salmon-700 border-2 mx-4 p-8 flex flex-col">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
               <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
               <p className="prose prose-md md:prose-xl text-right mt-4">
                 <Link to="/posts/purpose/" className="text-right">Read.</Link>
