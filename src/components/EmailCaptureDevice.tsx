@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
+import { useQueryParam, NumberParam } from "use-query-params"
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
 import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"
@@ -19,6 +20,8 @@ import {
 } from "../queries"
 
 const EmailCaptureDevice = () => {
+  const [queryV, setQueryV] = useQueryParam("v", NumberParam)
+
   const [showFindYourMembers, setShowFindYourMembers] = useState(true)
   const [loginLoading, setLoginLoading] = useState<boolean>(false)
   const [loginMessage, setLoginMessage] = useState(<span />)
@@ -60,6 +63,18 @@ const EmailCaptureDevice = () => {
     loading: createUserGoogleLoading, 
     data: createUserGoogleData 
   }] = useMutation(CREATE_USER_GOOGLE)
+
+  const sendToFacebook = () => {
+    // @ts-ignore
+    if (typeof window.fbq !== `function`) return
+
+    // @ts-ignore
+    window.fbq('trackCustom', 'BecomeAnOrganizer', {
+      em: emailAddress,
+      value: queryV,
+      currency: "USD",
+    })
+  }
 
   const submitLogin = async () => {
     if (emailAddress.match(/.+\@.+\..+/)) {
@@ -127,6 +142,7 @@ const EmailCaptureDevice = () => {
           </div>
         )
         setShowFindYourMembers(false)
+        sendToFacebook()
         await Promise.all([
           hubspotSignup(emailAddress, ``),
           mailchimpSignup(emailAddress, ``),
@@ -163,6 +179,7 @@ const EmailCaptureDevice = () => {
         }
       })
 
+      sendToFacebook()
       await hubspotSignup(emailAddress, `${firstName} ${lastName}`)
       await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
     }
@@ -195,6 +212,7 @@ const EmailCaptureDevice = () => {
           </div>
         )
         setShowFindYourMembers(false)
+        sendToFacebook()
         await Promise.all([
           hubspotSignup(emailAddress, `${firstName} ${lastName}`),
           mailchimpSignup(emailAddress, `${firstName} ${lastName}`),

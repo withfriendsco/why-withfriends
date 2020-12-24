@@ -48,6 +48,7 @@ module.exports = {
         fs_org: "J4FPZ",
       },
     },
+    `gatsby-plugin-use-query-params`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

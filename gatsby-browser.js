@@ -4,8 +4,3 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-exports.onRouteUpdate = function() {
-  if (typeof window.fbq === `function`) {
-    window.fbq("track", "ViewContent")
-  }
-}
