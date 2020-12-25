@@ -278,7 +278,7 @@ const EmailCaptureDevice = () => {
       { loginMessage }
       <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
         <Button 
-          className="py-6 px-8 sm:px-12 text-xl"
+          className="py-6 px-4 sm:px-12 text-xl"
           variant="salmon" 
           loading={loginLoading}
           onClick={submitLogin}>

@@ -67,9 +67,9 @@
   storeIcon: cart
   testimonialVideo: bluestockings
   images:
-    - ../images/magic_moment/food-and-drink-business-1.jpg
-    - ../images/magic_moment/food-and-drink-business-2.jpg
-    - ../images/magic_moment/food-and-drink-business-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: csa
   name: CSA
@@ -79,9 +79,9 @@
   storeIcon: cart
   testimonialVideo: bluestockings
   images:
-    - ../images/magic_moment/csa-1.jpg
-    - ../images/magic_moment/csa-2.jpg
-    - ../images/magic_moment/csa-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 -
   slug: farm
   name: farm
@@ -90,9 +90,9 @@
   storeLanguage: online store or point of sale
   storeIcon: cart
   images:
-    - ../images/magic_moment/farm-1.jpg
-    - ../images/magic_moment/farm-2.jpg
-    - ../images/magic_moment/farm-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: coffee shop
   name: coffee shop
@@ -102,9 +102,9 @@
   storeIcon: kiosk
   testimonialVideo: bluestockings
   images:
-    - ../images/magic_moment/coffee-shop-1.jpg
-    - ../images/magic_moment/coffee-shop-2.jpg
-    - ../images/magic_moment/coffee-shop-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: bar
   name: bar
@@ -114,9 +114,9 @@
   testimonialVideo: elsewhere
   storeIcon: kiosk
   images:
-    - ../images/magic_moment/bar-1.jpg
-    - ../images/magic_moment/bar-2.jpg
-    - ../images/magic_moment/bar-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: record_store
   name: record store
@@ -126,9 +126,9 @@
   testimonialVideo: bluestockings
   storeIcon: cart
   images:
-    - ../images/magic_moment/record-store-1.jpg
-    - ../images/magic_moment/record-store-2.jpg
-    - ../images/magic_moment/record-store-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: educational_venue
   name: educational venue
@@ -138,9 +138,9 @@
   testimonialVideo: bluestockings
   storeIcon: tickets
   images:
-    - ../images/magic_moment/educational-venue-1.jpg
-    - ../images/magic_moment/educational-venue-2.jpg
-    - ../images/magic_moment/educational-venue-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: performing_arts_venue
   name: performing arts venue
@@ -150,9 +150,9 @@
   testimonialVideo: elsewhere
   storeIcon: tickets
   images:
-    - ../images/magic_moment/performing-arts-venue-1.jpg
-    - ../images/magic_moment/performing-arts-venue-2.jpg
-    - ../images/magic_moment/performing-arts-venue-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: health_and_fitness_organization
   name: health and fitness organization
@@ -162,9 +162,9 @@
   testimonialVideo: bluestockings
   storeIcon: cart
   images:
-    - ../images/magic_moment/health-and-fitness-organization-1.jpg
-    - ../images/magic_moment/health-and-fitness-organization-2.jpg
-    - ../images/magic_moment/health-and-fitness-organization-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 - 
   slug: fashion
   name: boutique store
@@ -174,9 +174,9 @@
   testimonialVideo: bluestockings
   storeIcon: cart
   images:
-    - ../images/magic_moment/fashion-business-1.jpg
-    - ../images/magic_moment/fashion-business-2.jpg
-    - ../images/magic_moment/fashion-business-3.jpg
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
 -
   slug: community_organization
   name: community organization
@@ -186,7 +186,7 @@
   testimonialVideo: bluestockings
   storeIcon: cart
   images:
-    - ../images/magic_moment/community-organization-1.jpg
-    - ../images/magic_moment/community-organization-2.jpg
-    - ../images/magic_moment/community-organization-3.jpg
--
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+
