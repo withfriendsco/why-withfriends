@@ -110,5 +110,15 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   })
+
+  createPage({
+    path: `organizers`,
+    component: path.resolve(`./src/templates/primers.js`),
+    context: {
+      market: "online_store",
+      platform: "shopify",
+      build: "subscriptions",
+    }
+  })
 }
 
