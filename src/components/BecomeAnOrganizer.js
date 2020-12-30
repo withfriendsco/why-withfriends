@@ -1,8 +1,12 @@
 import React, { useEffect } from "react"
-import { mixpanel } from "../helpers/mixpanel"
+import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
 import Button from "./Button"
-import UTMLink from "./UTMLink"
+
+export const goToSignup = () => {
+  becomeAnOrganizer()
+  window.scrollTo(0, 0)
+}
 
 const BecomeAnOrganizer = () => {
   useEffect(() => {
@@ -11,20 +15,15 @@ const BecomeAnOrganizer = () => {
 
   return (
     <div className="flex w-full justify-center">
-      <UTMLink
-        className="inline-block justify-self-end justify-end become-an-organizer"
-        href="https://withfriends.co/action/364/sign_up/modal"
-        text="Find your members"
-      >
-        <div className="flex justify-end">
-          <Button
-            className="py-6 px-8 sm:px-12 text-xl"
-            variant="salmon"
-          >
-            Find your members
-          </Button>
-        </div>
-      </UTMLink>
+      <div className="flex justify-end">
+        <Button
+          className="py-6 px-8 sm:px-12 text-xl"
+          variant="salmon"
+          onClick={goToSignup}
+        >
+          Find your members
+        </Button>
+      </div>
     </div>
   )
 }

@@ -4,7 +4,8 @@ import React from "react"
 import Button from "./Button"
 import Wordmark from "./Wordmark"
 import UTMLink from "./UTMLink"
-import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
+import { goToSignup } from "../components/BecomeAnOrganizer"
+import { mixpanel } from "../helpers/mixpanel"
 
 const Header = ({ siteTitle, isPrimer }) => {
   const pricingLink = isPrimer ? (
@@ -60,17 +61,11 @@ const Header = ({ siteTitle, isPrimer }) => {
         >
           Log In
         </UTMLink>
-        <UTMLink
-          className="inline-block justify-self-end justify-end"
-          href="https://withfriends.co/action/364/sign_up/modal"
-          text="Get Started"
-        >
-          <div className="flex justify-end">
-            <Button onClick={becomeAnOrganizer} variant="salmon-sm">
-              Get Started
-            </Button>
-          </div>
-        </UTMLink>
+        <div className="flex justify-end">
+          <Button onClick={goToSignup} variant="salmon-sm">
+            Get Started
+          </Button>
+        </div>
       </nav>
     </header>
   )
