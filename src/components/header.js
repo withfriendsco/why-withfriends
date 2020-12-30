@@ -28,7 +28,7 @@ const Header = ({ siteTitle, isPrimer }) => {
     <header className="fixed w-full flex flex-nowrap border-b bg-white border-wfGray-300 justify-center z-50 shadow-sm">
       <nav className="top-0 py-2 w-full flex flex-grow items-center px-4 sm:px-8">
         <h2 className="inline-block">
-          <Link to="/" className="color-salmon-600 no-underline">
+          <Link to="/organizers" className="color-salmon-600 no-underline">
             <Wordmark className="h-5" />
           </Link>
         </h2>
