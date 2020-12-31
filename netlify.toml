@@ -10,13 +10,21 @@
 		BASE_URL = "https://dev.why.withfriends.co/organizers"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
 
-[context.production]
-	[context.production.environment]
-		GATSBY_GRAPHQL_API = "https://wf-graphql-api.herokuapp.com"
-		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMzIwfQ.XMtCGoGk9peJnph25V7CirtXZiMMP6-KZejlF2qWIUQ"
-
 [context.staging]
 	[context.staging.environment]
 		GATSBY_GRAPHQL_API = "https://wf-graphql-api-staging.herokuapp.com"
 		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMjIzfQ.ozhMygzdz7nUxcFcpdDmiCOZHxqhil3MelCpa_8dMl4"
+		GATSBY_FB_APP_ID = "769110557146959"
+		GATSBY_FB_REDIRECT_URI = "https://sandbox-why.withfriends.co/.netlify/functions/facebook_login"
+		BASE_URL = "https://sandbox-why.withfriends.co/organizers"
+		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
+
+[context.production]
+	[context.production.environment]
+		GATSBY_GRAPHQL_API = "https://wf-graphql-api.herokuapp.com"
+		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMzIwfQ.XMtCGoGk9peJnph25V7CirtXZiMMP6-KZejlF2qWIUQ"
+		GATSBY_FB_APP_ID = "769110557146959"
+		GATSBY_FB_REDIRECT_URI = "https://why.withfriends.co/.netlify/functions/facebook_login"
+		BASE_URL = "https://sandbox-why.withfriends.co/organizers"
+		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
 
