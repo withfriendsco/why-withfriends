@@ -16,7 +16,7 @@ const getTokenFromCode = async code => {
     method: 'GET'
   });
 
-  if (response.ok) {
+  if (response !== null && response !== void 0 && response.ok) {
     return response.json();
   }
 };
@@ -31,7 +31,7 @@ const getAppAccessToken = async () => {
     method: 'GET'
   });
 
-  if (response.ok) {
+  if (response !== null && response !== void 0 && response.ok) {
     return response.json();
   }
 };
@@ -46,7 +46,7 @@ const verifyToken = async input_token => {
     method: 'GET'
   });
 
-  if (response.ok) {
+  if (response !== null && response !== void 0 && response.ok) {
     return response.json();
   } else {
     console.log(response);
@@ -63,7 +63,7 @@ const getUserInfo = async (token, userId) => {
     method: 'GET'
   });
 
-  if (response.ok) {
+  if (response !== null && response !== void 0 && response.ok) {
     return response.json();
   } else {
     console.log(response);

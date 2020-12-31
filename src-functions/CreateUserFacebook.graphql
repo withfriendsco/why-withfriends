@@ -1,0 +1,16 @@
+mutation CreateUserFacebook(
+  $emailAddress: String!, 
+  $facebookId: String!, 
+  $firstName: String, 
+  $lastName: String) {
+  userCreate(userInput: {
+    emailAddress: $emailAddress,
+    facebookId: $facebookId,
+    firstName: $firstName,
+    lastName: $lastName,
+    signUpReason: "Become_an_Organizer",
+  }) {
+    id
+    loginLink
+  }
+}
