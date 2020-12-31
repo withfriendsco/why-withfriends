@@ -1,3 +1,5 @@
+"use strict";
+
 const fetch = require('node-fetch');
 
 const facebookAccessTokenURL = "https://graph.facebook.com/v9.0/oauth/access_token";
@@ -106,7 +108,7 @@ const userCreate = async userInfo => {
     })
   });
 
-  if (response?.ok) {
+  if (response !== null && response !== void 0 && response.ok) {
     const body = await response.json();
     console.log(body);
     return body;
