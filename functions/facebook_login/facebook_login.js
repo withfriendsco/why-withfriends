@@ -147,7 +147,7 @@ exports.handler = async function(event, context) {
 
   console.log(userInfo)
 
-  const [firstName, ...moreName] = userInfo.name?.split(' ')
+  const [firstName, ...moreName] = userInfo.name.split(' ')
   const lastName = moreName.join(' ')
   const emailAddress = userInfo.email
 
@@ -158,7 +158,7 @@ exports.handler = async function(event, context) {
     facebookId,
   })
 
-  if (!userResponse && userResponse?.data?.loginLink) return { statusCode: 400 }
+  if (!userResponse && userResponse.data.loginLink) return { statusCode: 400 }
 
   // Problems? Try https://stackoverflow.com/questions/29283040/how-to-add-custom-certificate-authority-ca-to-nodejs
   return {
