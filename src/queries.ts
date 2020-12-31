@@ -51,6 +51,7 @@ export const CREATE_USER_FACEBOOK = gql`
       signUpReason: "Become_an_Organizer",
     }) {
       id
+      loginLink
     }
   }
 `

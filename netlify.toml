@@ -1,3 +1,15 @@
+[build]
+	functions = "functions/"
+
+[context.development]
+	[context.development.environment]
+		GATSBY_GRAPHQL_API = "https://dev.api.withfriends.co/graphql"
+		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjg5NjEzfQ.GAuQYAcnTpUjMtKsQurCCMLCRQMXQtF7_jQE5jAoqXU"
+		GATSBY_FB_APP_ID = "769110557146959"
+		GATSBY_FB_REDIRECT_URI = "https://dev.why.withfriends.co/.netlify/functions/facebook_login"
+		BASE_URL = "https://dev.why.withfriends.co/organizers"
+		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
+
 [context.production]
 	[context.production.environment]
 		GATSBY_GRAPHQL_API = "https://wf-graphql-api.herokuapp.com"
