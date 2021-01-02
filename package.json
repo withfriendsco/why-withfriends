@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@apollo/client": "^3.3.6",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
     "@neojp/tailwindcss-aspect-ratio-utilities": "^1.0.1",
     "@tailwindcss/typography": "^0.3.1",
     "@types/mixpanel": "^2.14.2",
@@ -50,10 +51,13 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
     "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "@svgr/cli": "^5.5.0",
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/js-cookie": "^2.2.6",
+    "babel-preset-gatsby": "^0.9.1",
     "netlify-cli": "^2.69.11",
     "prettier": "2.1.2"
   },
