@@ -88,6 +88,7 @@ module.exports = {
       },
     },
     `gatsby-theme-apollo`,
+    `gatsby-plugin-graphql-config`,
     {
       resolve: `gatsby-plugin-hubspot`,
       options: {

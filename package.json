@@ -58,6 +58,7 @@
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/js-cookie": "^2.2.6",
     "babel-preset-gatsby": "^0.9.1",
+    "gatsby-plugin-graphql-config": "^0.4.0",
     "netlify-cli": "^2.69.11",
     "prettier": "2.1.2"
   },
