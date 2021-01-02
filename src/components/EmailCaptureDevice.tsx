@@ -226,12 +226,15 @@ const EmailCaptureDevice = () => {
   }
 
   const responseGoogleFailure = (response) => {
-    setLoginMessage(
-      <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-        Error logging you in. Try another method, or visit <a className="underline"
-          href="https://withfriends.co/action/364/sign_up/modal">this page to reset your password.</a>
-      </div>
-    )
+    if (response?.error === "idpiframe_initialization_failed") {
+    } else {
+      setLoginMessage(
+        <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
+          Error logging you in through Google. Try another method, or visit <a className="underline"
+            href="https://withfriends.co/action/364/sign_up/modal">this page to reset your password.</a>
+        </div>
+      )
+    }
   }
 
   const emailScreen = (
