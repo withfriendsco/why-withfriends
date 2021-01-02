@@ -109,6 +109,60 @@ const PrimerTemplate = ({ data }) => {
         </div>
       </div>
 
+      <div className="w-full flex py-4 md:py-16 justify-center">
+        <div className="w-full flex flex-wrap justify-center">
+          <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
+            <div className="w-full sm:hidden order-2" />
+            <div className="pt-2 md:pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24 order-3">
+              <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
+                Embedded {data.build.name} checkout in your store.
+              </h2>
+              <p className="prose md:prose-md text-wfGray-800">
+                Withfriends adds a button to your {data.platform.store}{" "}
+                automatically, allowing your customers to become members from
+                any page on your site.
+              </p>
+            </div>
+            <div className="mb-8 md:mb-16 md:px-8 w-100 order-1">
+              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+                <iframe 
+                  title="Withfriends Shopify Embedded Checkout"
+                  src="https://www.loom.com/embed/38f87bfd0b0f4bc585132768846b8b3b?autoplay=1"
+                  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex py-4 md:py-16 justify-center">
+        <div className="w-full flex flex-wrap justify-center">
+          <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
+            <div className="pt-2 md:pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24 order-3 sm:order-1">
+              <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
+                Upsell your customers with every purchase.
+              </h2>
+              <p className="prose md:prose-md text-wfGray-800">
+                Withfriends automates your {data.build.name} upsell with every
+                purchase. Approximately 5% of your customers will become members,
+                creating sustainable revenue for your {data.market.short}.
+              </p>
+            </div>
+            <div className="w-full sm:hidden order-2" />
+            <div className="mb-8 md:mb-16 md:px-8 w-100 order-1 sm:order-3">
+              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+                <iframe 
+                  title="Withfriends Shopify Upsell"
+                  src="https://www.loom.com/embed/35f0c1615a5a4a4e8485e4a54f7e63cc?autoplay=1" 
+                  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen 
+                  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="w-full px-2 sm:px-8">{featureRows}</div>
 
       <div className="w-full my-8" />
