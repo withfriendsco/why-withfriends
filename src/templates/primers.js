@@ -29,6 +29,10 @@ import EmailCaptureDevice from "../components/EmailCaptureDevice"
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
+import WithfriendsAutomatedMemberTiersMp4 from "../videos/withfriends-automated-member-tiers.mp4"
+import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated-member-tiers.webm"
+import WithfriendsUpsellYourCustomersMp4 from "../videos/upsell-your-customers.mp4"
+import WithfriendsUpsellYourCustomersWebm from "../videos/upsell-your-customers.webm"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
@@ -115,21 +119,35 @@ const PrimerTemplate = ({ data }) => {
             <div className="w-full sm:hidden order-2" />
             <div className="pt-2 md:pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24 order-3">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Embedded {data.build.name} checkout in your store.
+                Generate your membership tiers automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                Withfriends adds a button to your {data.platform.store}{" "}
-                automatically, allowing your customers to become members from
-                any page on your site.
+                Our membership tiers are generated for maximum conversion,
+                based on your data. We import your customers and orders,
+                analyze your data, and create tiers custom-made to ensure you
+                build sustaining revenue.
+              </p>
+              <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
+                <Link
+                  to="/posts/memberships"
+                  className="text-salmon-700 font-bold"
+                >
+                  Read more about how we calculate membership tiers.
+                </Link>
               </p>
             </div>
             <div className="mb-8 md:mb-16 md:px-8 w-100 order-1">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-                <iframe 
-                  title="Withfriends Shopify Embedded Checkout"
-                  src="https://www.loom.com/embed/38f87bfd0b0f4bc585132768846b8b3b?autoplay=1"
-                  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-                  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={WithfriendsAutomatedMemberTiersWebm} type="video/webm" />
+                  <source src={WithfriendsAutomatedMemberTiersMp4} type="video/mp4" />
+                  <p>Your browser does not support the video element.</p>
+                </video>
               </div>
             </div>
           </div>
@@ -152,11 +170,16 @@ const PrimerTemplate = ({ data }) => {
             <div className="w-full sm:hidden order-2" />
             <div className="mb-8 md:mb-16 md:px-8 w-100 order-1 sm:order-3">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-                <iframe 
-                  title="Withfriends Shopify Upsell"
-                  src="https://www.loom.com/embed/35f0c1615a5a4a4e8485e4a54f7e63cc?autoplay=1" 
-                  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen 
-                  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={WithfriendsUpsellYourCustomersWebm} type="video/webm" />
+                  <source src={WithfriendsUpsellYourCustomersMp4} type="video/mp4" />
+                  <p>Your browser does not support the video element.</p>
+                </video>
               </div>
             </div>
           </div>
