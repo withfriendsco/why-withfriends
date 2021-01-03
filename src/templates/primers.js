@@ -31,8 +31,8 @@ import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
 import WithfriendsAutomatedMemberTiersMp4 from "../videos/withfriends-automated-member-tiers.mp4"
 import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated-member-tiers.webm"
-import WithfriendsUpsellYourCustomersMp4 from "../videos/upsell-your-customers.mp4"
-import WithfriendsUpsellYourCustomersWebm from "../videos/upsell-your-customers.webm"
+import WithfriendsUpsellYourCustomersMp4 from "../videos/shopify-upsell.mp4"
+import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
@@ -136,7 +136,7 @@ const PrimerTemplate = ({ data }) => {
                 </Link>
               </p>
             </div>
-            <div className="mb-8 md:mb-16 md:px-8 w-100 order-1">
+            <div className="md:px-8 w-100 order-1">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
                 <video
                   autoPlay
@@ -168,7 +168,7 @@ const PrimerTemplate = ({ data }) => {
               </p>
             </div>
             <div className="w-full sm:hidden order-2" />
-            <div className="mb-8 md:mb-16 md:px-8 w-100 order-1 sm:order-3">
+            <div className="md:px-8 w-100 order-1 sm:order-3">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
                 <video
                   autoPlay
