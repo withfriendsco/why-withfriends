@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { useApolloClient, useLazyQuery } from "@apollo/client"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "../carousel.css"
+import { Carousel } from 'react-responsive-carousel';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,6 +35,7 @@ import WithfriendsAutomatedMemberTiersMp4 from "../videos/withfriends-automated-
 import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated-member-tiers.webm"
 import WithfriendsUpsellYourCustomersMp4 from "../videos/shopify-upsell.mp4"
 import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
+import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
@@ -185,6 +188,21 @@ const PrimerTemplate = ({ data }) => {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16">
+        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
+          See other { data.market.plural } on Withfriends
+        </h2>
+        <Carousel className="bg-white" 
+          showIndicators={true} 
+          showThumbs={false}
+          showStatus={false}
+        >
+          { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
+        </Carousel>
+      </div>
+      <div className="w-full my-8" />
+      <BecomeAnOrganizer />
 
       <div className="w-full px-2 sm:px-8">{featureRows}</div>
 
@@ -461,6 +479,7 @@ export const query = graphql`
       name
       plural
       short
+      socialProof
       images {
         id
         childImageSharp {
@@ -519,4 +538,3 @@ export const query = graphql`
 `
 
 export default PrimerTemplate
-

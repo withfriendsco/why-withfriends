@@ -16,11 +16,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-source-graphql`,
       options: {
-        icon: `src/images/favicon.png`,
+        typeName: "WFAPI",
+        fieldName: "wfapi",
+        url: process.env.GATSBY_GRAPHQL_API,
+        headers: {
+          Authorization: `Bearer ${process.env.ADMIN_JWT}`,
+        },
       },
     },
+    `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     `gatsby-transformer-yaml`,
     {

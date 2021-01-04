@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
+import { useMutation, useLazyQuery } from "@apollo/client"
 import { useQueryParam, NumberParam, StringParam } from "use-query-params"
 import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"

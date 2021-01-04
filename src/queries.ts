@@ -75,3 +75,17 @@ export const CREATE_USER_GOOGLE = gql`
     }
   }
 `
+
+export const BUSINESS_DATA = gql`
+  query GetBusinessInfo($alias: String!) {
+    businessWhere(business: { alias: $alias }) {
+      id
+      alias
+      name
+      coverPhoto {
+        cdnPath
+      }
+      mission
+    }
+  }
+`
