@@ -73,7 +73,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "env-cmd -f .env.development gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop --host 0.0.0.0",
     "netlify": "env-cmd -f .env.development netlify dev --host 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
