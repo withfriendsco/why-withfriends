@@ -1,9 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import "../carousel.css"
-import { Carousel } from 'react-responsive-carousel';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -74,7 +71,7 @@ const PrimerTemplate = ({ data }) => {
           muted
           loop
           playsInline
-          className="absolute top-0 z-0 object-cover w-screen h-screen bg-wfGray-800"
+          className="absolute top-0 z-0 object-cover w-100 h-screen bg-wfGray-800"
         >
           <source src={LocalBusinessVideoWebm} type="video/webm" />
           <source src={LocalBusinessVideoMp4} type="video/mp4" />
@@ -120,7 +117,7 @@ const PrimerTemplate = ({ data }) => {
         <div className="w-full flex flex-wrap justify-center">
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="w-full sm:hidden order-2" />
-            <div className="pt-2 md:pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24 order-3">
+            <div className="pt-8 sm:p-8 md:p-12 order-3">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
                 Generate your membership tiers automatically.
               </h2>
@@ -161,7 +158,7 @@ const PrimerTemplate = ({ data }) => {
       <div className="w-full flex py-4 md:py-16 justify-center">
         <div className="w-full flex flex-wrap justify-center">
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
-            <div className="pt-2 md:pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24 order-3 sm:order-1">
+            <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
                 Upsell your customers with every purchase.
               </h2>
@@ -190,32 +187,58 @@ const PrimerTemplate = ({ data }) => {
           </div>
         </div>
       </div>
+      
+      <div className="w-full my-8" />
+      <BecomeAnOrganizer />
+      <div className="w-full my-8" />
+
+      <div className="flex justify-center my-4 sm:my-16 flex-wrap">
+        <a id="insights" />
+        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/purpose/" className="text-right">Read.</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full px-2 sm:px-8">
+        {featureRows}
+      </div>
+
+      <div className="w-full my-8" />
+      <BecomeAnOrganizer />
 
       {
         data.market?.socialProof?.length && (
-          <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16">
-            <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
+          <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 text-wfGray-800 py-8">
+            <h2 className="w-full text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
               See other { data.market.plural } on Withfriends
             </h2>
-            <Carousel className="bg-white" 
-              showIndicators={true} 
-              showThumbs={false}
-              showStatus={false}
-            >
-              { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
-            </Carousel>
+            { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
           </div>
         )
       }
  
       <div className="w-full my-8" />
       <BecomeAnOrganizer />
-
-      <div className="w-full px-2 sm:px-8">{featureRows}</div>
-
-      <div className="w-full my-8" />
-      <BecomeAnOrganizer />
-
 
       <a id="pricing" />
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
@@ -382,33 +405,6 @@ const PrimerTemplate = ({ data }) => {
         </div>
         <div className="w-full my-4" />
         <BecomeAnOrganizer />
-      </div>
-
-      <div className="flex justify-center my-4 sm:my-16 flex-wrap">
-        <a id="insights" />
-        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
-              </p>
-            </div>
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
-              </p>
-            </div>
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/purpose/" className="text-right">Read.</Link>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div>
