@@ -189,18 +189,23 @@ const PrimerTemplate = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16">
-        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
-          See other { data.market.plural } on Withfriends
-        </h2>
-        <Carousel className="bg-white" 
-          showIndicators={true} 
-          showThumbs={false}
-          showStatus={false}
-        >
-          { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
-        </Carousel>
-      </div>
+      {
+        data.market?.socialProof?.length && (
+          <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16">
+            <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
+              See other { data.market.plural } on Withfriends
+            </h2>
+            <Carousel className="bg-white" 
+              showIndicators={true} 
+              showThumbs={false}
+              showStatus={false}
+            >
+              { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
+            </Carousel>
+          </div>
+        )
+      }
+ 
       <div className="w-full my-8" />
       <BecomeAnOrganizer />
 

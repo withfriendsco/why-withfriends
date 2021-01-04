@@ -12,6 +12,8 @@
     - ../images/magic_moment/online-store-3.jpg
   socialProof:
     - bluestockings
+    - dimos_pizza
+    - spectacle
     - sweat_records
 -
   slug: online_store
@@ -46,6 +48,14 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - dimos_pizza
+    - saras_cosmic_cookie_dough
+    - tile_table
+    - chicago_meat_collective
+    - tru_pickles
+    - magick_city
+    - salva_marketplace
 -
   slug: bookstore
   name: bookstore
@@ -58,6 +68,13 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - bluestockings
+    - mil_mundos_books
+    - making_worlds_bookstore_and_social_center
+    - este
+    - every_thing_goes_book_cafe_and_neighborhood_stage
+    - the_potters_house
 -
   slug: music_venue
   name: music venue
@@ -70,6 +87,14 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - elsewhere
+    - gray_area
+    - rhizome_dc
+    - national_sawdust
+    - ambient_church
+    - blank_forms
+    - nublu
 - 
   slug: food_and_drink_business
   name: food and drink business
@@ -82,6 +107,15 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - dimos_pizza
+    - saras_cosmic_cookie_dough
+    - magick_city
+    - tru_pickles
+    - tile_table
+    - salva_marketplace
+    - chicago_meat_collective
+    - soufrashop
 - 
   slug: csa
   name: CSA
@@ -94,6 +128,16 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - cabrire_farm
+    - north_brooklyn_farms
+    - franklin_chthonics
+    - bushwick_city_farms
+    - broadlandvegboxes
+    - fort_greene_park_conservancy
+    - arc38
+    - canham_horse_rescue_inc
+    - mccarren_dog_run
 -
   slug: farm
   name: farm
@@ -105,6 +149,16 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - cabrire_farm
+    - north_brooklyn_farms
+    - franklin_chthonics
+    - bushwick_city_farms
+    - broadlandvegboxes
+    - fort_greene_park_conservancy
+    - arc38
+    - canham_horse_rescue_inc
+    - mccarren_dog_run
 - 
   slug: coffee shop
   name: coffee shop
@@ -129,6 +183,16 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - saint_vitus
+    - the_footlight
+    - our_wicked_lady
+    - tamarack
+    - wine_minx
+    - chronicle_wines
+    - covert_cocktail_club
+    - cocktail_legion
+    - siren_and_wine
 - 
   slug: record_store
   name: record store
@@ -141,6 +205,16 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - sweat_records
+    - songbyrd_music_house
+    - possible_worlds
+    - blank_forms
+    - experimental_sound_studio
+    - indexical
+    - tribeca_new_music
+    - rhizome_dc
+    - living_room_light_exchange
 - 
   slug: educational_venue
   name: educational venue
@@ -153,6 +227,14 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - educated_little_monsters
+    - powrplnt
+    - renaissance_person
+    - think_olio
+    - mayday_space
+    - future_local
+    - living_room_light_exchange
 - 
   slug: performing_arts_venue
   name: performing arts venue
@@ -165,6 +247,16 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - the_lab
+    - the_cell
+    - gray_area
+    - rhizome_dc
+    - indexical
+    - national_sawdust
+    - ambient_church
+    - blank_forms
+    - nublu
 - 
   slug: health_and_fitness_organization
   name: health and fitness organization
@@ -201,4 +293,8 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - mayday_space
+    - powrplnt
+    - think_olio
 
