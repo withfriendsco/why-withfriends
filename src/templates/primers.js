@@ -142,6 +142,7 @@ const PrimerTemplate = ({ data }) => {
             <div className="md:px-8 w-100 order-1">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
                 <video
+                  style={{maxWidth: "100%", height: "auto"}}
                   autoPlay
                   muted
                   loop
@@ -174,6 +175,7 @@ const PrimerTemplate = ({ data }) => {
             <div className="md:px-8 w-100 order-1 sm:order-3">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
                 <video
+                  style={{maxWidth: "100%", height: "auto"}}
                   autoPlay
                   muted
                   loop
