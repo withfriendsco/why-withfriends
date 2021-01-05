@@ -26,7 +26,7 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
             imageFirst ? "" : "sm:order-1"
           }`}
         >
-          <div className="pt-8 sm:p-8 md:p-16 lg:py-24 xl:px-32 xl:py-24">
+          <div className="pt-8 sm:p-8 md:p-12">
             <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
               {featureRow.title}
             </h2>
@@ -46,7 +46,7 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
           </div>
         </div>
         <div className="w-full sm:hidden order-2" />
-        <div className="flex-1 order-1 -mx-4 sm:-mx-8 px-8 sm:mx-0 sm:px-0 p-4 sm:p-8 md:p-16 align-items-center">
+        <div className="flex-1 order-1 -mx-4 sm:-mx-8 px-8 sm:mx-0 sm:px-0 p-4 md:p-6 align-items-center">
           <div className="sm:p-4 align-items-center">
             <Img
               fadeIn={true}

@@ -10,6 +10,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - bluestockings
+    - sweat_records
 -
   slug: online_store
   name: online store
@@ -22,6 +25,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - saras_cosmic_cookie_dough
+    - bee_wild
 -
   slug: restaurant
   name: restaurant
@@ -34,6 +40,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - dimos_pizza
+    - tile_table
 -
   slug: bookstore
   name: bookstore
@@ -46,6 +55,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - bluestockings
+    - mil_mundos_books
 -
   slug: music_venue
   name: music venue
@@ -58,6 +70,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - elsewhere
+    - gray_area
 - 
   slug: food_and_drink_business
   name: food and drink business
@@ -70,6 +85,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - dimos_pizza
+    - saras_cosmic_cookie_dough
 - 
   slug: csa
   name: CSA
@@ -82,6 +100,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - cabrire_farm
+    - north_brooklyn_farms
 -
   slug: farm
   name: farm
@@ -93,6 +114,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - cabrire_farm
+    - north_brooklyn_farms
 - 
   slug: coffee shop
   name: coffee shop
@@ -117,6 +141,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - saint_vitus
+    - the_footlight
 - 
   slug: record_store
   name: record store
@@ -129,6 +156,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - sweat_records
+    - songbyrd_music_house
 - 
   slug: educational_venue
   name: educational venue
@@ -141,6 +171,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - educated_little_monsters
+    - powrplnt
 - 
   slug: performing_arts_venue
   name: performing arts venue
@@ -153,6 +186,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - the_lab
+    - the_cell
 - 
   slug: health_and_fitness_organization
   name: health and fitness organization
@@ -189,4 +225,7 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - mayday_space
+    - powrplnt
 

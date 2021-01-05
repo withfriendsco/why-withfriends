@@ -51,6 +51,7 @@ export const CREATE_USER_FACEBOOK = gql`
       signUpReason: "Become_an_Organizer",
     }) {
       id
+      loginLink
     }
   }
 `
@@ -71,6 +72,20 @@ export const CREATE_USER_GOOGLE = gql`
     }, googleToken: $googleToken) {
       id
       loginLink
+    }
+  }
+`
+
+export const BUSINESS_DATA = gql`
+  query GetBusinessInfo($alias: String!) {
+    businessWhere(business: { alias: $alias }) {
+      id
+      alias
+      name
+      coverPhoto {
+        cdnPath
+      }
+      mission
     }
   }
 `

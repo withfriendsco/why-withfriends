@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { useApolloClient, useMutation, useLazyQuery } from "@apollo/client"
-import { useQueryParam, NumberParam } from "use-query-params"
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
+import { useMutation, useLazyQuery } from "@apollo/client"
+import { useQueryParam, NumberParam, StringParam } from "use-query-params"
 import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"
 import { hubspotSignup } from "../helpers/hubspot"
@@ -21,6 +20,9 @@ import {
 
 const EmailCaptureDevice = () => {
   const [queryV, setQueryV] = useQueryParam("v", NumberParam)
+  const [queryEmail, setQueryEmail] = useQueryParam("email", StringParam)
+  const [queryName, setQueryName] = useQueryParam("name", StringParam)
+  const [queryFacebookId, setQueryFacebookId] = useQueryParam("facebookId", StringParam)
 
   const [showFindYourMembers, setShowFindYourMembers] = useState(true)
   const [loginLoading, setLoginLoading] = useState<boolean>(false)
@@ -237,24 +239,24 @@ const EmailCaptureDevice = () => {
     }
   }
 
+  const callFacebookRedirect = () => {
+    window.location = `https://www.facebook.com/v9.0/dialog/oauth?client_id=${process.env.GATSBY_FB_APP_ID}&redirect_uri=${process.env.GATSBY_FB_REDIRECT_URI}&scope=email`
+  }
+
   const emailScreen = (
     <div className="w-full max-w-md">
-      { /* <div className="w-full max-w-md font-bold">
-        <FacebookLogin
-          appId="783700495040097"
-          autoLoad={false}
-          fields="name,email,picture"
-          callback={responseFacebook}
-          render={renderProps => (
-            <Button variant="outlined" className="w-full flex relative place-items-center" {...renderProps}>
-              <Facebook className="w-8 inline absolute left-4" />
-              <div className="inline flex-1">
-                Sign in with Facebook
-              </div>
-            </Button>
-          )}
-        />
-        </div> */ }
+      <div className="w-full max-w-md font-bold">
+        <Button 
+          variant="outlined" 
+          className="w-full flex relative place-items-center"
+          onClick={callFacebookRedirect}
+        >
+          <Facebook className="w-8 inline absolute left-4" />
+          <div className="inline flex-1">
+            Sign up with Facebook
+          </div>
+        </Button>
+      </div>
       <div className="w-full max-w-md font-bold">
         <GoogleLogin
           clientId="351154443072-0nvldf11qe5dc13dlf7hfator1g2ks3t.apps.googleusercontent.com"

@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { useApolloClient, useLazyQuery } from "@apollo/client"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -29,6 +28,11 @@ import EmailCaptureDevice from "../components/EmailCaptureDevice"
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
+import WithfriendsAutomatedMemberTiersMp4 from "../videos/withfriends-automated-member-tiers.mp4"
+import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated-member-tiers.webm"
+import WithfriendsUpsellYourCustomersMp4 from "../videos/shopify-upsell.mp4"
+import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
+import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
@@ -67,7 +71,7 @@ const PrimerTemplate = ({ data }) => {
           muted
           loop
           playsInline
-          className="absolute top-0 z-0 object-cover w-screen h-screen bg-wfGray-800"
+          className="absolute top-0 z-0 object-cover w-100 h-screen bg-wfGray-800"
         >
           <source src={LocalBusinessVideoWebm} type="video/webm" />
           <source src={LocalBusinessVideoMp4} type="video/mp4" />
@@ -109,11 +113,132 @@ const PrimerTemplate = ({ data }) => {
         </div>
       </div>
 
-      <div className="w-full px-2 sm:px-8">{featureRows}</div>
+      <div className="w-full flex py-4 md:py-16 justify-center">
+        <div className="w-full flex flex-wrap justify-center">
+          <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
+            <div className="w-full sm:hidden order-2" />
+            <div className="pt-8 sm:p-8 md:p-12 order-3">
+              <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
+                Generate your membership tiers automatically.
+              </h2>
+              <p className="prose md:prose-md text-wfGray-800">
+                Our membership tiers are generated for maximum conversion,
+                based on your data. We import your customers and orders,
+                analyze your data, and create tiers custom-made to ensure you
+                build sustaining revenue.
+              </p>
+              <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
+                <Link
+                  to="/posts/memberships"
+                  className="text-salmon-700 font-bold"
+                >
+                  Read more about how we calculate membership tiers.
+                </Link>
+              </p>
+            </div>
+            <div className="md:px-8 w-100 order-1">
+              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+                <video
+                  style={{maxWidth: "100%", height: "auto"}}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={WithfriendsAutomatedMemberTiersWebm} type="video/webm" />
+                  <source src={WithfriendsAutomatedMemberTiersMp4} type="video/mp4" />
+                  <p>Your browser does not support the video element.</p>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex py-4 md:py-16 justify-center">
+        <div className="w-full flex flex-wrap justify-center">
+          <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
+            <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
+              <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
+                Upsell your customers with every purchase.
+              </h2>
+              <p className="prose md:prose-md text-wfGray-800">
+                Withfriends automates your {data.build.name} upsell with every
+                purchase. Approximately 5% of your customers will become members,
+                creating sustainable revenue for your {data.market.short}.
+              </p>
+            </div>
+            <div className="w-full sm:hidden order-2" />
+            <div className="md:px-8 w-100 order-1 sm:order-3">
+              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+                <video
+                  style={{maxWidth: "100%", height: "auto"}}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={WithfriendsUpsellYourCustomersWebm} type="video/webm" />
+                  <source src={WithfriendsUpsellYourCustomersMp4} type="video/mp4" />
+                  <p>Your browser does not support the video element.</p>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="w-full my-8" />
+      <BecomeAnOrganizer />
+      <div className="w-full my-8" />
+
+      <div className="flex justify-center my-4 sm:my-16 flex-wrap">
+        <a id="insights" />
+        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
+              </p>
+            </div>
+            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
+              <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
+              <p className="prose prose-md md:prose-xl text-right mt-4">
+                <Link to="/posts/purpose/" className="text-right">Read.</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full px-2 sm:px-8">
+        {featureRows}
+      </div>
 
       <div className="w-full my-8" />
       <BecomeAnOrganizer />
 
+      {
+        data.market?.socialProof?.length && (
+          <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 text-wfGray-800 py-8">
+            <h2 className="w-full text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
+              See other { data.market.plural } on Withfriends
+            </h2>
+            { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
+          </div>
+        )
+      }
+ 
+      <div className="w-full my-8" />
+      <BecomeAnOrganizer />
 
       <a id="pricing" />
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
@@ -282,33 +407,6 @@ const PrimerTemplate = ({ data }) => {
         <BecomeAnOrganizer />
       </div>
 
-      <div className="flex justify-center my-4 sm:my-16 flex-wrap">
-        <a id="insights" />
-        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Case Study:</strong> How a band's merch store hit $100,000 recurring revenue in three months.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/subscription-boxes-stick-figure/" className="text-right">Read.</Link>
-              </p>
-            </div>
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Insights:</strong> How Withfriends memberships reduce subscription box churn.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/subscription-box-churn/" className="text-right">Read.</Link>
-              </p>
-            </div>
-            <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
-              <h4 className="flex-grow"><strong className="font-heavy">Philosophy:</strong> How to convey a purpose that inspires growth.</h4>
-              <p className="prose prose-md md:prose-xl text-right mt-4">
-                <Link to="/posts/purpose/" className="text-right">Read.</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div>
         <h3 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
           Stories from Withfriends small businesses
@@ -384,6 +482,7 @@ export const query = graphql`
       name
       plural
       short
+      socialProof
       images {
         id
         childImageSharp {
@@ -442,4 +541,3 @@ export const query = graphql`
 `
 
 export default PrimerTemplate
-
