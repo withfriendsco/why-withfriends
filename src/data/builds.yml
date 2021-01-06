@@ -7,3 +7,6 @@
 -
   slug: loyalty
   name: loyalty
+-
+  slug: recurring_payment
+  name: recurring payments
