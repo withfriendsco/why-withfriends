@@ -9,6 +9,7 @@
 		GATSBY_FB_REDIRECT_URI = "https://dev.why.withfriends.co/.netlify/functions/facebook_login"
 		BASE_URL = "https://dev.why.withfriends.co/organizers"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
+		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE2NDE0OTM4NjB9.4qJacegECnM6koLJAcJQuaYYIiF3BHeHMlKf5uSCvsc"
 
 [context.staging]
 	[context.staging.environment]
@@ -27,5 +28,4 @@
 		GATSBY_FB_REDIRECT_URI = "https://why.withfriends.co/.netlify/functions/facebook_login"
 		BASE_URL = "https://why.withfriends.co/organizers"
 		FB_APP_SECRET = "eaaa0814c6979846f63ccfee3f05c0fa"
-		BASE_URL = "https://why.withfriends.co/organizers"
 

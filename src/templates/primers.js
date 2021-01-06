@@ -78,12 +78,14 @@ const PrimerTemplate = ({ data }) => {
           <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>
-        <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 py-32 p-4 sm:p-16 w-full h-screen -my-24 sm:-my-32 -mx-4 bg-wfGray-800 justify-center">
+        <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 py-20 sm:py-32 p-4 sm:p-16 w-full h-screen -my-24 sm:-my-32 -mx-4 bg-wfGray-800 justify-center">
           <div className="flex flex-wrap justify-center max-w-xl">
-            <h1 className="text-center leading-tight mb-8 font-bold text-3xl sm:text-4xl">
-              Sell {data.build.name} for your{" "}
-              {data.platform.store}, automatically.
+            <h1 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
+              Sell {data.build.name}, automatically.
             </h1>
+            <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
+              The best {data.platform.name} {data.build.tool} for your {data.market.name}.
+            </h2>
             <div className="w-full" />
             <EmailCaptureDevice />
           </div>
@@ -95,6 +97,8 @@ const PrimerTemplate = ({ data }) => {
 
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:-mx-8 text-xl sm:text-2xl md:text-4xl font-bold text-wfGray-800 py-8 sm:pt-16 bg-wfGray-100">
         <div className="w-full flex justify-center mb-8 md:mb-16">
+          <p className="text-center max-w-screen-md leading-tight">
+          </p>
           <p className="text-center max-w-screen-md leading-tight">
             Withfriends{" "}
             <span className="text-salmon-700">
@@ -307,7 +311,7 @@ const PrimerTemplate = ({ data }) => {
             </div>
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
               <div className="flex-1">
-                <h4 className="flex-grow font-heavy mb-4">Recurring subscription and membership payments</h4>
+                <h4 className="flex-grow font-heavy mb-4">Subscription boxes and recurring membership payments</h4>
                 <div className="flex">
                   <DoneIcon />
                   <div className="flex-1">Instant website checkout</div>
@@ -372,7 +376,7 @@ const PrimerTemplate = ({ data }) => {
         <div className="text-center w-full max-w-2xl">
           <h3 className="text-2xl md:text-4xl font-normal my-2 sm:my-8">
             Automations and integrated services let you focus on your business,
-            while we grow your memberships.
+            while our {data.platform.name} {data.build.tool} grows your memberships.
           </h3>
           <div className="flex my-8 flex-wrap">
             <IconItem icon={<Easy />} text="15 minutes to setup" />
@@ -386,7 +390,7 @@ const PrimerTemplate = ({ data }) => {
         <div className="w-full sm:my-4" />
         <div className="text-center w-full max-w-2xl">
           <h3 className="text-2xl md:text-4xl font-normal sm:my-8">
-            We integrate with your platform, however you reach your customers.
+            Our {data.build.tool} integrates with multiple platforms, however else you reach your customers.
           </h3>
           <div className="flex my-8 flex-wrap">
             <IconItem icon={<Eventbrite />} text="Eventbrite integration" />
@@ -409,7 +413,7 @@ const PrimerTemplate = ({ data }) => {
 
       <div>
         <h3 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
-          Stories from Withfriends small businesses
+          Stories from Withfriends businesses
         </h3>
         <div className="max-w-3xl mx-auto">
           <div
@@ -475,6 +479,7 @@ export const query = graphql`
       slug
       name
       store
+      short
     }
 
     market: marketsYaml(slug: { eq: $market }) {
@@ -496,6 +501,7 @@ export const query = graphql`
     build: buildsYaml(slug: { eq: $build }) {
       slug
       name
+      tool
     }
 
     allFeatureRowsYaml {

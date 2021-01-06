@@ -1,12 +1,24 @@
 -
   slug: memberships
   name: memberships
+  tool: memberships software
 -
   slug: subscriptions
   name: subscriptions
+  tool: subscription app
 -
   slug: loyalty
   name: loyalty
+  tool: loyalty app
+-
+  slug: subscription_plugin
+  name: subscriptions
+  tool: subscription plugin
+-
+  slug: subscription_box
+  name: subscription boxes
+  tool: subscription box app
 -
   slug: recurring_payment
   name: recurring payments
+  tool: recurring payments app

@@ -2,15 +2,19 @@
   slug: shopify
   name: Shopify
   store: Shopify shop
+  short: shop
 -
   slug: square
   name: Square
   store: Square store
+  short: store
 -
   slug: eventbrite
   name: Eventbrite
   store: Eventbrite account
+  short: events
 - 
   slug: squarespace
   name: Squarespace
   store: Squarespace site
+  short: site
