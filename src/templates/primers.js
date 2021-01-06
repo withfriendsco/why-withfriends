@@ -62,7 +62,7 @@ const PrimerTemplate = ({ data }) => {
   return (
     <Layout isPrimer={true}>
       <SEO
-        title="Membership and subscription box software for small businesses"
+        title={`Withfriends | ${data.platform.name} ${data.builds.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
       />
       <div className="flex flex-wrap md:flex-nowrap w-full justify-center bg-wfGray-800">
