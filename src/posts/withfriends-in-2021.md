@@ -14,7 +14,7 @@ members, and everyone who has been following us in this journey.
 possible at a time when support for small businesses and community
 organizations throughout the United States has never been more critical.** 
 
-<div class="text-xl sm:text-3xl leading-loose max-w-screen">
+<div class="text-xl sm:text-3xl leading-loose w-full">
 	<div class="border-b-2 mb-4 pb-2 border-wfGray-200"></div>
 	<div class="border-b-2 mb-4 pb-2 border-wfGray-200 flex place-items-center">
 		<div class="flex-1 font-heavy">

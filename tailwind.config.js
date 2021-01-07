@@ -11,6 +11,8 @@ module.exports = {
       "src/**/*.jsx",
       "src/**/*.ts",
       "src/**/*.tsx",
+      "src/**/*.md",
+      "src/**/*.mdx",
       "public/**/*.html",
     ],
   },

@@ -77,16 +77,16 @@ module.exports = {
           {
             resolve: `gatsby-remark-classes`,
             options: {
-              "heading[depth=1]": "text-lg",
-              "heading[depth=2]": "text-md",
-              "heading[depth=3]": "text-sm",
-              "list[ordered=false]":
-                "prose prose-md sm:prose-lg list-disc text-md",
-              "list[ordered=true]":
-                "prose prose-md sm:prose-lg list-decimal text-md",
               listitem: "ml-1",
               classMap: {
-                paragraph: "prose prose-md sm:prose-lg",
+                paragraph: "prose prose-md",
+                "heading[depth=1]": "text-lg max-w-prose mx-auto",
+                "heading[depth=2]": "text-md max-w-prose mx-auto",
+                "heading[depth=3]": "text-sm max-w-prose mx-auto",
+                "list[ordered=false]":
+                  "prose prose-md sm:prose-lg list-disc text-md max-w-prose mx-auto",
+                "list[ordered=true]":
+                  "prose prose-md sm:prose-lg list-decimal text-md max-w-prose mx-auto",
               },
             },
           },

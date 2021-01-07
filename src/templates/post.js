@@ -67,13 +67,16 @@ const Post = ({ data, pageContext }) => {
               </div>
             </div>
             <div className="px-0 md:pr-8 order-1 md:order-2">
-              <div className="prose prose-md md:prose-lg max-w-none">
-                <h1 className="mb-4">{post.frontmatter.title}</h1>
-                <div className="text-wfGray-600 text-sm">
-                  Posted on {post.frontmatter.date} by {post.frontmatter.author}
+              <div className="prose prose-md md:prose-lg max-w-none w-full flex flex-wrap justify-center">
+                <div className="max-w-prose w-full">
+                  <h1 className="mb-4">{post.frontmatter.title}</h1>
+                  <div className="text-wfGray-600 text-sm">
+                    Posted on {post.frontmatter.date} by {post.frontmatter.author}
+                  </div>
                 </div>
-                <div className="max-w-none">
-                  <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div 
+                  className="flex flex-wrap justify-center max-w-prose" 
+                  dangerouslySetInnerHTML={{ __html: post.html }}>
                 </div>
               </div>
               <div className="flex justify-center">

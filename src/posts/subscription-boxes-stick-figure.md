@@ -5,10 +5,10 @@ date: 2020-12-09
 headerImage: ../images/stick-figure-box.png
 ---
 
-Read on to see how a reggae group based in the woods outside of Oakland, CA,
-turned a successful merch store into a recurring revenue stream worth a
-substantial amount. Stick Figure's average membership on Withfriends is 300% the
-average Patreon donation.
+Read on to see how a reggae group based in Oakland, CA, turned a successful
+merch store into a recurring revenue stream worth a substantial amount. Stick
+Figure's average membership on Withfriends is 300% the average Patreon
+donation.
 
 <!-- end -->
 

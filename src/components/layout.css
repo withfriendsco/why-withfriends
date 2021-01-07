@@ -98,6 +98,13 @@
     @apply no-underline;
   }
 
+	.prose {
+		@apply w-full max-w-prose;
+		ul {
+			@apply w-full max-w-prose;
+		}
+	}
+
   .prose .gatsby-resp-image-wrapper {
     @apply border border-wfGray-300;
   }
