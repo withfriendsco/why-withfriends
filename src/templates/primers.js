@@ -231,18 +231,19 @@ const PrimerTemplate = ({ data }) => {
       <BecomeAnOrganizer />
 
       {
-        data.market?.socialProof?.length && (
+        data.market?.socialProof?.length &&
+        <>
           <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 text-wfGray-800 py-8">
             <h2 className="w-full text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">
               See other { data.market.plural } on Withfriends
             </h2>
             { data.market.socialProof.map(alias => <BusinessFeature alias={alias} />) }
           </div>
-        )
+     
+          <div className="w-full my-8" />
+          <BecomeAnOrganizer />
+        </>
       }
- 
-      <div className="w-full my-8" />
-      <BecomeAnOrganizer />
 
       <a id="pricing" />
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
