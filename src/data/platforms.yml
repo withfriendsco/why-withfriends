@@ -1,4 +1,9 @@
 -
+  slug: native
+  name:
+  store: business
+  short: small business
+-
   slug: shopify
   name: Shopify
   store: Shopify shop
