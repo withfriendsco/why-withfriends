@@ -27,7 +27,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -60,6 +59,13 @@ module.exports = {
       options: {
         excerpt_separator: `<!-- end -->`,
         plugins: [
+          { 
+            resolve: `gatsby-remark-images`,
+            options: {
+              wrapperStyle: {border: "none"},
+            },
+          },
+          `gatsby-remark-unwrap-images`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {

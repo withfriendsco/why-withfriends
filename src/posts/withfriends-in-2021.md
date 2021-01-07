@@ -1,8 +1,8 @@
 ---
-title: We made it to 2021!
+title: Reflecting on a year of support for businesses and organizers
 author: Joe Ahearn
 date: 2021-01-07
-headerImage: ../images/membership.png
+headerImage: ../images/wf-2020-header.png
 ---
 
 As the Withfriends team celebrated at a safe distance, with team members now on
@@ -59,8 +59,8 @@ online, our Shopify and Square integrations made it possible for every customer
 to support businesses they cared about, just as they did with our event
 integrations. This meant bookstores, record stores, coffeeshops, musicians, and
 many more essential businesses to our cultural landscape could find support at
-a difficult time. You can explore the 1500 businesses working with us in 2020
-here.
+a difficult time. [You can explore the 1500 businesses working with us in 2020
+here](https://withfriends.co/meet_our_organizations).
 
 Most transformative, though, is the amount of money spent by each member on
 Withfriends. At the close of 2020, that number is $12. The reason is that we
@@ -73,6 +73,8 @@ customers rewarded those that made the switch. The average amount of money
 spent per member with subscription benefits was $30! Compared to a platform
 like Patreon, whose average is $7, [we've discovered something that more than
 triples that value](/posts/subscription-boxes-stick-figure).
+
+![Membership Tiers Graphic](../images/subscriptions-sample-tiers.png)
 
 Lastly, we closed out the year with 6775 active members, and another 5,200 who
 supported the businesses with a donation or tip in 2020. With many businesses
