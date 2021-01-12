@@ -4,6 +4,7 @@ import { useQueryParam, NumberParam, StringParam } from "use-query-params"
 import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"
 import { hubspotSignup } from "../helpers/hubspot"
+import { becomeAnOrganizer } from "../helpers/mixpanel"
 
 import Button from "./Button"
 import IconItem from "./IconItem"
@@ -168,6 +169,7 @@ const EmailCaptureDevice = () => {
 
   const responseGoogleSuccess = async (response) => {
     setLoginLoading(true)
+    becomeAnOrganizer()
     if (response.profileObj) {
       const firstName = response.profileObj.givenName
       const lastName = response.profileObj.familyName
@@ -185,7 +187,7 @@ const EmailCaptureDevice = () => {
         }
       })
 
-      if (createUserResponse.data.userCreate.id) {
+      if (createUserResponse.data?.userCreate?.id) {
         const loginLink = createUserResponse.data.userCreate.loginLink + ",first_login"
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
@@ -219,6 +221,7 @@ const EmailCaptureDevice = () => {
   }
 
   const callFacebookRedirect = () => {
+    becomeAnOrganizer()
     window.location = `https://www.facebook.com/v9.0/dialog/oauth?client_id=${process.env.GATSBY_FB_APP_ID}&redirect_uri=${process.env.GATSBY_FB_REDIRECT_URI}&scope=email`
   }
 
