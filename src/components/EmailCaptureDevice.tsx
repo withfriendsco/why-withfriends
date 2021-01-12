@@ -166,27 +166,6 @@ const EmailCaptureDevice = () => {
     setEmailAddress(ev.target.value)
   }
 
-  const responseFacebook = async (response) => {
-    if (response) {
-      const [firstName, ...moreName] = response?.name?.split(' ')
-      const lastName = moreName?.join(' ')
-      const emailAddress = response?.email
-      const facebookId = response?.id
-      await createUserFacebook({
-        variables: {
-          firstName, 
-          lastName,
-          emailAddress,
-          facebookId,
-        }
-      })
-
-      sendToFacebook()
-      await hubspotSignup(emailAddress, `${firstName} ${lastName}`)
-      await mailchimpSignup(emailAddress, `${firstName} ${lastName}`)
-    }
-  }
-
   const responseGoogleSuccess = async (response) => {
     setLoginLoading(true)
     if (response.profileObj) {
