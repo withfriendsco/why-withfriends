@@ -151,7 +151,8 @@ exports.handler = async function (event, context) {
     emailAddress,
     facebookId
   });
-  if (!userResponse && userResponse.data.loginLink) return {
+
+  if (!userResponse) return {
     statusCode: 400
   }; // Problems? Try https://stackoverflow.com/questions/29283040/how-to-add-custom-certificate-authority-ca-to-nodejs
 

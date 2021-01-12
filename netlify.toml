@@ -28,4 +28,5 @@
 		GATSBY_FB_REDIRECT_URI = "https://why.withfriends.co/.netlify/functions/facebook_login"
 		BASE_URL = "https://why.withfriends.co/organizers"
 		FB_APP_SECRET = "eaaa0814c6979846f63ccfee3f05c0fa"
+		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE5MjYwMTI4NTB9.deQVAbZOLnEI3eZgl3wGBok4hUEQCQ0YJyxxagG0LZs"
 
