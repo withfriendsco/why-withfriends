@@ -197,8 +197,9 @@ const PrimerTemplate = ({ data }) => {
       <div className="w-full my-8" />
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
-        <a id="insights" />
-        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
+        <a title="Insights" id="insights" href="#insights">
+          <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Insights from Withfriends</h2>
+        </a>
         <div className="w-full flex justify-center">
           <div className="w-full max-w-screen-lg flex flex-wrap sm:flex-nowrap my-4 md:my-12">
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4">
@@ -245,9 +246,10 @@ const PrimerTemplate = ({ data }) => {
         </>
       }
 
-      <a id="pricing" />
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
-        <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Our Pricing & Features</h2>
+        <a title="Pricing" id="pricing" href="#pricing">
+          <h2 className="text-2xl md:text-4xl text-center font-normal my-8 text-wfGray-800">Our Pricing & Features</h2>
+        </a>
         <div className="text-center w-full flex justify-center">
           <div className="w-full max-w-screen-lg flex flex-wrap md:flex-nowrap my-4 md:my-12">
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
