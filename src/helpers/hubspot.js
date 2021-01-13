@@ -12,6 +12,10 @@ export const hubspotSignup = async (emailAddress, personName) => {
             name: "email",
             value: emailAddress,
           },
+          {
+            name: "hs_lead_status",
+            value: "Clicked",
+          },
         ],
         context: {
           hutk: hutk,
