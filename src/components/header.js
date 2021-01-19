@@ -19,7 +19,7 @@ const Header = ({ siteTitle, isPrimer }) => {
     </a>
   ) : (
     <UTMLink
-      href="https://withfriends.co/pricing"
+      href="/organizers#pricing"
       className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end"
       onClick={() => setShowMobileMenu(false)}
     >
