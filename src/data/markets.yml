@@ -129,6 +129,9 @@
     - ../images/magic_moment/online-store-1.jpg
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - mayday_space
+    - songbyrd_music_house
 - 
   slug: bar
   name: bar
@@ -228,4 +231,20 @@
   socialProof:
     - mayday_space
     - powrplnt
+-
+  slug: band
+  name: band
+  plural: bands
+  short: band
+  storeLanguage: merch store
+  storeIcon: cart
+  testimonialVideo: bluestockings
+  images:
+    - ../images/magic_moment/online-store-1.jpg
+    - ../images/magic_moment/online-store-2.jpg
+    - ../images/magic_moment/online-store-3.jpg
+  socialProof:
+    - stick_figure
+    - the_movement
+    - iya_terra
 
