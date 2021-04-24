@@ -5,11 +5,11 @@ date: 2021-04-21
 headerImage: ../images/making_worlds_logo.jpg
 ---
 
-![making_worlds_profile.jpg](../images/making_worlds_profile.jpg)
-
 “Bookstores are magical spaces.” If what bookstore cofounder Malav Kanuga says is true (and we all know it is), then Making Worlds Bookstore & Social Center is an extra magical space.
 
 <!-- end -->
+
+![making_worlds_profile.jpg](../images/making_worlds_profile.jpg)
 
 That’s because Malav and the Making Worlds collective take that magic seriously. It’s visible in every decision they make as they transform a bookstore into a space to build a better world.
 
