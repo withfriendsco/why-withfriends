@@ -47,6 +47,12 @@ const Header = ({ siteTitle, isPrimer }) => {
         }
       </div>
       <UTMLink
+        href="https://withfriends.co/discover"
+        className="color-salmon-600 no-underline block w-full mb-2"
+      >
+        Browse subscription boxes
+      </UTMLink>
+      <UTMLink
         href="https://withfriends.co/action/363/sign_in/modal"
         className="color-salmon-600 no-underline block w-full mb-2"
       >
