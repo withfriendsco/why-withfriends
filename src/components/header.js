@@ -35,6 +35,12 @@ const Header = ({ siteTitle, isPrimer }) => {
       >
         What's new
       </button>
+      <UTMLink
+        href="https://withfriends.co/discover"
+        className="color-salmon-600 no-underline block w-full mb-2"
+      >
+        Discover businesses
+      </UTMLink>
       <Link
         to="/"
         className="color-salmon-600 no-underline block w-full mb-2"
@@ -46,12 +52,6 @@ const Header = ({ siteTitle, isPrimer }) => {
           pricingLink
         }
       </div>
-      <UTMLink
-        href="https://withfriends.co/discover"
-        className="color-salmon-600 no-underline block w-full mb-2"
-      >
-        Browse
-      </UTMLink>
       <UTMLink
         href="https://withfriends.co/action/363/sign_in/modal"
         className="color-salmon-600 no-underline block w-full mb-2"
@@ -92,6 +92,12 @@ const Header = ({ siteTitle, isPrimer }) => {
           >
             What's new
           </button>
+          <UTMLink
+            href="https://withfriends.co/discover"
+            className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end inline-block"
+          >
+            Discover businesses
+          </UTMLink>
           <Link
             to="/"
             className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end inline-block"
@@ -101,12 +107,6 @@ const Header = ({ siteTitle, isPrimer }) => {
           {
             pricingLink
           }
-          <UTMLink
-            href="https://withfriends.co/discover"
-            className="color-salmon-600 no-underline block w-full mb-2"
-          >
-            Browse
-          </UTMLink>
           <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r justify-self-end border-wfGray-300 inline inline-block" />
           <UTMLink
             href="https://withfriends.co/action/363/sign_in/modal"
