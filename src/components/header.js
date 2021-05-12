@@ -50,7 +50,7 @@ const Header = ({ siteTitle, isPrimer }) => {
         href="https://withfriends.co/discover"
         className="color-salmon-600 no-underline block w-full mb-2"
       >
-        Browse subscription boxes
+        Browse
       </UTMLink>
       <UTMLink
         href="https://withfriends.co/action/363/sign_in/modal"
@@ -101,6 +101,12 @@ const Header = ({ siteTitle, isPrimer }) => {
           {
             pricingLink
           }
+          <UTMLink
+            href="https://withfriends.co/discover"
+            className="color-salmon-600 no-underline block w-full mb-2"
+          >
+            Browse
+          </UTMLink>
           <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r justify-self-end border-wfGray-300 inline inline-block" />
           <UTMLink
             href="https://withfriends.co/action/363/sign_in/modal"
