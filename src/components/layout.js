@@ -24,6 +24,11 @@ const Layout = ({ children, isPrimer }) => {
       }
     }
   `)
+  const pricingLink = isPrimer ? (
+    <a href="#pricing">Pricing</a>
+  ) : (
+    <a href="/#pricing">Pricing</a>
+  )
 
   return (
     <div className="font-sans">
@@ -37,12 +42,12 @@ const Layout = ({ children, isPrimer }) => {
       <footer className="py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">
         <div className="pl-2 md:pl-16 justify-self-start text-white flex-grow md:flex-grow-0 text-center md:text-left">
           <p className="text-white">
-            <UTMLink href="/organizers">
+            <UTMLink href="/">
               Why Withfriends?
             </UTMLink>
           </p>
           <p className="text-white">
-            <UTMLink href="/organizers#pricing">Pricing</UTMLink>
+            {pricingLink}
           </p>
           <p className="text-white">
             <UTMLink href="mailto:team@withfriends.co">Contact</UTMLink>

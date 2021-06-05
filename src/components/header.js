@@ -18,13 +18,13 @@ const Header = ({ siteTitle, isPrimer }) => {
       Pricing
     </a>
   ) : (
-    <UTMLink
-      href="/organizers#pricing"
+    <a
+      href="/#pricing"
       className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end"
       onClick={() => setShowMobileMenu(false)}
     >
       Pricing
-    </UTMLink>
+    </a>
   )
 
   const mobileMenu = (
@@ -42,10 +42,10 @@ const Header = ({ siteTitle, isPrimer }) => {
         Discover businesses
       </UTMLink>
       <Link
-        to="/"
+        to="/case_studies"
         className="color-salmon-600 no-underline block w-full mb-2"
       >
-        Insights
+        Case studies
       </Link>
       <div className="block w-full mb-2">
         {
@@ -77,7 +77,7 @@ const Header = ({ siteTitle, isPrimer }) => {
       { showMobileMenu && mobileMenu }
       <nav className="top-0 py-2 w-full flex flex-grow items-center px-4 sm:px-8">
         <h2 className="inline-block">
-          <Link to="/organizers" className="color-salmon-600 no-underline">
+          <Link to="/" className="color-salmon-600 no-underline">
             <Wordmark className="h-5" />
           </Link>
         </h2>
@@ -99,10 +99,10 @@ const Header = ({ siteTitle, isPrimer }) => {
             Discover businesses
           </UTMLink>
           <Link
-            to="/"
+            to="/case_studies"
             className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end inline-block"
           >
-            Insights
+            Case studies
           </Link>
           {
             pricingLink
