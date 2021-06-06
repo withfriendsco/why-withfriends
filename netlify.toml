@@ -1,6 +1,11 @@
 [build]
 	functions = "functions/"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
 [context.development]
 	[context.development.environment]
 		GATSBY_GRAPHQL_API = "https://dev.api.withfriends.co/graphql"
