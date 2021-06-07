@@ -9,6 +9,7 @@ import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
 const Header = ({ siteTitle, isPrimer }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+
   const pricingLink = isPrimer ? (
     <a
       href="#pricing"
@@ -36,7 +37,7 @@ const Header = ({ siteTitle, isPrimer }) => {
         What's new
       </button>
       <UTMLink
-        href="https://withfriends.co/discover"
+        href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
         className="color-salmon-600 no-underline block w-full mb-2"
       >
         Discover businesses
@@ -53,14 +54,14 @@ const Header = ({ siteTitle, isPrimer }) => {
         }
       </div>
       <UTMLink
-        href="https://withfriends.co/action/363/sign_in/modal"
+        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
         className="color-salmon-600 no-underline block w-full mb-2"
       >
         Log In
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href="https://withfriends.co/action/364/sign_up/modal"
+        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
         text="Get Started"
       >
         <div className="block w-full">
@@ -93,7 +94,7 @@ const Header = ({ siteTitle, isPrimer }) => {
             What's new
           </button>
           <UTMLink
-            href="https://withfriends.co/discover"
+            href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
             className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end inline-block"
           >
             Discover businesses
@@ -109,14 +110,14 @@ const Header = ({ siteTitle, isPrimer }) => {
           }
           <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r justify-self-end border-wfGray-300 inline inline-block" />
           <UTMLink
-            href="https://withfriends.co/action/363/sign_in/modal"
+            href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
             className="color-salmon-600 no-underline mr-6 justify-self-end inline-block"
           >
             Log In
           </UTMLink>
           <UTMLink
             className="inline-block"
-            href="https://withfriends.co/action/364/sign_up/modal"
+            href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
             text="Get Started"
           >
             <div className="flex justify-end">
