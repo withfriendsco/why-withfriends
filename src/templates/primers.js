@@ -20,6 +20,8 @@ import Squarespace from "../components/integrations/Squarespace"
 import Tickets from "../components/integrations/Tickets"
 import Toast from "../components/integrations/Toast"
 import Value from "../components/integrations/Value"
+import Box from "../components/integrations/Box"
+import Package from "../components/integrations/Package"
 import BecomeAnOrganizer from "../components/BecomeAnOrganizer"
 import IconItem from "../components/IconItem"
 import DoneIcon from "../components/DoneIcon"
@@ -394,9 +396,9 @@ const PrimerTemplate = ({ data }) => {
             <IconItem icon={<Easy />} text="15 minutes to setup" />
             <IconItem icon={<Pos />} text="Point of sale upsell" />
             <IconItem icon={<Cart />} text="Online order upsell" />
-            <IconItem icon={<Value />} text="Automated subscriptions" />
             <IconItem icon={<Tickets />} text="Ticketing upsell" />
-            <IconItem icon={<Discounts />} text="Automated ${translationMapping.person} discounts" />
+            <IconItem icon={<Package />} text="Automated shipments" />
+            <IconItem icon={<Discounts />} text={`Automated ${translationMapping.person} discounts`} />
           </div>
         </div>
         <div className="w-full sm:my-4" />
