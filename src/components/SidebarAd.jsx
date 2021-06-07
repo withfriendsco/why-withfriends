@@ -56,7 +56,7 @@ const SidebarAd = () => (
       </p>{" "}
       <p>
         <a
-          href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
+          href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/discover"}
           rel="noreferrer"
           target="_blank"
         >
@@ -69,7 +69,7 @@ const SidebarAd = () => (
     <div className="flex w-full justify-center mt-8">
       <UTMLink
         className="inline-block justify-self-end justify-end"
-        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
+        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
         text="Get Started"
       >
         <div className="flex justify-end">

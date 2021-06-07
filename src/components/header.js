@@ -37,7 +37,7 @@ const Header = ({ siteTitle, isPrimer }) => {
         What's new
       </button>
       <UTMLink
-        href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
+        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/discover"}
         className="color-salmon-600 no-underline block w-full mb-2"
       >
         Discover businesses
@@ -54,14 +54,14 @@ const Header = ({ siteTitle, isPrimer }) => {
         }
       </div>
       <UTMLink
-        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
+        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
         className="color-salmon-600 no-underline block w-full mb-2"
       >
         Log In
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
+        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
         text="Get Started"
       >
         <div className="block w-full">
@@ -94,7 +94,7 @@ const Header = ({ siteTitle, isPrimer }) => {
             What's new
           </button>
           <UTMLink
-            href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
+            href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/discover"}
             className="color-salmon-600 no-underline ml-2 md:ml-6 justify-self-end inline-block"
           >
             Discover businesses
@@ -110,14 +110,14 @@ const Header = ({ siteTitle, isPrimer }) => {
           }
           <div className="text-wfGray-300 h-8 mr-4 pr-4 border-r justify-self-end border-wfGray-300 inline inline-block" />
           <UTMLink
-            href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
+            href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}
             className="color-salmon-600 no-underline mr-6 justify-self-end inline-block"
           >
             Log In
           </UTMLink>
           <UTMLink
             className="inline-block"
-            href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
+            href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
             text="Get Started"
           >
             <div className="flex justify-end">

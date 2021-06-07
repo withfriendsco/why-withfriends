@@ -50,7 +50,7 @@ const Layout = ({ children, isPrimer }) => {
             {pricingLink}
           </p>
           <p className="text-white">
-            <UTMLink href={(process.env.JELLY_URL || "https://dev.better.space") + "/meet_the_team"}>
+            <UTMLink href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/meet_the_team"}>
               Our team
             </UTMLink>
           </p>

@@ -13,7 +13,7 @@ const BecomeAnOrganizer = ({translationMapping}) => {
     <div className="flex w-full justify-center">
       <UTMLink
         className="inline-block justify-self-end justify-end become-an-organizer"
-        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
+        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
         text="Find your members"
       >
         <div className="flex justify-end">

@@ -82,7 +82,7 @@ const Post = ({ data, pageContext }) => {
               <div className="flex justify-center">
                 <UTMLink
                   className="inline-block justify-self-end justify-end no-underline"
-                  href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
+                  href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
                   text="Get Started"
                 >
                   <Button

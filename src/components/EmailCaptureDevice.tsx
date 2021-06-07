@@ -119,7 +119,7 @@ const EmailCaptureDevice = ({translationMapping}) => {
       } else if (!response?.data?.userAuthorize) {
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Incorrect password. Try again, or <a className="underline" href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}>reset your password here</a>.
+            Incorrect password. Try again, or <a className="underline" href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}>reset your password here</a>.
           </div>
         )
         setLoginLoading(false)
@@ -214,7 +214,7 @@ const EmailCaptureDevice = ({translationMapping}) => {
       setLoginMessage(
         <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
           Error logging you in through Google. Try another method, or visit <a className="underline"
-            href={process.env.JELLY_URL + "/action/363/sign_in/modal"}>this page to reset your password.</a>
+            href={process.env.GATSBY_JELLY_URL + "/action/363/sign_in/modal"}>this page to reset your password.</a>
         </div>
       )
     }
