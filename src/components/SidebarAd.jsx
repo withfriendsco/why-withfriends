@@ -56,7 +56,7 @@ const SidebarAd = () => (
       </p>{" "}
       <p>
         <a
-          href="https://withfriends.co/meet_our_organizations?utm_medium=referral&utm_content=Check%out%all%our%organizers"
+          href={(process.env.JELLY_URL || "https://dev.better.space") + "/discover"}
           rel="noreferrer"
           target="_blank"
         >
@@ -69,7 +69,7 @@ const SidebarAd = () => (
     <div className="flex w-full justify-center mt-8">
       <UTMLink
         className="inline-block justify-self-end justify-end"
-        href="https://withfriends.co/action/364/sign_up/modal"
+        href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
         text="Get Started"
       >
         <div className="flex justify-end">
