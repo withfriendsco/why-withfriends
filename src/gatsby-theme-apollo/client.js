@@ -3,7 +3,7 @@ import { ApolloLink, ApolloClient, createHttpLink, InMemoryCache } from '@apollo
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = createHttpLink({
-  uri: process.env.GATSBY_GRAPHQL_API || "https://dev.api.withfriends.co/graphql",
+  uri: process.env.GATSBY_GRAPHQL_API || "http://localhost:4002/graphql",
   fetch
 })
 

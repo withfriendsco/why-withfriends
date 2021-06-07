@@ -3,14 +3,14 @@
 
 [context.development]
 	[context.development.environment]
-		GATSBY_GRAPHQL_API = "https://dev.api.withfriends.co/graphql"
+		GATSBY_GRAPHQL_API = "http://localhost:4002/graphql"
 		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjg5NjEzfQ.GAuQYAcnTpUjMtKsQurCCMLCRQMXQtF7_jQE5jAoqXU"
 		GATSBY_FB_APP_ID = "769110557146959"
 		GATSBY_FB_REDIRECT_URI = "http://localhost:8000/.netlify/functions/facebook_login"
 		BASE_URL = "http://localhost:8000"
 		GATSBY_JELLY_URL = "https://dev.better.space"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
-		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE2NDE0OTM4NjB9.4qJacegECnM6koLJAcJQuaYYIiF3BHeHMlKf5uSCvsc"
+		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE2NDQ5NjM1MTR9.iwSDjX_KALtsT83u6prvQbv9ZQa8HBuEPjIf0VtXfAI"
 
 [context.staging]
 	[context.staging.environment]

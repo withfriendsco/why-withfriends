@@ -96,7 +96,7 @@ mutation CreateUserFacebook(
 
 const userCreate = async (userInfo) => {
   const response = await fetch(
-    process.env.GATSBY_GRAPHQL_API, {
+    process.env.GATSBY_GRAPHQL_API || "http://localhost:4002/graphql", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

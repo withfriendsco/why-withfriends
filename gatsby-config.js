@@ -20,7 +20,7 @@ module.exports = {
       options: {
         typeName: "WFAPI",
         fieldName: "wfapi",
-        url: process.env.GATSBY_GRAPHQL_API,
+        url: process.env.GATSBY_GRAPHQL_API || "http://localhost:4002/graphql",
         headers: {
           Authorization: `Bearer ${process.env.ADMIN_JWT}`,
         },
