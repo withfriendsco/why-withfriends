@@ -19,7 +19,7 @@ import {
   CREATE_USER_GOOGLE,
 } from "../queries"
 
-const EmailCaptureDevice = () => {
+const EmailCaptureDevice = ({translationMapping}) => {
   const [queryV, setQueryV] = useQueryParam("v", NumberParam)
   const [queryEmail, setQueryEmail] = useQueryParam("email", StringParam)
   const [queryName, setQueryName] = useQueryParam("name", StringParam)
@@ -112,14 +112,14 @@ const EmailCaptureDevice = () => {
       if (response?.data?.userAuthorize?.loginLink) {
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Success! You should be redirected soon. Otherwise, <a className="underline" href={response.data.userAuthorize.loginLink}>click here to continue to find your members.</a>
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={response.data.userAuthorize.loginLink}>click here to continue to find your {translationMapping.personPlural}.</a>
           </div>
         )
         window.location = response.data.userAuthorize.loginLink
       } else if (!response?.data?.userAuthorize) {
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Incorrect password. Try again, or <a className="underline" href="https://withfriends.co">reset your password here</a>.
+            Incorrect password. Try again, or <a className="underline" href={(process.env.JELLY_URL || "https://dev.better.space") + "/action/363/sign_in/modal"}>reset your password here</a>.
           </div>
         )
         setLoginLoading(false)
@@ -141,7 +141,7 @@ const EmailCaptureDevice = () => {
         let loginLink = createUserResponse.data.userCreate.loginLink + ",first_login"
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your members.</a>
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your {translationMapping.personPlural}.</a>
           </div>
         )
         setShowFindYourMembers(false)
@@ -191,7 +191,7 @@ const EmailCaptureDevice = () => {
         const loginLink = createUserResponse.data.userCreate.loginLink + ",first_login"
         setLoginMessage(
           <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
-            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your members.</a>
+            Success! You should be redirected soon. Otherwise, <a className="underline" href={loginLink}>click here to continue to find your {translationMapping.personPlural}.</a>
           </div>
         )
         setShowFindYourMembers(false)
@@ -214,7 +214,7 @@ const EmailCaptureDevice = () => {
       setLoginMessage(
         <div className="border-4 border-salmon-700 text-salmon-700 bg-white font-bold p-4 my-2">
           Error logging you in through Google. Try another method, or visit <a className="underline"
-            href="https://withfriends.co/action/364/sign_up/modal">this page to reset your password.</a>
+            href={process.env.JELLY_URL + "/action/363/sign_in/modal"}>this page to reset your password.</a>
         </div>
       )
     }
@@ -269,7 +269,7 @@ const EmailCaptureDevice = () => {
           variant="salmon" 
           loading={loginLoading}
           onClick={submitLogin}>
-          Find Your Members
+          Find Your {translationMapping?.personPlural ? translationMapping.personPlural.charAt(0).toUpperCase() + translationMapping.personPlural.slice(1) : "Members"}
         </Button>
       </div>
     </div>

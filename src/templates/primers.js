@@ -36,6 +36,13 @@ import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
+  const translationMapping = {
+    "person": data.build.name == 'memberships' ? 'member' : 'subscriber',
+    "personPlural": data.build.name == 'memberships' ? 'members' : 'subscribers',
+    "product": data.build.name == 'memberships' ? 'membership' : 'subscription',
+    "productPlural": data.build.name == 'memberships' ? 'memberships' : 'subscriptions'
+  }
+
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
     if (!node.node.only || node.node.only === data.platform.slug) {
       imageFirst = !imageFirst
@@ -44,6 +51,7 @@ const PrimerTemplate = ({ data }) => {
           key={node.node.id}
           imageFirst={imageFirst}
           featureRow={node.node}
+          translationMapping={translationMapping}
         />
       )
     } else {
@@ -87,7 +95,7 @@ const PrimerTemplate = ({ data }) => {
               The best {data.platform.name} {data.build.tool} for your {data.market.name}.
             </h2>
             <div className="w-full" />
-            <EmailCaptureDevice />
+            <EmailCaptureDevice translationMapping={translationMapping}/>
           </div>
           <div />
         </div>
@@ -102,13 +110,13 @@ const PrimerTemplate = ({ data }) => {
           <p className="text-center max-w-screen-md leading-tight">
             Withfriends{" "}
             <span className="text-salmon-700">
-              transforms {data.build.name} by upselling your customers
+              transforms {data.build.name} by upselling your customers into {translationMapping.personPlural}
             </span>{" "}
             automatically with each purchase. <br />
             <br />
             On Withfriends, an average of{" "}
-            <span className="text-salmon-700">one of every ten</span> customers
-            will purchase a membership for your{" "}
+            <span className="text-salmon-700">one in fifteen</span> customers
+            will purchase a {translationMapping.product} for your{" "}
             {data.market.short}, resulting in a
             <span className="text-salmon-700">
               &nbsp;60%&nbsp;increase in reliable monthly revenue.
@@ -123,10 +131,10 @@ const PrimerTemplate = ({ data }) => {
             <div className="w-full sm:hidden order-2" />
             <div className="pt-8 sm:p-8 md:p-12 order-3">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Generate your membership tiers automatically.
+                Generate your {translationMapping.product} tiers automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                Our membership tiers are generated for maximum conversion,
+                Our {translationMapping.product} tiers are generated for maximum conversion,
                 based on your data. We import your customers and orders,
                 analyze your data, and create tiers custom-made to ensure you
                 build sustaining revenue.
@@ -136,7 +144,7 @@ const PrimerTemplate = ({ data }) => {
                   to="/posts/memberships"
                   className="text-salmon-700 font-bold"
                 >
-                  Read more about how we calculate membership tiers.
+                  Read more about how we calculate {translationMapping.product} tiers.
                 </Link>
               </p>
             </div>
@@ -168,7 +176,7 @@ const PrimerTemplate = ({ data }) => {
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
                 Withfriends automates your {data.build.name} upsell with every
-                purchase. Approximately 5% of your customers will become members,
+                purchase. Approximately 6% of your customers will become {translationMapping.personPlural},
                 creating sustainable revenue for your {data.market.short}.
               </p>
             </div>
@@ -193,7 +201,7 @@ const PrimerTemplate = ({ data }) => {
       </div>
       
       <div className="w-full my-8" />
-      <BecomeAnOrganizer />
+      <BecomeAnOrganizer translationMapping={translationMapping}/>
       <div className="w-full my-8" />
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
@@ -229,7 +237,7 @@ const PrimerTemplate = ({ data }) => {
       </div>
 
       <div className="w-full my-8" />
-      <BecomeAnOrganizer />
+      <BecomeAnOrganizer translationMapping={translationMapping}/>
 
       {
         data.market?.socialProof?.length &&
@@ -242,7 +250,7 @@ const PrimerTemplate = ({ data }) => {
           </div>
      
           <div className="w-full my-8" />
-          <BecomeAnOrganizer />
+          <BecomeAnOrganizer translationMapping={translationMapping}/>
         </>
       }
 
@@ -254,18 +262,18 @@ const PrimerTemplate = ({ data }) => {
           <div className="w-full max-w-screen-lg flex flex-wrap md:flex-nowrap my-4 md:my-12">
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
               <div className="flex-1">
-                <h4 className="flex-grow font-heavy mb-4">Member Management Software</h4>
+                <h4 className="flex-grow font-heavy mb-4">{translationMapping.person} Management Software</h4>
                 <div className="flex">
                   <DoneIcon />
                   <div className="flex-1">Management dashboard</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Member import/export</div>
+                  <div className="flex-1">{translationMapping.person} import/export</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Member messaging by tier</div>
+                  <div className="flex-1">{translationMapping.person} messaging by tier</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
@@ -273,11 +281,11 @@ const PrimerTemplate = ({ data }) => {
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Member events and ticketing</div>
+                  <div className="flex-1">{translationMapping.person} events and ticketing</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Receive and auto-post member testimonials</div>
+                  <div className="flex-1">Receive and auto-post {translationMapping.person} testimonials</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
@@ -285,7 +293,7 @@ const PrimerTemplate = ({ data }) => {
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
-                Manage existing members on Withfriends <strong className="font-heavy">for free.</strong>
+                Manage existing {translationMapping.personPlural} on Withfriends <strong className="font-heavy">for free.</strong>
               </div>
             </div>
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
@@ -314,7 +322,7 @@ const PrimerTemplate = ({ data }) => {
             </div>
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
               <div className="flex-1">
-                <h4 className="flex-grow font-heavy mb-4">Subscription boxes and recurring membership payments</h4>
+                <h4 className="flex-grow font-heavy mb-4">Subscription boxes and recurring {translationMapping.product} payments</h4>
                 <div className="flex">
                   <DoneIcon />
                   <div className="flex-1">Instant website checkout</div>
@@ -329,26 +337,26 @@ const PrimerTemplate = ({ data }) => {
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Gift memberships</div>
+                  <div className="flex-1">Gift {translationMapping.productPlural}</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Automatic member lapse recovery</div>
+                  <div className="flex-1">Automatic {translationMapping.person} lapse recovery</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">Membership drives</div>
+                  <div className="flex-1">{translationMapping.product} drives</div>
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
-                We charge <strong className="font-heavy">10% of recurring payments</strong> for memberships and subscriptions.
+                We charge <strong className="font-heavy">10% of recurring payments</strong> for {translationMapping.productPlural}.
               </div>
             </div>
           </div>
         </div>
 
         <div className="w-full mb-8" />
-        <BecomeAnOrganizer />
+        <BecomeAnOrganizer translationMapping={translationMapping}/>
       </div>
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
@@ -372,14 +380,14 @@ const PrimerTemplate = ({ data }) => {
           You'll make $38,880 per year on Withfriends!
         </h2>
         <div className="w-full my-4" />
-        <BecomeAnOrganizer />
+        <BecomeAnOrganizer translationMapping={translationMapping}/>
       </div>
 
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
         <div className="text-center w-full max-w-2xl">
           <h3 className="text-2xl md:text-4xl font-normal my-2 sm:my-8">
             Automations and integrated services let you focus on your business,
-            while our {data.platform.name} {data.build.tool} grows your memberships.
+            while our {data.platform.name} {data.build.tool} grows your {translationMapping.productPlural}.
           </h3>
           <div className="flex my-8 flex-wrap">
             <IconItem icon={<Easy />} text="15 minutes to setup" />
@@ -387,7 +395,7 @@ const PrimerTemplate = ({ data }) => {
             <IconItem icon={<Cart />} text="Online order upsell" />
             <IconItem icon={<Value />} text="Automated subscriptions" />
             <IconItem icon={<Tickets />} text="Ticketing upsell" />
-            <IconItem icon={<Discounts />} text="Automated member discounts" />
+            <IconItem icon={<Discounts />} text="Automated ${translationMapping.person} discounts" />
           </div>
         </div>
         <div className="w-full sm:my-4" />
@@ -411,7 +419,7 @@ const PrimerTemplate = ({ data }) => {
           </h3>
         </div>
         <div className="w-full my-4" />
-        <BecomeAnOrganizer />
+        <BecomeAnOrganizer translationMapping={translationMapping}/>
       </div>
 
       <div>
@@ -454,7 +462,7 @@ const PrimerTemplate = ({ data }) => {
           <h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">
             Let your community help support your {data.market.name}.
           </h3>
-          <BecomeAnOrganizer />
+          <BecomeAnOrganizer translationMapping={translationMapping}/>
         </div>
       </div>
 

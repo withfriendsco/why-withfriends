@@ -1,31 +1,31 @@
 -
   image: ../images/subscriptions-sample-tiers.png 
-  title: Create membership levels with automated discounts and subscription boxes.
-  content: Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, plus members-only discounts synched to your Shopify or Square store. You can include options like t-shirt sizes attached to different Shopify products.
+  title: Create %product% levels with automated discounts and subscription boxes.
+  content: Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, plus %personPlural%-only discounts synched to your Shopify or Square store. You can include options like t-shirt sizes attached to different Shopify products.
   linkText: Read our insights on how discounts reduce churn.
   link: /posts/subscription-box-churn/
 -
   image: ../images/lead-upsell-your-customers.png
-  title: Convert customers into members with every purchase.
-  content: Offer memberships with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your members will support you!
+  title: Convert customers into %personPlural% with every purchase.
+  content: Offer %productPlural% with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your %personPlural% will support you!
   linkText: Read about how to write a purpose that inspires growth and reduces churn.
   link: /posts/purpose/
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
-  content: Withfriends syncs your members' subscription boxes to Shopify as Draft Orders for your dashboard. We also automate discounts for your store if they're a part of your membership tiers.
+  content: Withfriends syncs your %personPlural%' subscription boxes to Shopify as Orders for your dashboard. We also automate discounts for your store if they're a part of your %product% tiers.
   only: shopify
 -
   image: ../images/subscriptions-customize-addons.png
-  title: Let your members choose what's in their box.
-  content: Offer your members choices for their subscription boxes, including adding extra goodies to their subscription benefits. Members get a reminder email from us with each shipment.
+  title: Let your %personPlural% choose what's in their box.
+  content: Offer your %personPlural% choices for their subscription boxes, including adding extra goodies to their %product% benefits. %PersonPlural% get a reminder email from us with each shipment.
 -
   image: ../images/lead-manage-multiple-tiers.png
   title: Manage recurring payments for multiple tiers.
-  content: Complex membership program? No problem. We make it easy to build multiple tiers, and we automate the discounts for you and your members.
-  linkText: Read about how you can craft a sustainable membership program.
+  content: Complex %product% program? No problem. We make it easy to build multiple tiers, and we automate the discounts for you and your %personPlural%.
+  linkText: Read about how you can craft a sustainable %product% program.
   link: /posts/memberships/
 -
   image: ../images/member-management.png
-  title: Use our comprehensive membership management software.
-  content: Use our member management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync with your CRM automatically.
+  title: Use our comprehensive %product% management software.
+  content: Use our %person% management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync with your CRM automatically.

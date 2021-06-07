@@ -15,9 +15,25 @@ interface FeatureRowData {
     link?: string
     linkText?: string
   }
+  translationMapping: {
+    person: string
+    personPlural: string
+    product: string
+    productPlural: string
+  }
 }
 
-const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
+const ucfirst = (content) => content.charAt(0).toUpperCase() + content.slice(1)
+
+const translate = (content, translationMapping) => {
+  for (const [key, value] of Object.entries(translationMapping)) {
+    content = content.replaceAll("%" + key + "%", value)
+    content = content.replaceAll("%" + ucfirst(key) + "%", ucfirst(value))
+  }
+  return content
+}
+
+const FeatureRow = ({ imageFirst, featureRow, translationMapping }: FeatureRowData) => {
   return (
     <div className="w-full flex flex-wrap justify-center">
       <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
@@ -28,10 +44,10 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
         >
           <div className="pt-8 sm:p-8 md:p-12">
             <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-              {featureRow.title}
+              {translate(featureRow.title, translationMapping)}
             </h2>
             <p className="prose md:prose-md text-wfGray-800">
-              {featureRow.content}
+            {translate(featureRow.content, translationMapping)}
             </p>
             {featureRow.link && featureRow.linkText && (
               <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
@@ -39,7 +55,7 @@ const FeatureRow = ({ imageFirst, featureRow }: FeatureRowData) => {
                   to={featureRow.link}
                   className="text-salmon-700 font-bold"
                 >
-                  {featureRow.linkText}
+                  {translate(featureRow.linkText, translationMapping)}
                 </Link>
               </p>
             )}
