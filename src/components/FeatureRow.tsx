@@ -27,8 +27,8 @@ const ucfirst = (content) => content.charAt(0).toUpperCase() + content.slice(1)
 
 const translate = (content, translationMapping) => {
   for (const [key, value] of Object.entries(translationMapping)) {
-    content = content.replace("/%" + key + "%/g", value)
-    content = content.replace("/%" + ucfirst(key) + "%/g", ucfirst(value))
+    content = content.replace(new RegExp("%" + key + "%", 'g'), value)
+    content = content.replace(new RegExp("%" + ucfirst(key) + "%", 'g'), ucfirst(value))
   }
   return content
 }
