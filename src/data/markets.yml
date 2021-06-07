@@ -26,8 +26,8 @@
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
   socialProof:
-    - saras_cosmic_cookie_dough
-    - bee_wild
+    - southern_elegance_candle_company
+    - leilo
 -
   slug: restaurant
   name: restaurant
@@ -86,8 +86,8 @@
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
   socialProof:
-    - dimos_pizza
-    - saras_cosmic_cookie_dough
+    - big_spoon_roasters
+    - subarzsweets
 - 
   slug: csa
   name: CSA
@@ -190,8 +190,8 @@
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
   socialProof:
+    - elsewhere
     - the_lab
-    - the_cell
 - 
   slug: health_and_fitness_organization
   name: health and fitness organization
@@ -229,8 +229,8 @@
     - ../images/magic_moment/online-store-2.jpg
     - ../images/magic_moment/online-store-3.jpg
   socialProof:
-    - mayday_space
-    - powrplnt
+    - common_notions
+    - making_worlds_bookstore_and_social_center
 -
   slug: band
   name: band
