@@ -42,6 +42,7 @@ const PrimerTemplate = ({ data }) => {
     "product": data.build.name == 'memberships' ? 'membership' : 'subscription',
     "productPlural": data.build.name == 'memberships' ? 'memberships' : 'subscriptions'
   }
+  const ucfirst = (content) => content.charAt(0).toUpperCase() + content.slice(1)
 
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
     if (!node.node.only || node.node.only === data.platform.slug) {
@@ -262,18 +263,18 @@ const PrimerTemplate = ({ data }) => {
           <div className="w-full max-w-screen-lg flex flex-wrap md:flex-nowrap my-4 md:my-12">
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
               <div className="flex-1">
-                <h4 className="flex-grow font-heavy mb-4">{translationMapping.person} Management Software</h4>
+                <h4 className="flex-grow font-heavy mb-4">{ucfirst(translationMapping.person)} Management Software</h4>
                 <div className="flex">
                   <DoneIcon />
                   <div className="flex-1">Management dashboard</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">{translationMapping.person} import/export</div>
+                  <div className="flex-1">{ucfirst(translationMapping.person)} import/export</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">{translationMapping.person} messaging by tier</div>
+                  <div className="flex-1">{ucfirst(translationMapping.person)} messaging by tier</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
@@ -281,7 +282,7 @@ const PrimerTemplate = ({ data }) => {
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">{translationMapping.person} events and ticketing</div>
+                  <div className="flex-1">{ucfirst(translationMapping.person)} events and ticketing</div>
                 </div>
                 <div className="flex">
                   <DoneIcon />
@@ -345,7 +346,7 @@ const PrimerTemplate = ({ data }) => {
                 </div>
                 <div className="flex">
                   <DoneIcon />
-                  <div className="flex-1">{translationMapping.product} drives</div>
+                  <div className="flex-1">{ucfirst(translationMapping.product)} drives</div>
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
