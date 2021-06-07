@@ -1,20 +1,14 @@
 [build]
 	functions = "functions/"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-	Access-Control-Allow-Methods = "GET,HEAD,OPTIONS,POST,PUT"
-	Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-
 [context.development]
 	[context.development.environment]
 		GATSBY_GRAPHQL_API = "https://dev.api.withfriends.co/graphql"
 		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjg5NjEzfQ.GAuQYAcnTpUjMtKsQurCCMLCRQMXQtF7_jQE5jAoqXU"
 		GATSBY_FB_APP_ID = "769110557146959"
-		GATSBY_FB_REDIRECT_URI = "https://dev.why.withfriends.co/.netlify/functions/facebook_login"
-		BASE_URL = "https://dev.why.withfriends.co/organizers"
+		GATSBY_FB_REDIRECT_URI = "http://localhost:8000/.netlify/functions/facebook_login"
+		BASE_URL = "http://localhost:8000"
+		GATSBY_JELLY_URL = "https://dev.better.space"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
 		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE2NDE0OTM4NjB9.4qJacegECnM6koLJAcJQuaYYIiF3BHeHMlKf5uSCvsc"
 
@@ -24,7 +18,8 @@
 		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMjIzfQ.ozhMygzdz7nUxcFcpdDmiCOZHxqhil3MelCpa_8dMl4"
 		GATSBY_FB_APP_ID = "769110557146959"
 		GATSBY_FB_REDIRECT_URI = "https://sandbox-why.withfriends.co/.netlify/functions/facebook_login"
-		BASE_URL = "https://sandbox-why.withfriends.co/organizers"
+		BASE_URL = "https://sandbox-why.withfriends.co"
+		GATSBY_JELLY_URL = "https://staging.withfriends.cool"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
 
 [context.production]
@@ -33,7 +28,8 @@
 		GATSBY_PUBLIC_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjpmYWxzZX0sInN1YiI6bnVsbCwiZXhwIjoxNjQwMjAwMzIwfQ.XMtCGoGk9peJnph25V7CirtXZiMMP6-KZejlF2qWIUQ"
 		GATSBY_FB_APP_ID = "783700495040097"
 		GATSBY_FB_REDIRECT_URI = "https://why.withfriends.co/.netlify/functions/facebook_login"
-		BASE_URL = "https://why.withfriends.co/organizers"
+		BASE_URL = "https://why.withfriends.co"
+		GATSBY_JELLY_URL = "https://withfriends.co"
 		FB_APP_SECRET = "eaaa0814c6979846f63ccfee3f05c0fa"
 		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE5MjYwMTI4NTB9.deQVAbZOLnEI3eZgl3wGBok4hUEQCQ0YJyxxagG0LZs"
 
