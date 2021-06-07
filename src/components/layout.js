@@ -50,6 +50,11 @@ const Layout = ({ children, isPrimer }) => {
             {pricingLink}
           </p>
           <p className="text-white">
+            <UTMLink href={(process.env.JELLY_URL || "https://dev.better.space") + "/meet_the_team"}>
+              Our team
+            </UTMLink>
+          </p>
+          <p className="text-white">
             <UTMLink href="mailto:team@withfriends.co">Contact</UTMLink>
           </p>
         </div>
