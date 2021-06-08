@@ -89,7 +89,7 @@ const PrimerTemplate = ({ data }) => {
           <img alt="Local Business Bluestockings on Withfriends" src={LocalBusinessVideoJpg} />
           <p>Your browser does not support the video element.</p>
         </video>
-        <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 py-20 sm:py-32 p-4 sm:p-16 w-full h-screen -my-24 sm:-my-32 -mx-4 bg-wfGray-800 justify-center">
+        <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 py-20 sm:py-32 p-4 sm:p-16 w-full h-screen -my-24 sm:-my-32 -mx-4 bg-wfGray-800 justify-center" style={{marginLeft:0, marginRight:0}}>
           <div className="flex flex-wrap justify-center max-w-xl">
             <h1 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
               Sell {data.build.name}, automatically.
