@@ -5,11 +5,11 @@ date: 2021-06-24
 headerImage: ../images/Sweat_Records_Social_Card.png
 ---
 
-"Our main competition is Amazom." says Lolo Reskin, founder of Sweat Records. "As much as we wish it weren't true, people reflexively order records on there even though Amazon doesn't give a damn about them, and pack the records crappily. Our records are packed perfectly with notes and stickers and love."
+In 2005, Sweat Records opened in Miami as a homegrown hub for music lovers in South Florida and beyond. It’s a record store. A space for shows. A community partner. And it’s become an international, intergenerationally beloved institution.
 
 <!-- end -->
 
-![images/Sweat_Records_Social_Card.png](../images/Sweat_Records_Social_Card.png)
+![Sweat Records v Amazon](../images/Sweat_Records_Social_Card.png)
 
 In 2005, Sweat Records opened in Miami as a homegrown hub for music lovers in South Florida and beyond. It’s a record store. A space for shows. A community partner. And it’s become an international, intergenerationally beloved institution.
 
@@ -20,6 +20,8 @@ That’s the Sweat Records effect: a global and hyperlocal community of supporte
 **“The fact that we get these generational visitors is incredible, and shows what longevity in this scene can do.”**
 
 ## Celebrating a 15 Year Anniversary in a Pandemic
+
+![Sweat Records' records](../images/Sweat_Records_Blog_1.png)
 
 As the COVID-19 pandemic forced thousands of small businesses to navigate online sales, Sweat Records was luckily ahead of the curve. They had been preparing to launch a webstore for the entirety of 2019 in celebration of their 15th anniversary.
 
