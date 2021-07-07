@@ -1,5 +1,5 @@
 ---
-title: Sweat Records Launches a Vinyl Club for Members
+title: Sweat Records launches a vinyl club for members
 author: Elise Granata
 date: 2021-06-24
 headerImage: ../images/Sweat_Records_Social_Card.png
