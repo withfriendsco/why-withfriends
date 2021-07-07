@@ -9,10 +9,6 @@ In 2005, Sweat Records opened in Miami as a homegrown hub for music lovers in So
 
 <!-- end -->
 
-![Sweat Records v Amazon](../images/Sweat_Records_Social_Card.png)
-
-In 2005, Sweat Records opened in Miami as a homegrown hub for music lovers in South Florida and beyond. It’s a record store. A space for shows. A community partner. And it’s become an international, intergenerationally beloved institution.
-
 “Over 16 years, we’ve had customers who have become friends, who have kids, and then come in with their kids,” said co-owner and founder Lolo Reskin. “We've gotten love letters in the mail from our patrons, people tagging us wearing sweatshirts all around the world, or someone texting about being in a bar in New York and seeing a Sweat Records sticker.”
 
 That’s the Sweat Records effect: a global and hyperlocal community of supporters who have been buying vinyl, going to shows, and hanging out with their staff for sixteen years.
@@ -21,7 +17,7 @@ That’s the Sweat Records effect: a global and hyperlocal community of supporte
 
 ## Celebrating a 15 Year Anniversary in a Pandemic
 
-![Sweat Records' records](../images/Sweat_Records_Blog_1.png)
+![Sweat Records' records](../images/Sweat_records_blog_1.png)
 
 As the COVID-19 pandemic forced thousands of small businesses to navigate online sales, Sweat Records was luckily ahead of the curve. They had been preparing to launch a webstore for the entirety of 2019 in celebration of their 15th anniversary.
 
