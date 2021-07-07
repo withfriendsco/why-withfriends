@@ -53,7 +53,7 @@ Even when vinyl sales were slower years ago, Sweat would hold a club night every
 
 ![Sweat Records collage](../images/Sweat_records_blog_3.png)
 
-## Questions? Let's [get started](https://why.withfriends.co/)!
+## Questions? Let's get started!
 
 If you have any questions about this article, we'd love to hear from you! Drop
 us a line at team@withfriends.co, and while you're at it get started setting up
