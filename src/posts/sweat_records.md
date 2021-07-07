@@ -31,6 +31,8 @@ And for their supporters who want to give back, but don’t necessarily collect 
 
 ## Bringing the In-Store Experience to Members
 
+![Sweat Records storefront](../images/Sweat_records_blog_2.png)
+
 Members can support Sweat Records through Withfriends at the ‘305 Represent’ level for $3.05 a month, or at the highest level of ‘Sweat Selects Vinyl Club Deluxe’ at $100 a month. 
 
 When designing perks for each level, the Sweat team brought the flavor of their in-store experience to members near and abroad.
@@ -48,6 +50,8 @@ While Sweat gives recommendations to anyone who asks, these members receive cura
 Even when vinyl sales were slower years ago, Sweat would hold a club night every Friday to make up for gaps in revenue. Withfriends is just one more alternative revenue stream that helps them during these uncertain times. 
 
 **“It’s great to diversify the ways that people can support us.”**
+
+![Sweat Records collage](../images/Sweat_records_blog_3.png)
 
 ## Questions? Let's get started!
 
