@@ -100,7 +100,7 @@ const PrimerTemplate = ({ data }) => {
             <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
               {
                 data.noSEM ? 
-                `The best ${data.build.tool} for your Shopify or Square ${data.market.name}.` : 
+                `The best ${data.build.tool} for your Shopify or Square store.` : 
                 `The best ${data.platform.name} ${data.build.tool} for your ${data.market.name}.`
               }
             </h2>
@@ -119,7 +119,7 @@ const PrimerTemplate = ({ data }) => {
           </p>
           <p className="text-center max-w-screen-md leading-tight">
             <span className="text-salmon-700">
-              Sell 10x as many {data.build.name}
+              Sell ten times as many {data.build.name}
             </span>
             {" "}than on{" "}
             {(data.noSEM || data.platform.name == 'Shopify') ? 'Recharge' : 'other apps'}
@@ -146,7 +146,7 @@ const PrimerTemplate = ({ data }) => {
             <div className="w-full sm:hidden order-2" />
             <div className="pt-8 sm:p-8 md:p-12 order-3">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Design {data.build.name} automatically.
+                Design your {data.build.name} automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
                 Not sure about the best {data.build.name} for your {data.market.short}? We'll get you through the writer's block.
@@ -188,16 +188,16 @@ const PrimerTemplate = ({ data }) => {
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Sell {data.build.name} automatically.
+                Sell your {data.build.name} automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
                 Don't distract yourself from your core business - we'll sell your {data.build.name} for you.<br/>
                 <br/>
-                How are we so good at bringing you subscribers? Our secret is that customers subscribe to your business, instead of to a product.<br/>
+                How do we do it? Our secret is that customers subscribe to your business, instead of to a specific product.<br/>
                 <br/>
-                Any customer that loves your business can become a {translationMapping.person}, not just the customers who need to restock. We automatically add upsells (in-browser, email, and SMS) for every single purchase on your store, instead of on specific products, driven by the unique story behind your {data.market.short}.<br/>
+                Any customer that loves your business can become a {translationMapping.person}, not just the customers who need to restock. We automatically add upsells (in-browser, email, and SMS) for every single purchase on your store, driven by the unique story behind your {data.market.short}.<br/>
                 <br/>
-                This makes Withfriends 10x more effective than subscribe-and-save apps.
+                That's what makes Withfriends 10x more effective than subscribe-and-save apps.
               </p>
               <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
                 <Link

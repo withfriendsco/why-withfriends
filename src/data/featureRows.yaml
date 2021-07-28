@@ -4,13 +4,13 @@
   content: |
     Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, with options like t-shirt sizes and flavors.  We'll attach these to Shopify products and generate orders automatically on schedule.
   
-    Your tiers can also include %personPlural%-only discounts, and %personPlural% will have automatic access to their discounts on your Shopify or Square store.
+    Your tiers can also include discounts for %personPlural%, and they'll have automatic access to their discounts on your Shopify or Square store, no discount codes needed.
   linkText: Read our insights on how %person% discounts reduce churn.
   link: /posts/subscription-box-churn/
 -
   image: ../images/lead-upsell-your-customers.png
   title: Upsell customers into %personPlural% with every purchase.
-  content: Offer a %productPlural% upsell with every purchase, and earn an average of $6 extra on every order. Keep focusing on being awesome at your core business, and your %personPlural% will support you!
+  content: Offer a %productPlural% upsell with every purchase, and earn an average of $6 extra on every order. You can keep your focus on being awesome at your core business, and your %personPlural% will support you!
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
@@ -19,7 +19,7 @@
 -
   image: ../images/subscriptions-customize-addons.png
   title: Let your %personPlural% choose what's in their box.
-  content: Offer your %personPlural% options for their subscription boxes, like t-shirt sizes or flavors. Allow %personPlural% to buy addons to add extra goodies to their shipments. %PersonPlural% will get a reminder email before each shipment to update their options, addons, and address.
+  content: Offer your %personPlural% options for their subscription boxes, like t-shirt sizes or flavors. Allow %personPlural% to buy addons to include extra goodies with their shipments. %PersonPlural% will get a reminder email before each shipment to update their options, addons, and address.
 -
   image: ../images/lead-manage-multiple-tiers.png
   title: Manage recurring payments for multiple tiers.
@@ -28,7 +28,7 @@
     
     We make it easy to build multiple tiers, multiple products in each box, welcome packages, options, add-ons, fixed and rolling shipping schedules, %personPlural%-only discounts, and more.
 
-    Use Withfriends to design the %product% program you've been dreaming of for your business. Our automation will take the pain out of running it.
+    Use Withfriends to design the %product% program you've been dreaming of for your business! We'll take the pain out of running it.
   linkText: Read about how you can craft a sustainable %product% program.
   link: /posts/memberships/
   
