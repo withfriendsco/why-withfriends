@@ -33,7 +33,7 @@ const BusinessFeature = ({ alias }: IBusinessFeature) => {
           </p>
           <p className="mt-4 md:mt-8 prose md:prose-lg font-bold">
             <button className="underline wf-membership-link" data-alias={alias} onClick={openPopup}>
-              See their membership levels.
+              See their subscription tiers.
             </button>
           </p>
         </div>

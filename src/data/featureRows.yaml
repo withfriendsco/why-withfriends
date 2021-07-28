@@ -1,15 +1,16 @@
 -
   image: ../images/subscriptions-sample-tiers.png 
-  title: Create %product% levels with automated discounts and subscription boxes.
-  content: Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, plus %personPlural%-only discounts synched to your Shopify or Square store. You can include options like t-shirt sizes attached to different Shopify products.
-  linkText: Read our insights on how discounts reduce churn.
+  title: Create %product% tiers with automated subscription boxes and discounts.
+  content: |
+    Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, with options like t-shirt sizes and flavors.  We'll attach these to Shopify products and generate orders automatically on schedule.
+  
+    Your tiers can also include %personPlural%-only discounts, and %personPlural% will have automatic access to their discounts on your Shopify or Square store.
+  linkText: Read our insights on how %person% discounts reduce churn.
   link: /posts/subscription-box-churn/
 -
   image: ../images/lead-upsell-your-customers.png
-  title: Convert customers into %personPlural% with every purchase.
-  content: Offer %productPlural% with every purchase, whether in-store or online, and earn an average of $6 extra on every order. Do on what you already do best, and your %personPlural% will support you!
-  linkText: Read about how to write a purpose that inspires growth and reduces churn.
-  link: /posts/purpose/
+  title: Upsell customers into %personPlural% with every purchase.
+  content: Offer a %productPlural% upsell with every purchase, and earn an average of $6 extra on every order. Keep focusing on being awesome at your core business, and your %personPlural% will support you!
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
@@ -18,13 +19,19 @@
 -
   image: ../images/subscriptions-customize-addons.png
   title: Let your %personPlural% choose what's in their box.
-  content: Offer your %personPlural% choices for their subscription boxes, including adding extra goodies to their %product% benefits. %PersonPlural% get a reminder email from us with each shipment.
+  content: Offer your %personPlural% options for their subscription boxes, like t-shirt sizes or flavors. Allow %personPlural% to buy addons to add extra goodies to their shipments. %PersonPlural% will get a reminder email before each shipment to update their options, addons, and address.
 -
   image: ../images/lead-manage-multiple-tiers.png
   title: Manage recurring payments for multiple tiers.
-  content: Complex %product% program? No problem. We make it easy to build multiple tiers, and we automate the discounts for you and your %personPlural%.
+  content: |
+    Complex %product% program? No problem. 
+    
+    We make it easy to build multiple tiers, multiple products in each box, welcome packages, options, add-ons, fixed and rolling shipping schedules, %personPlural%-only discounts, and more.
+
+    Use Withfriends to design the %product% program you've been dreaming of for your business. Our automation will take the pain out of running it.
   linkText: Read about how you can craft a sustainable %product% program.
   link: /posts/memberships/
+  
 -
   image: ../images/member-management.png
   title: Use our comprehensive %product% management software.

@@ -46,7 +46,7 @@ const FeatureRow = ({ imageFirst, featureRow, translationMapping }: FeatureRowDa
             <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
               {translate(featureRow.title, translationMapping)}
             </h2>
-            <p className="prose md:prose-md text-wfGray-800">
+            <p className="prose md:prose-md text-wfGray-800" style={{'whiteSpace': 'pre-wrap'}}>
             {translate(featureRow.content, translationMapping)}
             </p>
             {featureRow.link && featureRow.linkText && (

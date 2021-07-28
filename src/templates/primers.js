@@ -38,6 +38,9 @@ import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
   let imageFirst = false
+
+  data.noSEM = (data.market.name == 'online store' && data.build.name == 'subscription boxes' && !data.platform.name)
+
   const translationMapping = {
     "person": data.build.name == 'memberships' ? 'member' : 'subscriber',
     "personPlural": data.build.name == 'memberships' ? 'members' : 'subscribers',
@@ -95,7 +98,11 @@ const PrimerTemplate = ({ data }) => {
               Sell {data.build.name}, automatically.
             </h1>
             <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
-              The best {data.platform.name} {data.build.tool} for your {data.market.name}.
+              {
+                data.noSEM ? 
+                `The best ${data.build.tool} for your Shopify or Square ${data.market.name}.` : 
+                `The best ${data.platform.name} ${data.build.tool} for your ${data.market.name}.`
+              }
             </h2>
             <div className="w-full" />
             <EmailCaptureDevice translationMapping={translationMapping}/>
@@ -111,16 +118,21 @@ const PrimerTemplate = ({ data }) => {
           <p className="text-center max-w-screen-md leading-tight">
           </p>
           <p className="text-center max-w-screen-md leading-tight">
-            Withfriends{" "}
             <span className="text-salmon-700">
-              transforms {data.build.name} by upselling your customers into {translationMapping.personPlural}
+              Sell 10x as many {data.build.name}
+            </span>
+            {" "}than on{" "}
+            {(data.noSEM || data.platform.name == 'Shopify') ? 'Recharge' : 'other apps'}
+            {" "}by using Withfriends to{" "}
+            <span className="text-salmon-700">
+              upsell your customers into {translationMapping.personPlural}
             </span>{" "}
-            automatically with each purchase. <br />
+            automatically during checkout. <br />
             <br />
-            On Withfriends, an average of{" "}
+            An average of{" "}
             <span className="text-salmon-700">one in fifteen</span> customers
-            will purchase a {translationMapping.product} for your{" "}
-            {data.market.short}, resulting in a
+            will purchase {data.build.name} for your{" "}
+            {data.market.short}, earning you a
             <span className="text-salmon-700">
               &nbsp;60%&nbsp;increase in reliable monthly revenue.
             </span>
@@ -134,20 +146,21 @@ const PrimerTemplate = ({ data }) => {
             <div className="w-full sm:hidden order-2" />
             <div className="pt-8 sm:p-8 md:p-12 order-3">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Generate your {translationMapping.product} tiers automatically.
+                Design {data.build.name} automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                Our {translationMapping.product} tiers are generated for maximum conversion,
+                Not sure about the best {data.build.name} for your {data.market.short}? We'll get you through the writer's block.
+                Connect your store, and we'll generate {translationMapping.product} tiers for maximum conversion,
                 based on your data. We import your customers and orders,
                 analyze your data, and create tiers custom-made to ensure you
-                build sustaining revenue.
+                build sustaining revenue. You can customize them from there.
               </p>
               <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
                 <Link
                   to="/posts/memberships"
                   className="text-salmon-700 font-bold"
                 >
-                  Read more about how we calculate {translationMapping.product} tiers.
+                  Read more about how we design your {data.build.name}.
                 </Link>
               </p>
             </div>
@@ -175,12 +188,24 @@ const PrimerTemplate = ({ data }) => {
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Upsell your customers with every purchase.
+                Sell {data.build.name} automatically.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                Withfriends automates your {data.build.name} upsell with every
-                purchase. Approximately 6% of your customers will become {translationMapping.personPlural},
-                creating sustainable revenue for your {data.market.short}.
+                Don't distract yourself from your core business - we'll sell your {data.build.name} for you.<br/>
+                <br/>
+                How are we so good at bringing you subscribers? Our secret is that customers subscribe to your business, instead of to a product.<br/>
+                <br/>
+                Any customer that loves your business can become a {translationMapping.person}, not just the customers who need to restock. We automatically add upsells (in-browser, email, and SMS) for every single purchase on your store, instead of on specific products, driven by the unique story behind your {data.market.short}.<br/>
+                <br/>
+                This makes Withfriends 10x more effective than subscribe-and-save apps.
+              </p>
+              <p className="mt-4 md:mt-8 prose md:prose-lg font-bold text-salmon-700">
+                <Link
+                  to="/posts/purpose/"
+                  className="text-salmon-700 font-bold"
+                >
+                  Read about how to write a purpose that inspires growth and reduces churn.
+                </Link>
               </p>
             </div>
             <div className="w-full sm:hidden order-2" />
@@ -296,7 +321,7 @@ const PrimerTemplate = ({ data }) => {
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
-                Manage existing {translationMapping.personPlural} on Withfriends <strong className="font-heavy">for free.</strong>
+                Manage your existing {translationMapping.personPlural} on Withfriends <strong className="font-heavy">for free.</strong>
               </div>
             </div>
             <div className="md:flex-1 w-full md:w-none border-salmon-700 border-2 mx-4 p-8 text-left flex flex-col my-4 bg-white">
@@ -380,7 +405,7 @@ const PrimerTemplate = ({ data }) => {
           </div>
         </div>
         <h2 className="text-center mt-8">
-          You'll make $38,880 per year on Withfriends!
+          You'll make $38,880 in {translationMapping.productPlural} this year on Withfriends!
         </h2>
         <div className="w-full my-4" />
         <BecomeAnOrganizer translationMapping={translationMapping}/>
@@ -463,7 +488,7 @@ const PrimerTemplate = ({ data }) => {
       <div className="flex justify-center">
         <div className="max-w-2xl">
           <h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">
-            Let your community help support your {data.market.name}.
+            Let your community help support your {data.market.name == 'online store' ? data.market.short : data.market.name}.
           </h3>
           <BecomeAnOrganizer translationMapping={translationMapping}/>
         </div>
