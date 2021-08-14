@@ -3,6 +3,9 @@ import Button from "./Button"
 import UTMLink from "./UTMLink"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
 
+// const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
+const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+
 const SidebarAd = () => (
   <div className="p-4 sm:p-8 border-salmon-600 border-2 shadow-lg">
     <div className="prose">
@@ -69,12 +72,12 @@ const SidebarAd = () => (
     <div className="flex w-full justify-center mt-8">
       <UTMLink
         className="inline-block justify-self-end justify-end"
-        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
-        text="Get Started"
+        href={becomeAnOrganizerLink}
+        text="Add App"
       >
         <div className="flex justify-end">
           <Button onClick={becomeAnOrganizer} variant="salmon">
-            Get Started
+            Add App
           </Button>
         </div>
       </UTMLink>

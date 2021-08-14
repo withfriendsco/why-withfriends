@@ -7,6 +7,9 @@ import UTMLink from "./UTMLink"
 import SvgMenu from "../icons/SvgMenu"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
+// const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
+const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+
 const Header = ({ siteTitle, isPrimer }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
@@ -61,12 +64,12 @@ const Header = ({ siteTitle, isPrimer }) => {
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
-        text="Get Started"
+        href={becomeAnOrganizerLink}
+        text="Add App"
       >
         <div className="block w-full">
           <Button onClick={becomeAnOrganizer} variant="salmon-sm">
-            Get Started
+          Add App
           </Button>
         </div>
       </UTMLink>
@@ -117,12 +120,12 @@ const Header = ({ siteTitle, isPrimer }) => {
           </UTMLink>
           <UTMLink
             className="inline-block"
-            href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
-            text="Get Started"
+            href={becomeAnOrganizerLink}
+            text="Add App"
           >
             <div className="flex justify-end">
               <Button onClick={becomeAnOrganizer} variant="salmon-sm">
-                Get Started
+                Add App
               </Button>
             </div>
           </UTMLink>

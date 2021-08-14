@@ -21,6 +21,10 @@ const Post = ({ data, pageContext }) => {
   const edge = data?.allMarkdownRemark.edges[0]
   const post = edge.node
   const { next, previous } = pageContext
+  
+  // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
+  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+
   return (
     <Layout>
       <SEO
@@ -82,15 +86,15 @@ const Post = ({ data, pageContext }) => {
               <div className="flex justify-center">
                 <UTMLink
                   className="inline-block justify-self-end justify-end no-underline"
-                  href={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"}
-                  text="Get Started"
+                  href={becomeAnOrganizerLink}
+                  text="Add App"
                 >
                   <Button
                     onClick={becomeAnOrganizer}
                     className="no-underline"
                     variant="salmon"
                   >
-                    Get Started
+                    Add App
                   </Button>
                 </UTMLink>
               </div>

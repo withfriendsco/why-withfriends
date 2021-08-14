@@ -99,6 +99,10 @@ const EmailCaptureDevice = ({translationMapping}) => {
     }
   }
 
+  const addApp = async () => {
+    window.location.href = "https://dev.better.space/add_shopify_app/modal" 
+  }
+
   const submitAuthorization = async () => {
     if (userData.userByEmail.id) {
       setLoginLoading(true)
@@ -225,7 +229,25 @@ const EmailCaptureDevice = ({translationMapping}) => {
     window.location = `https://www.facebook.com/v9.0/dialog/oauth?client_id=${process.env.GATSBY_FB_APP_ID}&redirect_uri=${process.env.GATSBY_FB_REDIRECT_URI}&scope=email`
   }
 
-  const emailScreen = (
+  const addAppMode = true
+
+  const emailScreen = (addAppMode ? ( 
+    <div className="w-full max-w-md">
+      <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
+        <Button 
+          className="py-6 px-4 sm:px-12 text-xl"
+          variant="salmon" 
+          loading={loginLoading}
+          onClick={addApp}
+        >
+          Add App
+        </Button>
+      </div>
+      <p className={`w-full flex justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
+        Free to install.&nbsp;&nbsp;<a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
+      </p>
+    </div>
+  ) : (
     <div className="w-full max-w-md">
       <div className="w-full max-w-md font-bold">
         <Button 
@@ -273,7 +295,7 @@ const EmailCaptureDevice = ({translationMapping}) => {
         </Button>
       </div>
     </div>
-  )
+  ))
 
   const loginScreen = (
     <div className="w-full max-w-md">
@@ -325,7 +347,7 @@ const EmailCaptureDevice = ({translationMapping}) => {
           variant="salmon" 
           loading={loginLoading}
           onClick={submitNewUser}>
-          Get Started
+          Add App
         </Button>
       </div>
     </div>
