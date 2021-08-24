@@ -100,7 +100,7 @@ const EmailCaptureDevice = ({translationMapping}) => {
   }
 
   const addApp = async () => {
-    window.location.href = "https://dev.better.space/add_shopify_app/modal" 
+    window.location.href = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
   }
 
   const submitAuthorization = async () => {
