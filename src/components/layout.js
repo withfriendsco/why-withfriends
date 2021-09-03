@@ -14,7 +14,13 @@ import Track from "../components/track"
 import "./layout.css"
 import UTMLink from "./UTMLink"
 
-const Layout = ({ children, isPrimer }) => {
+import Modal from 'react-modal';
+import {closeModal, addCloseModalListener} from "../helpers/addapp"
+
+Modal.setAppElement('#___gatsby');
+
+const Layout = ({ children, isPrimer, showModal, setShowModal}) => {  
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,19 +30,30 @@ const Layout = ({ children, isPrimer }) => {
       }
     }
   `)
+
   const pricingLink = isPrimer ? (
     <a href="#pricing">Pricing</a>
   ) : (
     <a href="/#pricing">Pricing</a>
   )
 
+  addCloseModalListener(setShowModal)
+
   return (
     <div className="font-sans">
       <Track />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} setShowModal={setShowModal}/>
       <div className="flex flex-wrap justify-center pt-24 md:pt-32">
         <div className="w-full px-4 md:px-8">
           <main>{children}</main>
+          <Modal 
+            isOpen={showModal}
+            onRequestClose={() => closeModal(setShowModal)}
+            className="add-app-modal-content"
+            overlayClassName="add-app-modal-overlay"
+          >
+            <iframe style={{width:"100%", height:"100%", border: "none"}} src={(process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"}/>
+          </Modal>
         </div>
       </div>
       <footer className="py-4 md:py-16 bg-wfGray-800 text-white flex flex-wrap md:flex-nowrap">

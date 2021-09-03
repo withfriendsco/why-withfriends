@@ -2,11 +2,12 @@ import React from "react"
 import Button from "./Button"
 import UTMLink from "./UTMLink"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
+import {addAppHref} from "../helpers/addapp"
 
 // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
 const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
 
-const SidebarAd = () => (
+const SidebarAd = ({setShowModal}) => (
   <div className="p-4 sm:p-8 border-salmon-600 border-2 shadow-lg">
     <div className="prose">
       <h2 className="text-center mb-4">
@@ -74,6 +75,7 @@ const SidebarAd = () => (
         className="inline-block justify-self-end justify-end"
         href={becomeAnOrganizerLink}
         text="Add App"
+        onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >
         <div className="flex justify-end">
           <Button onClick={becomeAnOrganizer} variant="salmon">

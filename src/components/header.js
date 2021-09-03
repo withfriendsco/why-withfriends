@@ -7,10 +7,12 @@ import UTMLink from "./UTMLink"
 import SvgMenu from "../icons/SvgMenu"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
+import {addAppHref} from "../helpers/addapp"
+
 // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
 const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
 
-const Header = ({ siteTitle, isPrimer }) => {
+const Header = ({ siteTitle, isPrimer, setShowModal }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const pricingLink = isPrimer ? (
@@ -66,6 +68,7 @@ const Header = ({ siteTitle, isPrimer }) => {
         className="block w-full mb-2"
         href={becomeAnOrganizerLink}
         text="Add App"
+        onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >
         <div className="block w-full">
           <Button onClick={becomeAnOrganizer} variant="salmon-sm">
@@ -122,6 +125,7 @@ const Header = ({ siteTitle, isPrimer }) => {
             className="inline-block"
             href={becomeAnOrganizerLink}
             text="Add App"
+            onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
           >
             <div className="flex justify-end">
               <Button onClick={becomeAnOrganizer} variant="salmon-sm">

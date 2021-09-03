@@ -11,6 +11,8 @@ import IconItem from "./IconItem"
 import Facebook from "./Facebook"
 import Google from "./Google"
 
+import {addApp} from "../helpers/addapp"
+
 import { 
   GET_USER, 
   AUTHORIZE_USER, 
@@ -19,7 +21,7 @@ import {
   CREATE_USER_GOOGLE,
 } from "../queries"
 
-const EmailCaptureDevice = ({translationMapping}) => {
+const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
   const [queryV, setQueryV] = useQueryParam("v", NumberParam)
   const [queryEmail, setQueryEmail] = useQueryParam("email", StringParam)
   const [queryName, setQueryName] = useQueryParam("name", StringParam)
@@ -97,10 +99,6 @@ const EmailCaptureDevice = ({translationMapping}) => {
         </div>
       )
     }
-  }
-
-  const addApp = async () => {
-    window.location.href = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
   }
 
   const submitAuthorization = async () => {
@@ -238,12 +236,15 @@ const EmailCaptureDevice = ({translationMapping}) => {
           className="py-6 px-4 sm:px-12 text-xl"
           variant="salmon" 
           loading={loginLoading}
-          onClick={addApp}
+          onClick={() => {
+            becomeAnOrganizer();
+            addApp(setShowModal);
+          }}
         >
           Add App
         </Button>
       </div>
-      <p className={`w-full flex justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
+      <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
         Free to install.&nbsp;&nbsp;<a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
       </p>
     </div>

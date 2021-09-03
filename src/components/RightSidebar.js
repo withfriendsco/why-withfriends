@@ -2,7 +2,7 @@ import React from "react"
 import SignupForm from "./SignupForm"
 import SidebarAd from "./SidebarAd"
 
-const RightSidebar = () => (
+const RightSidebar = ({setShowModal}) => (
   <div className="w-full flex-grow md:pl-8 md:border-l md:border-wfGray-300 md:max-w-xs lg:max-w-md">
     <h4
       style={{ fontFamily: "Avenir Heavy WF" }}
@@ -14,7 +14,7 @@ const RightSidebar = () => (
       <SignupForm />
     </div>
     <div className="mt-8 md:my-16 w-full" />
-    <SidebarAd />
+    <SidebarAd setShowModal={setShowModal}/>
   </div>
 )
 

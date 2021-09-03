@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -8,6 +8,8 @@ import RightSidebar from "../components/RightSidebar"
 import UTMLink from "../components/UTMLink"
 import Button from "../components/Button"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
+import {addAppHref} from "../helpers/addapp"
+
 
 const Article = styled.article`
   .prose p strong {
@@ -25,8 +27,10 @@ const Post = ({ data, pageContext }) => {
   // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
   const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
 
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <Layout>
+    <Layout showModal={showModal} setShowModal={setShowModal}>
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
@@ -88,6 +92,7 @@ const Post = ({ data, pageContext }) => {
                   className="inline-block justify-self-end justify-end no-underline"
                   href={becomeAnOrganizerLink}
                   text="Add App"
+                  onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
                 >
                   <Button
                     onClick={becomeAnOrganizer}
@@ -121,7 +126,7 @@ const Post = ({ data, pageContext }) => {
               </div>
             </div>
           </div>
-          <RightSidebar />
+          <RightSidebar setShowModal={setShowModal}/>
         </div>
       </Article>
     </Layout>

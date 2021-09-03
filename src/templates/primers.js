@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
@@ -73,8 +73,10 @@ const PrimerTemplate = ({ data }) => {
     }
   }
 
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <Layout isPrimer={true}>
+    <Layout isPrimer={true} showModal={showModal} setShowModal={setShowModal}>
       <SEO
         title={`Withfriends | ${data.platform.name || "The best"} ${data.build.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
@@ -105,7 +107,7 @@ const PrimerTemplate = ({ data }) => {
               }
             </h2>
             <div className="w-full" />
-            <EmailCaptureDevice translationMapping={translationMapping}/>
+            <EmailCaptureDevice translationMapping={translationMapping} showModal={showModal} setShowModal={setShowModal}/>
           </div>
           <div />
         </div>
@@ -229,7 +231,7 @@ const PrimerTemplate = ({ data }) => {
       </div>
       
       <div className="w-full my-8" />
-      <BecomeAnOrganizer translationMapping={translationMapping}/>
+      <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
       <div className="w-full my-8" />
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
@@ -265,7 +267,7 @@ const PrimerTemplate = ({ data }) => {
       </div>
 
       <div className="w-full my-8" />
-      <BecomeAnOrganizer translationMapping={translationMapping}/>
+      <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
 
       {
         data.market?.socialProof?.length &&
@@ -278,7 +280,7 @@ const PrimerTemplate = ({ data }) => {
           </div>
      
           <div className="w-full my-8" />
-          <BecomeAnOrganizer translationMapping={translationMapping}/>
+          <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
         </>
       }
 
@@ -384,7 +386,7 @@ const PrimerTemplate = ({ data }) => {
         </div>
 
         <div className="w-full mb-8" />
-        <BecomeAnOrganizer translationMapping={translationMapping}/>
+        <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
       </div>
 
       <div className="flex justify-center my-4 sm:my-16 flex-wrap">
@@ -408,7 +410,7 @@ const PrimerTemplate = ({ data }) => {
           You'll make $38,880 in {translationMapping.productPlural} this year on Withfriends!
         </h2>
         <div className="w-full my-4" />
-        <BecomeAnOrganizer translationMapping={translationMapping}/>
+        <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
       </div>
 
       <div className="flex flex-wrap justify-center px-4 -mx-4 md:px-8 md:-mx-8 mt-8 md:mt-16 text-wfGray-800 py-8 md:py-16 bg-wfGray-100">
@@ -447,7 +449,7 @@ const PrimerTemplate = ({ data }) => {
           </h3>
         </div>
         <div className="w-full my-4" />
-        <BecomeAnOrganizer translationMapping={translationMapping}/>
+        <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
       </div>
 
       <div>
@@ -490,7 +492,7 @@ const PrimerTemplate = ({ data }) => {
           <h3 className="text-2xl md:text-4xl leading-normal text-center mb-8 text-salmon-700 font-bold">
             Let your community help support your {data.market.name == 'online store' ? data.market.short : data.market.name}.
           </h3>
-          <BecomeAnOrganizer translationMapping={translationMapping}/>
+          <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
         </div>
       </div>
 
