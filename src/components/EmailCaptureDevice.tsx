@@ -171,7 +171,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
 
   const responseGoogleSuccess = async (response) => {
     setLoginLoading(true)
-    becomeAnOrganizer()
+    becomeAnOrganizer("google")
     if (response.profileObj) {
       const firstName = response.profileObj.givenName
       const lastName = response.profileObj.familyName
@@ -223,8 +223,8 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
   }
 
   const callFacebookRedirect = () => {
-    becomeAnOrganizer()
-    window.location = `https://www.facebook.com/v9.0/dialog/oauth?client_id=${process.env.GATSBY_FB_APP_ID}&redirect_uri=${process.env.GATSBY_FB_REDIRECT_URI}&scope=email`
+    becomeAnOrganizer("facebook")
+    window.top.location.href = `https://www.facebook.com/v9.0/dialog/oauth?client_id=${process.env.GATSBY_FB_APP_ID}&redirect_uri=${process.env.GATSBY_FB_REDIRECT_URI}&scope=email`
   }
 
   const addAppMode = true
@@ -237,7 +237,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
           variant="salmon" 
           loading={loginLoading}
           onClick={() => {
-            becomeAnOrganizer();
+            becomeAnOrganizer("main");
             addApp(setShowModal);
           }}
         >

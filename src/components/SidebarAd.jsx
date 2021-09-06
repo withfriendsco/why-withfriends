@@ -78,7 +78,7 @@ const SidebarAd = ({setShowModal}) => (
         onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >
         <div className="flex justify-end">
-          <Button onClick={becomeAnOrganizer} variant="salmon">
+          <Button onClick={() => becomeAnOrganizer("sidebar")} variant="salmon">
             Add App
           </Button>
         </div>

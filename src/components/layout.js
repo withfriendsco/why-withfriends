@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -20,6 +20,16 @@ import {closeModal, addCloseModalListener} from "../helpers/addapp"
 Modal.setAppElement('#___gatsby');
 
 const Layout = ({ children, isPrimer, showModal, setShowModal}) => {  
+
+  useEffect(() => {
+    const intercomElement = document.querySelector("#intercom-container, .intercom-lightweight-app")
+    if (window.Intercom && intercomElement) {
+      if (showModal)
+        intercomElement.style.display = "none"
+      else
+        intercomElement.style.display = "initial"
+    }
+  }, [showModal])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

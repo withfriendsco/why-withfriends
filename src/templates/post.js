@@ -95,7 +95,7 @@ const Post = ({ data, pageContext }) => {
                   onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
                 >
                   <Button
-                    onClick={becomeAnOrganizer}
+                    onClick={() => becomeAnOrganizer("post")}
                     className="no-underline"
                     variant="salmon"
                   >

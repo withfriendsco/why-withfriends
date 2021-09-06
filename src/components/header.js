@@ -71,7 +71,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
         onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >
         <div className="block w-full">
-          <Button onClick={becomeAnOrganizer} variant="salmon-sm">
+          <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
           Add App
           </Button>
         </div>
@@ -128,7 +128,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
             onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
           >
             <div className="flex justify-end">
-              <Button onClick={becomeAnOrganizer} variant="salmon-sm">
+              <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
                 Add App
               </Button>
             </div>

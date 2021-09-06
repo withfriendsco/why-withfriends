@@ -11,6 +11,7 @@
 		GATSBY_JELLY_URL = "https://dev.better.space"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
 		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE2NDQ5NjM1MTR9.iwSDjX_KALtsT83u6prvQbv9ZQa8HBuEPjIf0VtXfAI"
+		GATSBY_MIXPANEL_KEY = "287044101a1f47c209745cab2afcbb0e"
 
 [context.staging]
 	[context.staging.environment]
@@ -21,6 +22,7 @@
 		BASE_URL = "https://sandbox-why.withfriends.co"
 		GATSBY_JELLY_URL = "https://staging.withfriends.cool"
 		FB_APP_SECRET = "ba7389e45d29318095818bee3c82b3b3"
+		GATSBY_MIXPANEL_KEY = "287044101a1f47c209745cab2afcbb0e"
 
 [context.production]
 	[context.production.environment]
@@ -32,4 +34,5 @@
 		GATSBY_JELLY_URL = "https://withfriends.co"
 		FB_APP_SECRET = "eaaa0814c6979846f63ccfee3f05c0fa"
 		ADMIN_JWT = "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImFkbWluIjp0cnVlfSwic3ViIjpudWxsLCJleHAiOjE5MjYwMTI4NTB9.deQVAbZOLnEI3eZgl3wGBok4hUEQCQ0YJyxxagG0LZs"
+		GATSBY_MIXPANEL_KEY = "5c91cd64f52c6452741c98f5e6615923"
 

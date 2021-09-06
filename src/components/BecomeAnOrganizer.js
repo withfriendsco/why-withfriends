@@ -27,7 +27,7 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
           <Button
             className="py-6 px-8 sm:px-12 text-xl"
             variant="salmon"
-            onClick={becomeAnOrganizer}
+            onClick={() => becomeAnOrganizer("content")}
           >
             Add App
           </Button>

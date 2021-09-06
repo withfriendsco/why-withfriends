@@ -1,8 +1,9 @@
 const mixpanel = require("mixpanel-browser")
-mixpanel.init("5c91cd64f52c6452741c98f5e6615923")
+const mixpanelKey = process.env.GATSBY_MIXPANEL_KEY
+mixpanel.init(mixpanelKey)
 
-const becomeAnOrganizer = () => {
-  mixpanel.track("Clicked Become an Organizer")
+const becomeAnOrganizer = (clickLocation) => {
+  mixpanel.track("Clicked Become an Organizer", {location: clickLocation})
 }
 
 export { mixpanel, becomeAnOrganizer }
