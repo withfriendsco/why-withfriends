@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -23,6 +23,23 @@ const Post = ({ data, pageContext }) => {
   const edge = data?.allMarkdownRemark.edges[0]
   const post = edge.node
   const { next, previous } = pageContext
+
+  // Can't get global styles to work.
+  useEffect(() => {
+    if (!document.getElementById("global-styles")) {
+      const style = document.createElement('style');
+      style.id = 'global-styles';
+      style.innerHTML = `
+          body.hide_intercom #intercom-container {
+            display:none !important;
+        }
+        body.hide_intercom .intercom-lightweight-app { 
+            display:none !important;
+        }
+      `;
+      document.body.appendChild(style);
+    } 
+  }, []);
   
   // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
   const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"

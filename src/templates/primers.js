@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
@@ -37,6 +37,24 @@ import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
 import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
+
+  // Can't get global styles to work.
+  useEffect(() => {
+    if (!document.getElementById("global-styles")) {
+      const style = document.createElement('style');
+      style.id = 'global-styles';
+      style.innerHTML = `
+          body.hide_intercom #intercom-container {
+            display:none !important;
+        }
+        body.hide_intercom .intercom-lightweight-app { 
+            display:none !important;
+        }
+      `;
+      document.body.appendChild(style);
+    } 
+  }, []);
+
   let imageFirst = false
 
   data.noSEM = (data.market.name == 'online store' && data.build.name == 'subscription boxes' && !data.platform.name)
