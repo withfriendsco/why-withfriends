@@ -13,7 +13,7 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
   })
   */
 
-  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
 
   return (
     <div className="flex w-full justify-center">

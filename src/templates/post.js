@@ -25,7 +25,7 @@ const Post = ({ data, pageContext }) => {
   const { next, previous } = pageContext
   
   // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
-  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
 
   const [showModal, setShowModal] = useState(false);
 

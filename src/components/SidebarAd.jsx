@@ -5,7 +5,7 @@ import { becomeAnOrganizer } from "../helpers/mixpanel"
 import {addAppHref} from "../helpers/addapp"
 
 // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
-const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal"
+const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
 
 const SidebarAd = ({setShowModal}) => (
   <div className="p-4 sm:p-8 border-salmon-600 border-2 shadow-lg">
