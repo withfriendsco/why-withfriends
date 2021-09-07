@@ -143,10 +143,3 @@
     }
   }
 }
-
-body.hide_intercom #intercom-container {
-    display:none !important;
-}
-body.hide_intercom .intercom-lightweight-app { 
-    display:none !important;
-}

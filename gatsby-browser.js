@@ -4,3 +4,4 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
+ import "./src/body.css"
