@@ -22,6 +22,10 @@ Modal.setAppElement('#___gatsby');
 const Layout = ({ children, isPrimer, showModal, setShowModal}) => {  
 
   useEffect(() => {
+    addCloseModalListener(setShowModal)
+  }, [])
+
+  useEffect(() => {
     const intercomElement = document.querySelector("#intercom-container, .intercom-lightweight-app")
     if (window.Intercom && intercomElement) {
       if (showModal)
@@ -47,7 +51,6 @@ const Layout = ({ children, isPrimer, showModal, setShowModal}) => {
     <a href="/#pricing">Pricing</a>
   )
 
-  addCloseModalListener(setShowModal)
 
   return (
     <div className="font-sans">
