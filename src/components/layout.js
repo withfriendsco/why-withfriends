@@ -26,12 +26,11 @@ const Layout = ({ children, isPrimer, showModal, setShowModal}) => {
   }, [])
 
   useEffect(() => {
-    const intercomElement = document.querySelector("#intercom-container, .intercom-lightweight-app")
-    if (window.Intercom && intercomElement) {
-      if (showModal)
-        intercomElement.style.display = "none"
-      else
-        intercomElement.style.display = "initial"
+    if (showModal)
+      document.body.classList.add("hide_intercom")
+    else {
+      if (document.body.classList.contains("hide_intercom"))
+        document.body.classList.remove("hide_intercom")
     }
   }, [showModal])
 
