@@ -64,7 +64,11 @@ const Layout = ({ children, isPrimer, showModal, setShowModal}) => {
             className="add-app-modal-content"
             overlayClassName="add-app-modal-overlay"
           >
-            <iframe style={{width:"100%", height:"100%", border: "none"}} src={(process.env.GATSBY_JELLY_URL || "http://localhost") + "/add_shopify_app/modal:is_embedded"}/>
+            <iframe 
+              style={{width:"100%", height:"100%", border: "none"}} 
+              src={(process.env.GATSBY_JELLY_URL || "http://localhost") + "/add_shopify_app/modal:is_embedded"} 
+              onload="document.querySelector('add-app-modal-content').style.backgroundImage = 'none';"
+            />
           </Modal>
         </div>
       </div>
