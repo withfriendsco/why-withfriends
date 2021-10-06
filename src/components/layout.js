@@ -88,7 +88,7 @@ const Layout = ({ children, isPrimer, showModal, setShowModal}) => {
             </UTMLink>
           </p>
           <p className="text-white">
-            <UTMLink href="mailto:team@withfriends.co">Contact</UTMLink>
+            <UTMLink href="mailto:support@withfriends.co">Contact</UTMLink>
           </p>
         </div>
         <div className="px-2 md:px-16 md:flex-grow"></div>
