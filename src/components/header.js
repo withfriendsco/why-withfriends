@@ -38,7 +38,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
       <button
         className="color-salmon-600 no-underline beamer-news block mb-2"
         onClick={() => { mixpanel.track("Clicked What's new"); return false; }}
-        style={{display:none}}
+        style={{display:"none"}}
       >
         What's new
       </button>
@@ -97,7 +97,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
           <button
             className="color-salmon-600 no-underline ml-2 justify-self-end beamer-news inline-block"
             onClick={() => { mixpanel.track("Clicked What's new"); return false; }}
-            style={{display:none}}
+            style={{display:"none"}}
           >
             What's new
           </button>
