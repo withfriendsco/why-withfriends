@@ -1,5 +1,8 @@
+const addAppUrl = "https://apps.shopify.com/withfriends"
+
 const addApp = (setShowModal) => {
-    setShowModal(true)
+    // setShowModal(true)
+    window.location.href = addAppUrl
 }
 const addAppHref = (clickEvent, setShowModal) => {
     clickEvent.preventDefault()
@@ -15,4 +18,4 @@ const addCloseModalListener = (setShowModal) => {
         }
     });
 }
-export {addApp, addAppHref, closeModal, addCloseModalListener}
+export {addApp, addAppHref, addAppUrl, closeModal, addCloseModalListener}

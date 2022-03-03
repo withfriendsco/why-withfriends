@@ -7,10 +7,7 @@ import UTMLink from "./UTMLink"
 import SvgMenu from "../icons/SvgMenu"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
-import {addAppHref} from "../helpers/addapp"
-
-// const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
-const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
+import {addAppHref, addAppUrl} from "../helpers/addapp"
 
 const Header = ({ siteTitle, isPrimer, setShowModal }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -67,7 +64,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href={becomeAnOrganizerLink}
+        href={addAppUrl}
         text="Add App"
         onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >

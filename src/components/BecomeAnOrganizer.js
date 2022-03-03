@@ -4,7 +4,7 @@ import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 import Button from "./Button"
 import UTMLink from "./UTMLink"
 
-import {addAppHref} from "../helpers/addapp"
+import {addAppHref, addAppUrl} from "../helpers/addapp"
 
 const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
   /*
@@ -13,13 +13,11 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
   })
   */
 
-  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
-
   return (
     <div className="flex w-full justify-center">
       <UTMLink
         className="inline-block justify-self-end justify-end become-an-organizer"
-        href={becomeAnOrganizerLink}
+        href={addAppUrl}
         text="Find your members"
         onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
       >
