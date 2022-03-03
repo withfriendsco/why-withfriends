@@ -122,7 +122,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
           </UTMLink>
           <UTMLink
             className="inline-block"
-            href={becomeAnOrganizerLink}
+            href={addAppUrl}
             text="Add App"
             onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
           >
