@@ -120,7 +120,7 @@ const PrimerTemplate = ({ data }) => {
             <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
               {
                 data.noSEM ? 
-                `The best ${data.build.tool} for your Shopify or Square store.` : 
+                `The best ${data.build.tool} for your Shopify store.` : 
                 `The best ${data.platform.name} ${data.build.tool} for your ${data.market.name}.`
               }
             </h2>

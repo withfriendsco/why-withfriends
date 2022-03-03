@@ -6,4 +6,8 @@ const becomeAnOrganizer = (clickLocation) => {
   mixpanel.track("Clicked Become an Organizer", {location: clickLocation})
 }
 
+const becomeASquareOrganizer = () => {
+  mixpanel.track("Shopify Connect Continued to Legacy")
+}
+
 export { mixpanel, becomeAnOrganizer }
