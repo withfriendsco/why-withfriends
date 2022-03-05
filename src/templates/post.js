@@ -8,7 +8,7 @@ import RightSidebar from "../components/RightSidebar"
 import UTMLink from "../components/UTMLink"
 import Button from "../components/Button"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
-import {addAppHref} from "../helpers/addapp"
+import {addAppUrl} from "../helpers/addapp"
 
 
 const Article = styled.article`
@@ -41,9 +41,6 @@ const Post = ({ data, pageContext }) => {
     } 
   }, []);
   
-  // const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
-  const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
-
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -107,16 +104,15 @@ const Post = ({ data, pageContext }) => {
               <div className="flex justify-center">
                 <UTMLink
                   className="inline-block justify-self-end justify-end no-underline"
-                  href={becomeAnOrganizerLink}
-                  text="Add App"
-                  onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
+                  href={addAppUrl}
+                  text="Get the app"
                 >
                   <Button
                     onClick={() => becomeAnOrganizer("post")}
                     className="no-underline"
                     variant="salmon"
                   >
-                    Add App
+                    Get the app
                   </Button>
                 </UTMLink>
               </div>

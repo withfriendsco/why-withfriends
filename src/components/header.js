@@ -65,12 +65,11 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
       <UTMLink
         className="block w-full mb-2"
         href={addAppUrl}
-        text="Add App"
-        onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
+        text="Get the app"
       >
         <div className="block w-full">
           <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-          Add App
+          Get the app
           </Button>
         </div>
       </UTMLink>
@@ -123,12 +122,11 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
           <UTMLink
             className="inline-block"
             href={addAppUrl}
-            text="Add App"
-            onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
+            text="Get the app"
           >
             <div className="flex justify-end">
               <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-                Add App
+                Get the app
               </Button>
             </div>
           </UTMLink>

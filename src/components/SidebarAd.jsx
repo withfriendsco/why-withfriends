@@ -2,10 +2,7 @@ import React from "react"
 import Button from "./Button"
 import UTMLink from "./UTMLink"
 import { becomeAnOrganizer } from "../helpers/mixpanel"
-import {addAppHref} from "../helpers/addapp"
-
-// const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/action/364/sign_up/modal"
-const becomeAnOrganizerLink = (process.env.GATSBY_JELLY_URL || "https://dev.better.space") + "/add_shopify_app/modal:is_embedded"
+import {addAppUrl} from "../helpers/addapp"
 
 const SidebarAd = ({setShowModal}) => (
   <div className="p-4 sm:p-8 border-salmon-600 border-2 shadow-lg">
@@ -73,13 +70,12 @@ const SidebarAd = ({setShowModal}) => (
     <div className="flex w-full justify-center mt-8">
       <UTMLink
         className="inline-block justify-self-end justify-end"
-        href={becomeAnOrganizerLink}
-        text="Add App"
-        onClick={(clickEvent) => addAppHref(clickEvent, setShowModal)}
+        href={addAppUrl}
+        text="Get the app"
       >
         <div className="flex justify-end">
           <Button onClick={() => becomeAnOrganizer("sidebar")} variant="salmon">
-            Add App
+            Get the app
           </Button>
         </div>
       </UTMLink>

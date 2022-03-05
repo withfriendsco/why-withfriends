@@ -5,13 +5,14 @@ import GoogleLogin from "react-google-login"
 import { mailchimpSignup } from "../helpers/mailchimp"
 import { hubspotSignup } from "../helpers/hubspot"
 import { becomeAnOrganizer, becomeASquareOrganizer } from "../helpers/mixpanel"
+import UTMLink from "./UTMLink"
 
 import Button from "./Button"
 import IconItem from "./IconItem"
 import Facebook from "./Facebook"
 import Google from "./Google"
 
-import {addApp} from "../helpers/addapp"
+import {addAppUrl} from "../helpers/addapp"
 
 import { 
   GET_USER, 
@@ -232,17 +233,21 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
   const emailScreen = (addAppMode ? ( 
     <div className="w-full max-w-md">
       <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
+      <UTMLink
+        href={addAppUrl}
+        text="Get the app"
+      >
         <Button 
           className="py-6 px-4 sm:px-12 text-xl"
           variant="salmon" 
           loading={loginLoading}
           onClick={() => {
             becomeAnOrganizer("main");
-            addApp(setShowModal);
           }}
         >
-          Add App
+          Get the app
         </Button>
+      </UTMLink>
       </div>
       <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
         Free to install.&nbsp;&nbsp;<a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
