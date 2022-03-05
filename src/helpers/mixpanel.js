@@ -10,4 +10,4 @@ const becomeASquareOrganizer = () => {
   mixpanel.track("Shopify Connect Continued to Legacy")
 }
 
-export { mixpanel, becomeAnOrganizer }
+export { mixpanel, becomeAnOrganizer, becomeASquareOrganizer }
