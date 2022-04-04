@@ -252,7 +252,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
       <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
         Free to install.&nbsp;&nbsp;<a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
       </p>
-      <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
+      <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white", display: "none"}}>
         Or sign up without Shopify <a style={{color:"white"}} href={`${(process.env.GATSBY_JELLY_URL || "https://dev.better.space")}/action/364/sign_up/modal`} onClick={becomeASquareOrganizer}>here</a>.
       </p>
     </div>
