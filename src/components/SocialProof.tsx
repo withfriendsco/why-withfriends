@@ -28,9 +28,7 @@ const BusinessFeature = ({ alias }: IBusinessFeature) => {
           <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
             { data?.businessWhere?.name }
           </h2>
-          <p className="prose md:prose-md text-wfGray-800">
-            { data?.businessWhere?.mission }
-          </p>
+          <p className="prose md:prose-md text-wfGray-800" dangerouslySetInnerHTML={data?.businessWhere?.mission}></p>
           <p className="mt-4 md:mt-8 prose md:prose-lg font-bold">
             <button className="underline wf-membership-link" data-alias={alias} onClick={openPopup}>
               See their subscription tiers.
