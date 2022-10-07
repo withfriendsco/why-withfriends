@@ -24,7 +24,7 @@ const BusinessFeature = ({ alias }: IBusinessFeature) => {
   return (
     <div className="w-full flex flex-wrap justify-center bg-white">
       <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
-        <div className="pt-2 md:p-16 md:pt-8 sm:px-8 sm:py-16 lg:py-12 xl:px-32 xl:py-16 order-3 sm:order-1" style={{"flexBasis": "75%"}}>
+        <div className="pt-2 md:p-16 md:pt-8 sm:px-8 sm:pt-16 sm:pb-16 lg:py-12 xl:px-32 xl:py-16 order-3 sm:order-1" style={{"flexBasis": "75%"}}>
           <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
             { data?.businessWhere?.name }
           </h2>
