@@ -121,6 +121,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-posthog`,
+      options: {
+        apiKey: "phc_5fqzIc8W0zudGAkdvuHmLWieaKR5HEVo1GQtKonNFaP",
+        head: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
