@@ -15,7 +15,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-W21GB3RH49');
+gtag('config', 'G-K702KG2P71');
 `
 
 const intercomOne = `window.intercomSettings = { app_id: "ohqapfc3" };`
@@ -110,7 +110,7 @@ function SEO({
     >
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-W21GB3RH49"
+        src="https://www.googletagmanager.com/gtag/js?id=G-K702KG2P71"
       ></script>
       <script>{intercomOne}</script>
       <script>{intercomTwo}</script>
