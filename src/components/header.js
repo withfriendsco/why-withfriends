@@ -34,7 +34,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
     <div className="absolute right-0 md:hidden top-12 z-100 bg-white flex flex-wrap justify-end text-right p-4 w-full">
       <button
         className="color-salmon-600 no-underline beamer-news block mb-2"
-        onClick={() => { mixpanel.track("Clicked What's new"); return false; }}
+        onClick={() => { return false; }}
         style={{display:"none"}}
       >
         What's new
@@ -92,7 +92,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
         <div className="hidden md:inline-block flex-1 align-right text-right">
           <button
             className="color-salmon-600 no-underline ml-2 justify-self-end beamer-news inline-block"
-            onClick={() => { mixpanel.track("Clicked What's new"); return false; }}
+            onClick={() => { return false; }}
             style={{display:"none"}}
           >
             What's new

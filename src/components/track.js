@@ -7,7 +7,7 @@ const Track = () => {
       document.cookie = `wf-lm-id=${mixpanel.get_distinct_id()};domain=.withfriends.co;secure;path=/`
     }
 
-    mixpanel.track("Visited Why Withfriends")
+    // mixpanel.track("Visited Why Withfriends")
   }, [])
 
   useEffect(() => {

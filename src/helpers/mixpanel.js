@@ -3,11 +3,11 @@ const mixpanelKey = (process.env.GATSBY_MIXPANEL_KEY || "287044101a1f47c209745ca
 mixpanel.init(mixpanelKey)
 
 const becomeAnOrganizer = (clickLocation) => {
-  mixpanel.track("Clicked Become an Organizer", {location: clickLocation})
+  // mixpanel.track("Clicked Become an Organizer", {location: clickLocation})
 }
 
 const becomeASquareOrganizer = () => {
-  mixpanel.track("Shopify Connect Continued to Legacy")
+  // mixpanel.track("Shopify Connect Continued to Legacy")
 }
 
 export { mixpanel, becomeAnOrganizer, becomeASquareOrganizer }
