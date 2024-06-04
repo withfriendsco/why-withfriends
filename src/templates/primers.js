@@ -121,7 +121,7 @@ const PrimerTemplate = ({ data }) => {
               {
                 data.noSEM ? 
                 `The best ${data.build.tool} for your Shopify store.` : 
-                `The best ${data.platform.name} ${data.build.tool} for your ${data.market.name}.`
+                `The best ${data.platform?.name ? `${data.platform.name} ` : ''}${data.build.tool} for your ${data.market.name}.`
               }
             </h2>
             <div className="w-full" />
