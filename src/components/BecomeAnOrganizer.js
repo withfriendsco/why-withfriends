@@ -26,7 +26,7 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
             variant="salmon"
             onClick={() => becomeAnOrganizer("content")}
           >
-            Get the app
+            Try it free
           </Button>
         </div>
       </UTMLink>

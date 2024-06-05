@@ -245,7 +245,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
             becomeAnOrganizer("main");
           }}
         >
-          Get the app
+          Try it free
         </Button>
       </UTMLink>
       </div>

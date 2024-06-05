@@ -69,7 +69,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
       >
         <div className="block w-full">
           <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-          Get the app
+          Try it free
           </Button>
         </div>
       </UTMLink>
@@ -126,7 +126,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
           >
             <div className="flex justify-end">
               <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-                Get the app
+                Try it free
               </Button>
             </div>
           </UTMLink>

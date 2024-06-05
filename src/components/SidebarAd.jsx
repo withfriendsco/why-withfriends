@@ -75,7 +75,7 @@ const SidebarAd = ({setShowModal}) => (
       >
         <div className="flex justify-end">
           <Button onClick={() => becomeAnOrganizer("sidebar")} variant="salmon">
-            Get the app
+            Try it free
           </Button>
         </div>
       </UTMLink>

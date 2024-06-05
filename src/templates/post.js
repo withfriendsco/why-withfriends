@@ -112,7 +112,7 @@ const Post = ({ data, pageContext }) => {
                     className="no-underline"
                     variant="salmon"
                   >
-                    Get the app
+                    Try it free
                   </Button>
                 </UTMLink>
               </div>
