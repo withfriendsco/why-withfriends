@@ -12,7 +12,7 @@ import IconItem from "./IconItem"
 import Facebook from "./Facebook"
 import Google from "./Google"
 
-import {addAppUrl} from "../helpers/addapp"
+import {addAppUrl, oldAddAppUrl} from "../helpers/addapp"
 
 import { 
   GET_USER, 
@@ -22,7 +22,7 @@ import {
   CREATE_USER_GOOGLE,
 } from "../queries"
 
-const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
+const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldLink = false}) => {
   const [queryV, setQueryV] = useQueryParam("v", NumberParam)
   const [queryEmail, setQueryEmail] = useQueryParam("email", StringParam)
   const [queryName, setQueryName] = useQueryParam("name", StringParam)
@@ -234,7 +234,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal}) => {
     <div className="w-full max-w-md">
       <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
       <UTMLink
-        href={addAppUrl}
+        href={useOldLink ? oldAddAppUrl : addAppUrl}
         text="Get the app"
       >
         <Button 

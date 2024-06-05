@@ -7,9 +7,9 @@ import UTMLink from "./UTMLink"
 import SvgMenu from "../icons/SvgMenu"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
-import {addAppHref, addAppUrl} from "../helpers/addapp"
+import {addAppHref, useOldAddAppUrl,addAppUrl} from "../helpers/addapp"
 
-const Header = ({ siteTitle, isPrimer, setShowModal }) => {
+const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const pricingLink = isPrimer ? (
@@ -64,7 +64,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal }) => {
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href={addAppUrl}
+        href={useOldLink ? useOldAddAppUrl : addAppUrl}
         text="Get the app"
       >
         <div className="block w-full">

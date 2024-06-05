@@ -1,4 +1,5 @@
 const addAppUrl = "https://apps.shopify.com/withfriends"
+const oldAddAppUrl = "https://withfriends.co/action/364/sign_up/modal"
 
 const addApp = (setShowModal) => {
     // setShowModal(true)
@@ -18,4 +19,4 @@ const addCloseModalListener = (setShowModal) => {
         }
     });
 }
-export {addApp, addAppHref, addAppUrl, closeModal, addCloseModalListener}
+export {addApp, addAppHref, addAppUrl, oldAddAppUrl, closeModal, addCloseModalListener}
