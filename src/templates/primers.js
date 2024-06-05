@@ -94,7 +94,7 @@ const PrimerTemplate = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <Layout useOldLink={data.platform?.name != "Shopify"} isPrimer={true} showModal={showModal} setShowModal={setShowModal}>
+    <Layout useOldLink={data.platform?.name != "Shopify" && !!data.platform?.name} isPrimer={true} showModal={showModal} setShowModal={setShowModal}>
       <SEO
         title={`Withfriends | ${data.platform.name || "The best"} ${data.build.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
@@ -125,7 +125,7 @@ const PrimerTemplate = ({ data }) => {
               }
             </h2>
             <div className="w-full" />
-            <EmailCaptureDevice useOldLink={data.platform?.name != "Shopify"} translationMapping={translationMapping} showModal={showModal} setShowModal={setShowModal}/>
+            <EmailCaptureDevice useOldLink={data.platform?.name != "Shopify" && !!data.platform?.name} translationMapping={translationMapping} showModal={showModal} setShowModal={setShowModal}/>
           </div>
           <div />
         </div>
