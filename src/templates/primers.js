@@ -138,16 +138,22 @@ const PrimerTemplate = ({ data }) => {
           <p className="text-center max-w-screen-md leading-tight">
           </p>
           <p className="text-center max-w-screen-md leading-tight">
-            <span className="text-salmon-700">
-              Sell ten times as many {data.build.name}
-            </span>
-            {" "}than on{" "}
-            {(data.noSEM || data.platform.name == 'Shopify') ? 'Recharge' : 'other apps'}
-            {" "}by using Withfriends to{" "}
-            <span className="text-salmon-700">
-              upsell your customers into {translationMapping.personPlural}
-            </span>{" "}
-            automatically during checkout. <br />
+            {data.platform.name == 'Shopify' ? (
+              <div>
+                <span className="text-salmon-700">
+                  Sell ten times as many {data.build.name}
+                </span>
+                {" "}than on Recharge by using Withfriends to{" "}
+                <span className="text-salmon-700">
+                  upsell your customers into {translationMapping.personPlural}
+                </span>
+                {" "}automatically during checkout. <br />
+              </div>
+            ) : (
+              <div>
+                Withfriends makes it easy to <span className="text-salmon-700">build community support for your {data.market.name}</span> by seamlessly selling {translationMapping.productPlural} during checkout. <br />
+              </div>
+            )}
             <br />
             An average of{" "}
             <span className="text-salmon-700">one in fifteen</span> customers
