@@ -31,6 +31,11 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <script key="wf-jquery" type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" />,
     <script key="wf-load-library" type="text/javascript" dangerouslySetInnerHTML={{
       __html: `var jq = $.noConflict(true);Withfriends.Set_jQuery(jq);` }} />,
+    <script
+      key="wf-penguin"
+      async
+      src="https://guidebar-backend-727ab3a68ba9.herokuapp.com/install/withfriends_co"
+    ></script>,
   ])
 }
 
