@@ -7,7 +7,7 @@ import UTMLink from "./UTMLink"
 import SvgMenu from "../icons/SvgMenu"
 import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
-import {addAppHref, useOldAddAppUrl,addAppUrl} from "../helpers/addapp"
+import {addAppHref, oldAddAppUrl, addAppUrl} from "../helpers/addapp"
 
 const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -64,12 +64,12 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
       </UTMLink>
       <UTMLink
         className="block w-full mb-2"
-        href={useOldLink ? useOldAddAppUrl : addAppUrl}
-        text="Get the app"
+        href={useOldLink ? oldAddAppUrl : addAppUrl}
+        text="Start free trial"
       >
         <div className="block w-full">
           <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-          Try it free
+            Start free trial
           </Button>
         </div>
       </UTMLink>
@@ -126,7 +126,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
           >
             <div className="flex justify-end">
               <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-                Try it free
+                Start free trial
               </Button>
             </div>
           </UTMLink>

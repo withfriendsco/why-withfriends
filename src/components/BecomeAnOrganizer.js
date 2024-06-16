@@ -18,7 +18,7 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
       <UTMLink
         className="inline-block justify-self-end justify-end become-an-organizer"
         href={addAppUrl}
-        text="Get the app"
+        text="Start free trial"
       >
         <div className="flex justify-end">
           <Button
@@ -26,7 +26,7 @@ const BecomeAnOrganizer = ({translationMapping, setShowModal}) => {
             variant="salmon"
             onClick={() => becomeAnOrganizer("content")}
           >
-            Try it free
+            Start free trial
           </Button>
         </div>
       </UTMLink>

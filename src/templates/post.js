@@ -105,14 +105,14 @@ const Post = ({ data, pageContext }) => {
                 <UTMLink
                   className="inline-block justify-self-end justify-end no-underline"
                   href={addAppUrl}
-                  text="Get the app"
+                  text="Start free trial"
                 >
                   <Button
                     onClick={() => becomeAnOrganizer("post")}
                     className="no-underline"
                     variant="salmon"
                   >
-                    Try it free
+                    Start free trial
                   </Button>
                 </UTMLink>
               </div>

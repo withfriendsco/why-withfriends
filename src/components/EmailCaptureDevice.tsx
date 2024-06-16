@@ -235,7 +235,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
       <div className={`w-full flex justify-center ${showFindYourMembers ? "" : "hidden"}`}>
       <UTMLink
         href={useOldLink ? oldAddAppUrl : addAppUrl}
-        text="Get the app"
+        text="Start free trial"
       >
         <Button 
           className="py-6 px-4 sm:px-12 text-xl"
@@ -245,7 +245,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
             becomeAnOrganizer("main");
           }}
         >
-          Try it free
+          Start free trial
         </Button>
       </UTMLink>
       </div>
