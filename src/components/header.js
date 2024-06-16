@@ -122,7 +122,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
           <UTMLink
             className="inline-block"
             href={useOldLink ? oldAddAppUrl : addAppUrl}
-            text="Get the app"
+            text="Start free trial"
           >
             <div className="flex justify-end">
               <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
