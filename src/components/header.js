@@ -121,7 +121,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
           </UTMLink>
           <UTMLink
             className="inline-block"
-            href={useOldLink ? useOldAddAppUrl : addAppUrl}
+            href={useOldLink ? oldAddAppUrl : addAppUrl}
             text="Get the app"
           >
             <div className="flex justify-end">
