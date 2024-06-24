@@ -7,8 +7,8 @@ import { BecomeAnOrganizer } from "../pages/organizers"
 interface FeatureRowData {
   imageFirst: boolean
   featureRow: {
-    video: string
-    image: {
+    video?: string
+    image?: {
       childImageSharp: GatsbyImageFluidProps
     }
     content: string
