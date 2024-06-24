@@ -253,7 +253,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
         Free to install.&nbsp;&nbsp;
         {
           isBookstorePage ? 
-            <a href="/#pricing" style={{color:"white"}}>Pay 10% of membership revenue</a>
+            <a href="#pricing" style={{color:"white"}}>Pay 10% of membership revenue</a>
           : (
             <>
               <a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
