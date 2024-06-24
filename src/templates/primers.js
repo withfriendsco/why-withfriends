@@ -637,6 +637,7 @@ export const query = graphql`
           link
           only
           not
+          video
           image {
             id
             childImageSharp {

@@ -10,6 +10,10 @@
   content: Automatically offer your %personPlural% exclusive benefits at your events, such as discounts, free attendance, guest passes, or early access—just turn on the features and you're set. If you’re not already organizing events, we make it easy to create, promote, and manage %person% gatherings. These events are a fantastic way to strengthen your community and grow your %product%. Our %person% events pages are designed to be shareable publicly and can sell %productPlural% automatically during the RSVP process.
   not: shopify
 -
+  video: ../videos/shopify-upsell 
+  title: Grow your %productPlural% automatically
+  content: Focus on what you do best – running your %market% – while we handle %product% growth. Our platform seamlessly integrates with your online store to offer one-click %product% upsells, automatically applying %person% discounts during checkout or following up with enticing email and text message offers. For in-store shoppers, we integrate with your POS system and provide eye-catching posters with QR codes that offer exclusive deals for joining your %product% program. Based on our data, an average of one in fifteen customers convert to %personPlural%, potentially boosting your monthly revenue by as much as 60%.
+-
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
   content: Withfriends syncs your %personPlural%' subscription boxes to Shopify as Orders for your dashboard. We also automate discounts for your store if they're a part of your %product% tiers.
