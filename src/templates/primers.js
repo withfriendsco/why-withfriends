@@ -36,6 +36,7 @@ import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated
 import WithfriendsUpsellYourCustomersMp4 from "../videos/shopify-upsell.mp4"
 import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
 import SubscriptionBoxesPng from "../images/subscriptions-sample-tiers.png"
+import BookClubsPng from "../images/bookstores-clubs.png"
 import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
@@ -65,12 +66,15 @@ const PrimerTemplate = ({ data }) => {
     "person": data.build.name == 'memberships' ? 'member' : 'subscriber',
     "personPlural": data.build.name == 'memberships' ? 'members' : 'subscribers',
     "product": data.build.name == 'memberships' ? 'membership' : 'subscription',
-    "productPlural": data.build.name == 'memberships' ? 'memberships' : 'subscriptions'
+    "productPlural": data.build.name == 'memberships' ? 'memberships' : 'subscriptions',
+    "market": data.market.name
   }
   const ucfirst = (content) => content.charAt(0).toUpperCase() + content.slice(1)
 
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
-    if (!node.node.only || node.node.only === data.platform.slug) {
+    if (
+      !node.node.only || node.node.only === data.platform.slug || node.node.only === data.market.slug
+    ) {
       imageFirst = !imageFirst
       return (
         <FeatureRow
@@ -247,16 +251,16 @@ const PrimerTemplate = ({ data }) => {
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                Offer subscription boxes to your members every month or on a flexible schedule.
+                {(isBookstorePage ? "Offer a book club" : "Send subscription boxes")} to your members every month or on a flexible schedule.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                Send books and swag to your members, delivered right to their door or available for easy in-store pickup. Customize options like t-shirt sizes and genre preferences. We'll automatically generate orders on your schedule, with easy export to Shippo, ShipStation, Shopify, or any platform you use for packing slips.
+                {(isBookstorePage ? "Send books and merch to your members, delivered right to their door or available for easy in-store pickup. Customize options like genre preferences and t-shirt sizes. We'll automatically generate orders on your schedule, with easy export to Shopify, Shippo, ShipStation, Bookshop,or any platform you use for fulfillment." : "Send curated variety boxes to your members, delivered right to their door weekly, monthly, or quarterly, with options like t-shirt sizes and flavors. We'll automatically generate orders on your schedule in Shopify for easy fulfillment.")}
               </p>
             </div>
             <div className="w-full sm:hidden order-2" />
             <div className="md:px-8 w-100 order-1 sm:order-3">
               <div className="border shadow-xl" style={{position: "relative"}}>
-                <img src={SubscriptionBoxesPng} alt="Subscription Boxes" style={{maxWidth: "100%"}}/>
+                <img src={isBookstorePage ? BookClubsPng : SubscriptionBoxesPng} alt="Subscription Boxes" style={{maxWidth: "100%"}}/>
               </div>
             </div>
           </div>

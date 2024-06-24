@@ -1,7 +1,18 @@
 -
-  image: ../images/lead-upsell-your-customers.png
-  title: Upsell customers into %personPlural% with every purchase.
-  content: Offer a %productPlural% upsell with every purchase, and earn an average of $6 extra on every order. You can keep your focus on being awesome at your core business, and your %personPlural% will support you!
+  image: ../images/member-discount.png
+  title: Effortless %person% discounts
+  content: Reward your loyal %personPlural% with exclusive discounts, both online and in-store. With seamless integration with popular platforms like Shopify, Square, and many others, %personPlural% can enjoy automatic discounts during online checkout – no codes needed. For in-store purchases, our intuitive integration with your POS system makes it a breeze. %PersonPlural% simply show their digital %person% badge on their phone, and your staff can apply the discount with a single tap.
+  linkText: Read our insights on how %person% discounts reduce churn.
+  link: /posts/subscription-box-churn/
+-
+  image: ../images/member-event.png
+  title: Give members special treatment at your events
+  content: Automatically offer your members exclusive benefits at your events, such as discounts, free attendance, guest passes, or early access—just turn on the features and you're set. If you’re not already organizing events, we make it easy to create, promote, and manage member gatherings. These events are a fantastic way to strengthen your community and grow your membership. Our member events pages are designed to be shareable publicly and can sell memberships automatically during the RSVP process.
+  not: shopify
+-
+  video:../videos/shopify-upsell 
+  title: Grow your %productPlural% automatically
+  content: Focus on what you do best – running your %market% – while we handle %product% growth. Our platform seamlessly integrates with your online store to offer one-click membership upsells, automatically applying %person% discounts during checkout or following up with enticing email and text message offers. For in-store shoppers, we integrate with your POS system and provide eye-catching posters with QR codes that offer exclusive deals for joining your %product% program. Based on our data, an average of one in fifteen customers convert to %personPlural%, potentially boosting your monthly revenue by as much as 60%.
 -
   image: ../images/subscriptions-manage-shopify.png
   title: Manage subscription boxes within your Shopify dashboard.
@@ -9,21 +20,26 @@
   only: shopify
 -
   image: ../images/subscriptions-customize-addons.png
-  title: Let your %personPlural% choose what's in their box.
-  content: Offer your %personPlural% options for their subscription boxes, like t-shirt sizes or flavors. Allow %personPlural% to buy addons to include extra goodies with their shipments. %PersonPlural% will get a reminder email before each shipment to update their options, addons, and address.
+  title: Elevate the %person% experience with add-ons
+  content: Give your %personPlural% the power to personalize their shipments with add-ons. Want to offer international delivery? Easy. Want to add extra books or premium merchandise like long-sleeve shirts? Done. %PersonPlural% receive a friendly reminder email before each shipment, showcasing available add-ons and allowing them to customize their box with just a click. 
+  not: shopify
+-
+  image: ../images/subscriptions-customize-addons.png
+  title: Unleash the power of customization for your %personPlural%
+  content: Empower your %personPlural% to curate their dream subscription boxes with unparalleled flexibility. With our Shopify integration, subscribers can not only choose from a curated selection of add-ons (like exclusive merchandise or priority shipping), but they can also handpick any products from your entire store to create a truly unique experience. Our pre-shipment reminder emails showcase these premium add-ons alongside the option for complete box customization, ensuring your %personPlural% have full control and are delighted with every delivery. This level of personalization fosters deeper engagement and excitement, making your subscription boxes even more irresistible.
+  only: shopify
 -
   image: ../images/lead-manage-multiple-tiers.png
-  title: Manage recurring payments for multiple tiers.
+  title: Advanced %product% management for your business
   content: |
     Complex %product% program? No problem. 
-    
-    We make it easy to build multiple tiers, multiple products in each box, welcome packages, options, add-ons, fixed and rolling shipping schedules, %personPlural%-only discounts, and more.
+
+    With our advanced features, you can effortlessly manage multiple %product% tiers and products. Our platform supports %product% drives (similar to Kickstarter but for recurring payments), proration settings, annual discounts, and the ability to set commitment periods that do or don't renew, restricting %personPlural% cancellations during those periods. %PersonPlural% can gift entire %productPlural% or individual shipments, skip shipments, or pause their %product%. You can also delay shipments for a certain number of months.
 
     Use Withfriends to design the %product% program you've been dreaming of for your business! We'll take the pain out of running it.
   linkText: Read about how you can craft a sustainable %product% program.
   link: /posts/memberships/
-  
 -
   image: ../images/member-management.png
   title: Use our comprehensive %product% management software.
-  content: Use our %person% management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync with your CRM automatically.
+  content: Use our %person% management dashboard to ship subscription boxes, send thank you notes, and engage with your community. Sync seamlessly with your CRM to keep everything in one place.

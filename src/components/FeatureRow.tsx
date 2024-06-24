@@ -7,6 +7,7 @@ import { BecomeAnOrganizer } from "../pages/organizers"
 interface FeatureRowData {
   imageFirst: boolean
   featureRow: {
+    video: string
     image: {
       childImageSharp: GatsbyImageFluidProps
     }
@@ -20,6 +21,7 @@ interface FeatureRowData {
     personPlural: string
     product: string
     productPlural: string
+    market: string
   }
 }
 
@@ -64,15 +66,30 @@ const FeatureRow = ({ imageFirst, featureRow, translationMapping }: FeatureRowDa
         <div className="w-full sm:hidden order-2" />
         <div className="flex-1 order-1 -mx-4 sm:-mx-8 px-8 sm:mx-0 sm:px-0 p-4 md:p-6 align-items-center">
           <div className="sm:p-4 align-items-center">
-            <Img
-              fadeIn={true}
-              imgStyle={{ objectFit: "contain" }}
-              fluid={{
-                ...featureRow.image.childImageSharp.fluid,
-                aspectRatio: 4 / 3,
-              }}
-              alt="Sample tiers for a subscription membership on Withfriends"
-            />
+            {featureRow.video ? (
+              <video
+                style={{maxWidth: "100%", height: "auto"}}
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src={featureRow.video + ".webm"} type="video/webm" />
+                <source src={featureRow.video + ".mp4"} type="video/mp4" />
+                <p>Your browser does not support the video element.</p>
+              </video>
+            ) : (
+              <Img
+                fadeIn={true}
+                imgStyle={{ objectFit: "contain" }}
+                fluid={{
+                  ...featureRow.image.childImageSharp.fluid,
+                  aspectRatio: 4 / 3,
+                }}
+                alt="Sample tiers for a subscription membership on Withfriends"
+              />
+            )}
+            
           </div>
         </div>
       </div>
