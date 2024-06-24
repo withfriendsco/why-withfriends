@@ -103,11 +103,14 @@ const PrimerTemplate = ({ data }) => {
 
   const isBookstorePage = !data.platform.name && data.build.name == "memberships" && data.market.name == "bookstore"
 
+  const seoDescription = `Build financial resilience for your ${data.market.name} by allowing customers to become monthly supporting members`
+
   return (
     <Layout useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} isPrimer={true} showModal={showModal} setShowModal={setShowModal} isBookstorePage={isBookstorePage}>
       <SEO
         title={`Withfriends | ${data.platform.name || "The best"} ${data.build.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
+        seoDescription={seoDescription}
       />
       <div className="flex flex-wrap md:flex-nowrap w-full justify-center bg-wfGray-800">
         <video
