@@ -255,7 +255,7 @@ const PrimerTemplate = ({ data }) => {
             </div>
             <div className="w-full sm:hidden order-2" />
             <div className="md:px-8 w-100 order-1 sm:order-3">
-              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+              <div className="border shadow-xl" style={{position: "relative"}}>
                 <img src={SubscriptionBoxesPng} alt="Subscription Boxes" style={{maxWidth: "100%"}}/>
               </div>
             </div>
