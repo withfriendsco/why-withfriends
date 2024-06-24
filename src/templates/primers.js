@@ -73,8 +73,10 @@ const PrimerTemplate = ({ data }) => {
 
   const featureRows = data.allFeatureRowsYaml.edges.map(node => {
     if (
-      !node.node.only || node.node.only === data.platform.slug || node.node.only === data.market.slug || node.node.not && node.node.not !== data.platform.slug && node.node.not !== data.market.slug
-    ) {
+      (!node.node.only && !node.node.not) || // neither only nor not is set
+      (node.node.only && (node.node.only === data.platform.slug || node.node.only === data.market.slug)) || // only is set and matches
+      (node.node.not && node.node.not !== data.platform.slug && node.node.not !== data.market.slug) // not is set and does not match
+    ){
       imageFirst = !imageFirst
       return (
         <FeatureRow
