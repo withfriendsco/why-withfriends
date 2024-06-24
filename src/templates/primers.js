@@ -222,7 +222,7 @@ const PrimerTemplate = ({ data }) => {
               </p>
             </div>
             <div className="md:px-8 w-100 order-1">
-              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+              <div className="border shadow-xl" style={isBookstorePage ? {position:relative} : {position: "relative", paddingBottom: "56.25%", height: 0}}>
                 {
                   isBookstorePage ? (
                     <img src={BookstoreDesignPng} alt="Bookstore Design" style={{maxWidth: "100%", height: "auto"}}/>
