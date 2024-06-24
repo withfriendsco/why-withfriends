@@ -22,7 +22,7 @@ import {
   CREATE_USER_GOOGLE,
 } from "../queries"
 
-const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldLink = false}) => {
+const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldLink = false, isBookstorePage = false}) => {
   const [queryV, setQueryV] = useQueryParam("v", NumberParam)
   const [queryEmail, setQueryEmail] = useQueryParam("email", StringParam)
   const [queryName, setQueryName] = useQueryParam("name", StringParam)
@@ -250,7 +250,16 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
       </UTMLink>
       </div>
       <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
-        Free to install.&nbsp;&nbsp;<a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
+        Free to install.&nbsp;&nbsp;
+        {
+          isBookstorePage ? 
+            <a href="/#pricing" style={{color:"white"}}>Pay 10% of membership revenue</a>
+          : (
+            <>
+              <a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.
+            </>
+          )
+        }
       </p>
       <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white", display: "none"}}>
         Or sign up without Shopify <a style={{color:"white"}} href={`${(process.env.GATSBY_JELLY_URL || "https://dev.better.space")}/action/364/sign_up/modal`} onClick={becomeASquareOrganizer}>here</a>.

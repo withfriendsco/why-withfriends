@@ -1,13 +1,4 @@
 -
-  image: ../images/subscriptions-sample-tiers.png 
-  title: Create %product% tiers with automated subscription boxes and discounts.
-  content: |
-    Your tiers can include subscription boxes delivered weekly, monthly, or quarterly, with options like t-shirt sizes and flavors.  We'll attach these to Shopify products and generate orders automatically on schedule.
-  
-    Your tiers can also include discounts for %personPlural%, and they'll have automatic access to their discounts on your Shopify or Square store, no discount codes needed.
-  linkText: Read our insights on how %person% discounts reduce churn.
-  link: /posts/subscription-box-churn/
--
   image: ../images/lead-upsell-your-customers.png
   title: Upsell customers into %personPlural% with every purchase.
   content: Offer a %productPlural% upsell with every purchase, and earn an average of $6 extra on every order. You can keep your focus on being awesome at your core business, and your %personPlural% will support you!

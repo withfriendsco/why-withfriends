@@ -30,10 +30,12 @@ import EmailCaptureDevice from "../components/EmailCaptureDevice"
 import LocalBusinessVideoMp4 from "../videos/Local_Business.mp4"
 import LocalBusinessVideoWebm from "../videos/Local_Business.webm"
 import LocalBusinessVideoJpg from "../videos/Local_Business.jpg"
+import BookstoreDesignPng from "../videos/Bookstore_Design.png"
 import WithfriendsAutomatedMemberTiersMp4 from "../videos/withfriends-automated-member-tiers.mp4"
 import WithfriendsAutomatedMemberTiersWebm from "../videos/withfriends-automated-member-tiers.webm"
 import WithfriendsUpsellYourCustomersMp4 from "../videos/shopify-upsell.mp4"
 import WithfriendsUpsellYourCustomersWebm from "../videos/shopify-upsell.webm"
+import SubscriptionBoxesPng from "../images/subscriptions-sample-tiers.png"
 import BusinessFeature from "../components/SocialProof"
 
 const PrimerTemplate = ({ data }) => {
@@ -93,6 +95,8 @@ const PrimerTemplate = ({ data }) => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const isBookstorePage = !data.platform.name && data.build.name == "memberships" && data.market.name == "bookstore"
+
   return (
     <Layout useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} isPrimer={true} showModal={showModal} setShowModal={setShowModal}>
       <SEO
@@ -114,18 +118,24 @@ const PrimerTemplate = ({ data }) => {
         </video>
         <div className="absolute flex flex-wrap z-10 text-white place-items-center bg-opacity-75 py-20 sm:py-32 p-4 sm:p-16 w-full h-screen -my-24 sm:-my-32 -mx-4 bg-wfGray-800 justify-center" style={{marginLeft:0, marginRight:0}}>
           <div className="flex flex-wrap justify-center max-w-xl">
-            <h1 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
-              Sell {data.build.name}, automatically.
-            </h1>
+            {
+              !isBookstorePage && (
+                <h1 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
+                  Sell {data.build.name}, automatically.
+                </h1>
+              )
+            }
             <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
               {
-                data.noSEM ? 
-                `The best ${data.build.tool} for your Shopify store.` : 
-                `The best ${data.platform?.name ? `${data.platform.name} ` : ''}${data.build.tool} for your ${data.market.name}.`
+                isBookstorePage ? "Allow your customers to become monthly supporting members of your bookstore" : (
+                  data.noSEM ? 
+                  `The best ${data.build.tool} for your Shopify store.` : 
+                  `The best ${data.platform?.name ? `${data.platform.name} ` : ''}${data.build.tool} for your ${data.market.name}.`
+                )
               }
             </h2>
             <div className="w-full" />
-            <EmailCaptureDevice useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} translationMapping={translationMapping} showModal={showModal} setShowModal={setShowModal}/>
+            <EmailCaptureDevice useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} translationMapping={translationMapping} showModal={showModal} setShowModal={setShowModal} isBookstorePage={isBookstorePage}/>
           </div>
           <div />
         </div>
@@ -150,18 +160,35 @@ const PrimerTemplate = ({ data }) => {
                 {" "}automatically during checkout. <br />
               </div>
             ) : (
-              <div>
-                Withfriends makes it easy to <span className="text-salmon-700">build community support for your {data.market.name}</span> by seamlessly selling {translationMapping.productPlural} during checkout. <br />
-              </div>
+              isBookstorePage ? (
+                <div>
+                  Withfriends helps you earn <span className="text-salmon-700">reliable recurring revenue for your bookstore</span> by making it easy to sell and manage memberships<br />
+                </div>
+              ) : (
+                <div>
+                  Withfriends makes it easy to <span className="text-salmon-700">build community support for your {data.market.name}</span> by seamlessly selling {translationMapping.productPlural} during checkout. <br />
+                </div>
+              )
+              
             )}
             <br />
-            An average of{" "}
-            <span className="text-salmon-700">one in fifteen</span> customers
-            will purchase {data.build.name} for your{" "}
-            {data.market.short}, earning you a
-            <span className="text-salmon-700">
-              &nbsp;60%&nbsp;increase in reliable monthly revenue.
-            </span>
+            {
+              isBookstorePage ? (
+                <>
+                  Delight members with exclusive perks like monthly book deliveries, special discounts, and member events - <span className="text-salmon-700">all without adding work for your staff</span>
+                </>
+              ) : (
+                <>
+                  An average of{" "}
+                  <span className="text-salmon-700">one in fifteen</span> customers
+                  will purchase {data.build.name} for your{" "}
+                  {data.market.short}, earning you a
+                  <span className="text-salmon-700">
+                    &nbsp;60%&nbsp;increase in reliable monthly revenue.
+                  </span>
+                </>
+              )
+            }
           </p>
         </div>
       </div>
@@ -192,17 +219,44 @@ const PrimerTemplate = ({ data }) => {
             </div>
             <div className="md:px-8 w-100 order-1">
               <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-                <video
-                  style={{maxWidth: "100%", height: "auto"}}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                >
-                  <source src={WithfriendsAutomatedMemberTiersWebm} type="video/webm" />
-                  <source src={WithfriendsAutomatedMemberTiersMp4} type="video/mp4" />
-                  <p>Your browser does not support the video element.</p>
-                </video>
+                {
+                  isBookstorePage ? (
+                    <img src={BookstoreDesignPng} alt="Bookstore Design" style={{maxWidth: "100%", height: "auto"}}/>
+                  ) : (
+                    <video
+                      style={{maxWidth: "100%"}}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    >
+                      <source src={WithfriendsAutomatedMemberTiersWebm} type="video/webm" />
+                      <source src={WithfriendsAutomatedMemberTiersMp4} type="video/mp4" />
+                      <p>Your browser does not support the video element.</p>
+                    </video>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex py-4 md:py-16 justify-center">
+        <div className="w-full flex flex-wrap justify-center">
+          <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
+            <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
+              <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
+                Offer subscription boxes to your members every month or on a flexible schedule.
+              </h2>
+              <p className="prose md:prose-md text-wfGray-800">
+                Send books and swag to your members, delivered right to their door or available for easy in-store pickup. Customize options like t-shirt sizes and genre preferences. We'll automatically generate orders on your schedule, with easy export to Shippo, ShipStation, Shopify, or any platform you use for packing slips.
+              </p>
+            </div>
+            <div className="w-full sm:hidden order-2" />
+            <div className="md:px-8 w-100 order-1 sm:order-3">
+              <div className="border shadow-xl" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+                <img src={SubscriptionBoxesPng} alt="Subscription Boxes" style={{maxWidth: "100%"}}/>
               </div>
             </div>
           </div>
