@@ -131,7 +131,7 @@ const PrimerTemplate = ({ data }) => {
             }
             <h2 className="text-center leading-tight mb-2 sm:mb-8 font-bold text-2xl sm:text-4xl">
               {
-                isBookstorePage ? "Allow your customers to become monthly supporting members of your bookstore" : (
+                isBookstorePage ? "Allow customers to become monthly supporting members of your bookstore" : (
                   data.noSEM ? 
                   `The best ${data.build.tool} for your Shopify store.` : 
                   `The best ${data.platform?.name ? `${data.platform.name} ` : ''}${data.build.tool} for your ${data.market.name}.`
