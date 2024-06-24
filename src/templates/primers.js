@@ -263,7 +263,7 @@ const PrimerTemplate = ({ data }) => {
         </div>
       </div>
 
-      <div className="w-full flex py-4 md:py-16 justify-center">
+      {/* <div className="w-full flex py-4 md:py-16 justify-center">
         <div className="w-full flex flex-wrap justify-center">
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
@@ -306,7 +306,7 @@ const PrimerTemplate = ({ data }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       
       <div className="w-full my-8" />
       <BecomeAnOrganizer translationMapping={translationMapping} setShowModal={setShowModal}/>
