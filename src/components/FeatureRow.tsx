@@ -3,6 +3,8 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { GatsbyImageFluidProps } from "gatsby-image"
 import { BecomeAnOrganizer } from "../pages/organizers"
+import HackMp4 from "../videos/shopify-upsell.mp4"
+import HackWebm from "../videos/shopify-upsell.webm"
 
 interface FeatureRowData {
   imageFirst: boolean
@@ -74,8 +76,8 @@ const FeatureRow = ({ imageFirst, featureRow, translationMapping }: FeatureRowDa
                 loop
                 playsInline
               >
-                <source src={featureRow.video + ".webm"} type="video/webm" />
-                <source src={featureRow.video + ".mp4"} type="video/mp4" />
+                <source src={HackWebm} type="video/webm" />
+                <source src={HackMp4} type="video/mp4" />
                 <p>Your browser does not support the video element.</p>
               </video>
             ) : (
