@@ -4,3 +4,13 @@
   content: Reward your loyal %personPlural% with exclusive discounts, both online and in-store. With seamless integration with popular platforms like Shopify, Square, and many others, %personPlural% can enjoy automatic discounts during online checkout – no codes needed. For in-store purchases, our intuitive integration with your POS system makes it a breeze. %PersonPlural% simply show their digital %person% badge on their phone, and your staff can apply the discount with a single tap.
   linkText: Read our insights on how %person% discounts reduce churn.
   link: /posts/subscription-box-churn/
+-
+  image: ../images/member-event.png
+  title: Give %personPlural% special treatment at your events
+  content: Automatically offer your %personPlural% exclusive benefits at your events, such as discounts, free attendance, guest passes, or early access—just turn on the features and you're set. If you’re not already organizing events, we make it easy to create, promote, and manage %person% gatherings. These events are a fantastic way to strengthen your community and grow your %product%. Our %person% events pages are designed to be shareable publicly and can sell %productPlural% automatically during the RSVP process.
+  not: shopify
+-
+  image: ../images/subscriptions-manage-shopify.png
+  title: Manage subscription boxes within your Shopify dashboard.
+  content: Withfriends syncs your %personPlural%' subscription boxes to Shopify as Orders for your dashboard. We also automate discounts for your store if they're a part of your %product% tiers.
+  only: shopify
