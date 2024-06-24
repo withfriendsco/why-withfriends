@@ -102,7 +102,7 @@ const PrimerTemplate = ({ data }) => {
   const isBookstorePage = !data.platform.name && data.build.name == "memberships" && data.market.name == "bookstore"
 
   return (
-    <Layout useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} isPrimer={true} showModal={showModal} setShowModal={setShowModal}>
+    <Layout useOldLink={(data.platform?.name != "Shopify" && !data.noSEM)} isPrimer={true} showModal={showModal} setShowModal={setShowModal} isBookstorePage={isBookstorePage}>
       <SEO
         title={`Withfriends | ${data.platform.name || "The best"} ${data.build.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
@@ -251,10 +251,10 @@ const PrimerTemplate = ({ data }) => {
           <div className="max-w-screen-xl w-full flex flex-wrap sm:flex-nowrap justify-center text-center sm:text-left items-center">
             <div className="pt-8 sm:p-8 md:p-12 order-3 sm:order-1">
               <h2 className="mb-8 font-bold text-2xl md:mb-12 lg:mb-16 text-wfGray-800">
-                {(isBookstorePage ? "Offer a book club" : "Send subscription boxes")} to your members every month or on a flexible schedule.
+                Treat {translationMapping.personPlural} to a {(isBookstorePage ? "book club" : "subscription box")} every month or on a flexible schedule.
               </h2>
               <p className="prose md:prose-md text-wfGray-800">
-                {(isBookstorePage ? "Send books and merch to your members, delivered right to their door or available for easy in-store pickup. Customize options like genre preferences and t-shirt sizes. We'll automatically generate orders on your schedule, with easy export to Shopify, Shippo, ShipStation, Bookshop,or any platform you use for fulfillment." : "Send curated variety boxes to your members, delivered right to their door weekly, monthly, or quarterly, with options like t-shirt sizes and flavors. We'll automatically generate orders on your schedule in Shopify for easy fulfillment.")}
+                {(isBookstorePage ? `Send books and merch to your ${translationMapping.personPlural}, delivered right to their door or available for easy in-store pickup. Customize options like genre preferences and t-shirt sizes. We'll automatically generate orders on your schedule, with easy export to Shopify, Shippo, ShipStation, Bookshop,or any platform you use for fulfillment.` : `Send curated variety boxes to your ${translationMapping.personPlural}, delivered right to their door weekly, monthly, or quarterly, with options like t-shirt sizes and flavors. We'll automatically generate orders on your schedule in Shopify for easy fulfillment.`)}
               </p>
             </div>
             <div className="w-full sm:hidden order-2" />

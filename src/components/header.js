@@ -9,7 +9,7 @@ import { mixpanel, becomeAnOrganizer } from "../helpers/mixpanel"
 
 import {addAppHref, oldAddAppUrl, addAppUrl} from "../helpers/addapp"
 
-const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
+const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false, isBookstorePage = false }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const pricingLink = isPrimer ? (
@@ -69,7 +69,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
       >
         <div className="block w-full">
           <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-            Start free trial
+            {isBookstorePage ? "Get started for free" : "Start free trial"}
           </Button>
         </div>
       </UTMLink>
@@ -126,7 +126,7 @@ const Header = ({ siteTitle, isPrimer, setShowModal, useOldLink = false }) => {
           >
             <div className="flex justify-end">
               <Button onClick={() => becomeAnOrganizer("header")} variant="salmon-sm">
-                Start free trial
+                {isBookstorePage ? "Get started for free" : "Start free trial"}
               </Button>
             </div>
           </UTMLink>

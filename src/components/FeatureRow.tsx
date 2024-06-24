@@ -67,7 +67,7 @@ const FeatureRow = ({ imageFirst, featureRow, translationMapping }: FeatureRowDa
         </div>
         <div className="w-full sm:hidden order-2" />
         <div className="flex-1 order-1 -mx-4 sm:-mx-8 px-8 sm:mx-0 sm:px-0 p-4 md:p-6 align-items-center">
-          <div className="sm:p-4 align-items-center">
+          <div className={`${featureRow.video ? "border shadow-xl" : ""} align-items-center`}>
             {featureRow.video ? (
               <video
                 style={{maxWidth: "100%", height: "auto"}}

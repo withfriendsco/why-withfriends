@@ -245,7 +245,9 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
             becomeAnOrganizer("main");
           }}
         >
-          Start free trial
+          {
+            isBookstorePage ? "Get started for free" : "Start free trial"
+          }
         </Button>
       </UTMLink>
       </div>

@@ -19,7 +19,7 @@ import {closeModal, addCloseModalListener} from "../helpers/addapp"
 
 Modal.setAppElement('#___gatsby');
 
-const Layout = ({ children, isPrimer, showModal, setShowModal, useOldLink = false}) => {  
+const Layout = ({ children, isPrimer, showModal, setShowModal, useOldLink = false, isBookstorePage = false}) => {  
 
   useEffect(() => {
     addCloseModalListener(setShowModal)
@@ -54,7 +54,7 @@ const Layout = ({ children, isPrimer, showModal, setShowModal, useOldLink = fals
   return (
     <div className="font-sans">
       <Track />
-      <Header useOldLink={useOldLink} siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} setShowModal={setShowModal}/>
+      <Header useOldLink={useOldLink} siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} setShowModal={setShowModal} isBookstorePage={isBookstorePage} />
       <div className="flex flex-wrap justify-center pt-24 md:pt-32">
         <div className="w-full px-4 md:px-8">
           <main>{children}</main>
