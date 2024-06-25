@@ -110,7 +110,7 @@ const PrimerTemplate = ({ data }) => {
       <SEO
         title={`Withfriends | ${data.platform.name || "The best"} ${data.build.tool} for your ${data.market.name}.`}
         url={`https://why.withfriends.co/organizers/${data.market.slug}/${data.platform.slug}/${data.build.slug}`}
-        seoDescription={seoDescription}
+        description={seoDescription}
       />
       <div className="flex flex-wrap md:flex-nowrap w-full justify-center bg-wfGray-800">
         <video
