@@ -115,9 +115,9 @@ exports.createPages = async ({ graphql, actions }) => {
     path: `/`,
     component: path.resolve(`./src/templates/primers.js`),
     context: {
-      market: "online_store",
+      market: "bookstores",
       platform: "native",
-      build: "subscription_box",
+      build: "memberships",
     }
   })
 

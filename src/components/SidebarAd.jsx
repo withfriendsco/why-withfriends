@@ -71,7 +71,7 @@ const SidebarAd = ({setShowModal}) => (
       <UTMLink
         className="inline-block justify-self-end justify-end"
         href={addAppUrl}
-        text="Get the app"
+        text="Start free trial"
       >
         <div className="flex justify-end">
           <Button onClick={() => becomeAnOrganizer("sidebar")} variant="salmon">
