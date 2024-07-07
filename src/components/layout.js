@@ -58,9 +58,9 @@ const Layout = ({ children, isPrimer, showModal, setShowModal, useOldLink = fals
       <Header useOldLink={useOldLink} siteTitle={data.site.siteMetadata?.title || `Title`} isPrimer={isPrimer} setShowModal={setShowModal} isBookstorePage={isBookstorePage} />
       <div className={`flex flex-wrap justify-center ${showBanner ? 'pt-49 md:pt-77' : 'pt-24 md:pt-32'}`}>
       {showBanner && (
-        <div className="w-full py-2 bg-gray-300 bg-opacity-80 z-10 text-center text-black">
+        <div className="w-full py-2 bg-gray-300 bg-opacity-80 z-11 text-center text-black">
           Looking for our Shopify app instead?{" "}
-          <a href="addAppUrl" className="underline">
+          <a href={addAppUrl} className="underline">
             Head here
           </a>
         </div>
