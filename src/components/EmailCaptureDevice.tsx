@@ -253,7 +253,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
       </div>
       <p className={`w-full text-center justify-center mt-4 md:mt-8 prose md:prose-lg font-bold text-white-700 ${showFindYourMembers ? "" : "hidden"}`} style={{color:"white"}}>
         {
-         isBookstorePage ?
+         isBookstorePage && false ?
           <>
             Launch by July 8th and you won't pay monthly charges for the first three months.<br/>
           </>
@@ -264,7 +264,7 @@ const EmailCaptureDevice = ({translationMapping, showModal, setShowModal,useOldL
         }
         {
           isBookstorePage ? 
-            <a href="#pricing" style={{color:"white"}}>See our pricing details</a>
+            <a href="#pricing" style={{color:"white"}}>Pay $50/month plus 5% of membership revenue</a>
           : (
             <>
               <a href="/#pricing" style={{color:"white"}}>Additional charges</a>&nbsp;may apply.

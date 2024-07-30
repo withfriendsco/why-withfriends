@@ -436,7 +436,7 @@ const PrimerTemplate = ({ data }) => {
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
-                We charge <strong className="font-heavy">{isBookstorePage ? '3%' : '5%'} of one-time contributions.</strong>
+                We charge <strong className="font-heavy">5% of one-time contributions.</strong>
                 <div className="mt-4">
                   The payment processor charges $0.30 + 2.9% per transaction.
                 </div>
@@ -471,11 +471,11 @@ const PrimerTemplate = ({ data }) => {
                 </div>
               </div>
               <div className="border-t-2 border-wfGray-300 pt-4 mt-4">
-                We charge {isBookstorePage ? <><strong className="font-heavy">$30/month</strong> plus </> : ''}<strong className="font-heavy">{isBookstorePage ? '3%' : '10%'} of recurring payments</strong> for {translationMapping.productPlural}.
+                We charge {isBookstorePage ? <><strong className="font-heavy">$50/month</strong> plus </> : ''}<strong className="font-heavy">{isBookstorePage ? '5%' : '10%'} of recurring payments</strong> for {translationMapping.productPlural}.
                 <div className="mt-4">
                   The payment processor charges $0.30 + 2.9% per transaction.
                 </div>
-                {isBookstorePage && (
+                {isBookstorePage && false && (
                   <div className="mt-2 text-salmon-700">
                     <strong>Launch by July 8th and pay no monthly charges</strong> for 3 months. We'll become your first member to cover the cost.
                   </div>
